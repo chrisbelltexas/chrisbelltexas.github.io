@@ -25,11 +25,12 @@
 .title {
 	font-family: 'Momo Trust Display' !important; 
 	color: rgba(255,255,255,1) !important;
+	text-shadow: .15em .15em .15em rgba(0,0,0,.5) !important;
 }
 
 .subtitle {
 	font-family: 'Merriweather' !important; 
-	color:rgba(255,255,255,.75) !important;
+	color:rgba(255,255,255,1) !important;
 	margin-bottom: .75em !important;
 }
 
