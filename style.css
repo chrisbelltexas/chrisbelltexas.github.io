@@ -28,6 +28,14 @@
 	text-shadow: .15em .15em .15em rgba(0,0,0,.5) !important;
 }
 
+.for {
+	
+	font-family: 'Island Moments' !important; 
+	color: rgba(255,255,255,1) !important;
+	text-shadow: .15em .15em .15em rgba(0,0,0,1) !important;
+	
+}
+
 .subtitle {
 	font-family: 'Marcellus' !important; 
 	color:rgba(255,255,255,1) !important;
