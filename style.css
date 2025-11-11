@@ -35,7 +35,7 @@
 }
 
 .button-style {
-	color: rgba(0,255,0,1) !important;
+	color: white !important;
 	border-width: 0 !important;
 	background-color: rgba(0,255,0,.75) !important;
 	transition: background-color .5s !important;
