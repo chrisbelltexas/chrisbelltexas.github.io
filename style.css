@@ -29,21 +29,21 @@
 }
 
 .subtitle {
-	font-family: 'Merriweather' !important; 
+	font-family: 'Marcellus' !important; 
 	color:rgba(255,255,255,1) !important;
 	margin-bottom: .75em !important;
 }
 
 .button-style {
-	color: yellow !important;
+	color: rgba(0,255,0,1) !important;
 	border-width: 0 !important;
-	background-color: rgba(0,0,255,.75) !important;
+	background-color: rgba(0,255,0,.75) !important;
 	transition: background-color .5s !important;
 	font-family: 'Momo Trust Display' !important;
 }
 
 .button-style:hover {
-	background-color: rgba(0,0,255,1) !important;
+	background-color: rgba(0,255,0,1) !important;
 }
 
 .link {
@@ -63,4 +63,5 @@
 .press:hover {
 	opacity: 100% !important;
 }
+
 hr {height: .01em !important; background-color: rgba(255,255,255,.75) !important;}
