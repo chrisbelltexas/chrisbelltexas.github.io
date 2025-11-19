@@ -34,7 +34,7 @@
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Island+Moments&family=Marcellus&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Island+Moments&family=Marcellus&family=Montserrat:wght@400;800&display=swap">
 	
 	<link rel="canonical" href="https://chrisbelltexas.com">
 	
@@ -56,9 +56,9 @@
 	}
 	
 	.title {
-		font-family: 'Momo Trust Display' !important; 
+		font-family: 'Montserrat' !important; 
 		color: rgba(255,255,255,1) !important;
-		text-shadow: .05em .05em 0em rgba(0,0,0,1) !important;
+		text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.75) !important;
 		margin-bottom: 0.2em !important;
 	}
 
@@ -69,7 +69,7 @@
 	}
 	
 	.subtitle {
-		font-family: 'Marcellus' !important; 
+		font-family: 'Montserrat' !important; 
 		color:rgba(255,255,255,1) !important;
 		margin-bottom: .75em !important;
 		text-shadow: .05em .05em 0em rgba(0,0,0,1) !important;
@@ -78,35 +78,17 @@
 	.button-style {
 		color: white !important;
 		border-width: 0 !important;
-		background-color: rgba(0,255,0,.75) !important;
+		background-color: rgba(0,255,0,0.75) !important;
 		transition: background-color .5s !important;
-		font-family: 'Momo Trust Display' !important;
+		font-family: 'Montserrat' !important;
 	}
 
 	.button-style:hover {
 		background-color: rgba(0,255,0,1) !important;
 	}
 	
-	.navbar {
-	    position: fixed;
-	    top: 0; /* stick to top */
-		left: 0;
-		width: 100%;
-	    z-index: 100; /* make sure it floats above content */
-	    background-color: rgba(255,255,255,.85); /* optional: prevent transparency weirdness */
-	}
-	
-	.navbar-item {
-		color: rgba(31,31,73,1) !important;
-		font-family: 'Momo Trust Display' !important;
-		transition: transform .25s ease !important;
-	}
-	
-	.navbar-item:hover {
-		color: white !important;
-		background-color: rgba(0,0,255,.85) !important;
-		transform: scale(1.05) !important;
-	}
+	.navbar-item {}
+	.navbar-item:hover {}
 	
 	.navbar-burger span {
 	    background-color: rgba(31,31,73,.85) !important; /* Change this to any color you like */
@@ -135,8 +117,68 @@
 	}
 	
 	#media {
-		background-color: rgba(31,31,73,1) !important;
+		background-color: rgba(31,31,73,1) !important; /* campaign blue */
 	}
+	
+	
+	.navbar {
+	    position: fixed;
+	    top: 0; /* stick to top */
+		left: 0;
+		width: 100%;
+	    z-index: 100; /* make sure it floats above content */
+	    background-color: rgba(255,255,255,0.5); /* transparent white */
+		font-family: 'Montserrat' !important;
+	}
+	
+	
+	
+	.logo {
+		transition: background-color .25s ease, transform 1s ease !important;
+	}
+	
+	.logo:hover {
+		background-color: rgba(255,255,255,1) !important;
+		transform: scale(1.15) !important;
+	}
+	
+	
+	
+	.anchor {
+		color: rgba(31,31,73,1) !important; /* campaign blue */
+		transition: color .25s ease, background-color .25s ease, transform 1s ease !important;
+	}
+	
+	.anchor:hover {
+		color: white !important;
+		background-color: rgba(31,31,73,1) !important; /* campaign blue */
+		transform: scale(1.05) !important;
+	}
+	
+	
+	
+	.donate {
+		color: white !important;
+		background-color: rgba(0,255,0,1) !important;
+		text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.25) !important;
+		transition: transform 1s ease !important;
+		font-weight: 800 !important;
+	}
+	
+	.donate:hover {
+		transform: scale(1.05) !important;
+	}
+	
+	
+	@media (max-width: 1023px) {
+	  .navbar-menu .navbar-item i {
+	    margin-right: .5em; /* space between icon & text on mobile */
+	  }
+	}
+	
+	
+	.expand {transition: transform .25s ease !important;}
+	.expand:hover {transform: scale(1.15) !important;}
 	
 </style>
 
@@ -145,8 +187,8 @@
 	<header class="navbar">
 		<div class="container">
 			<div class="navbar-brand">
-				<a class="navbar-item" href="#home">
-					<img src="logo.webp" alt="Logo" />
+				<a class="navbar-item logo" href="#home">
+					<img src="logo.webp" alt="Campgaign Logo" />
 				</a>
 				<span class="navbar-burger" data-target="navbarMenuHeroC">
 					<span></span>
@@ -157,8 +199,15 @@
 			</div>
 			<div id="navbarMenuHeroC" class="navbar-menu">
 				<div class="navbar-end">
-					<a class="navbar-item" href="#about"><i class="fa-solid fa-handshake"></i>&nbsp;Meet Chris</a>
-					<a class="navbar-item" href="#media"><i class="fa-solid fa-bullhorn"></i>&nbsp;Media Coverage</a>
+					<a class="navbar-item anchor" href="#about">
+						<i class="fa-solid fa-handshake"></i>Meet Chris
+					</a>
+					<a class="navbar-item anchor" href="#media">
+						<i class="fa-solid fa-bullhorn"></i>Media Coverage
+					</a>
+					<a class="navbar-item donate" href="https://secure.actblue.com/donate/chris-bell-texas" target="blank">
+						<i class="fa-solid fa-hand-holding-dollar"></i>Donate
+					</a>
 				</div>
 			</div>
 		</div>
@@ -170,10 +219,10 @@
 				<h1 class="title">Chris Bell <span class="for">for</span> Texas Governor &nbsp;<i class="fa-solid fa-bell"></i>&nbsp; 2026</h1>
 				<h2 class="subtitle is-size-7-mobile">Enough is enough. Texans deserve better.</h2>
 				<div class="buttons is-right">
-					<a class="button button-style is-rounded" href="https://secure.actblue.com/donate/chris-bell-texas" target="_blank">
-						<i class="fa-solid fa-hand-holding-dollar"></i>&nbsp;Give
+					<a class="button button-style is-rounded expand" href="https://secure.actblue.com/donate/chris-bell-texas" target="_blank">
+						<i class="fa-solid fa-hand-holding-dollar"></i>&nbsp;Donate
 					</a>
-					<a class="button button-style is-rounded" href="https://www.votetexas.gov/index.html" target="_blank">
+					<a class="button button-style is-rounded expand" href="https://www.votetexas.gov/index.html" target="_blank">
 						<i class="fa-solid fa-check-to-slot"></i>&nbsp;Vote
 					</a>
 				</div>
