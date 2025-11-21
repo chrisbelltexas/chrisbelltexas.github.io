@@ -32,6 +32,7 @@
 	<link rel="preload" href="logo.webp" as="image" importance="high">
 	
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -43,12 +44,12 @@
 	<link rel="canonical" href="https://chrisbelltexas.com">
 	
 	<style>
-	
+		
 		html {
 			scroll-behavior: smooth;
 			background-color: black !important;
 		}
-	
+		
 		.hero {
 			background-image: url('https://chrisbelltexas.com/photo_home.webp'), url('https://chrisbelltexas.com/photo_home.png') !important;
 			background-repeat: no-repeat !important;
@@ -56,125 +57,32 @@
 			background-size: cover !important;
 			height: 100vh;
 		}
-
-		.for {
-			font-family: 'Island Moments' !important; 
-			color: rgba(255,255,255,1) !important;
-			text-shadow: .05em .05em 0em rgba(0,0,0,1) !important;
-		}
-
-	
-		.button-style {
-			color: white !important;
-			border-width: 0 !important;
-			background-color: rgba(0,255,0,0.75) !important;
-			transition: background-color .5s !important;
-			font-family: 'Montserrat' !important;
-		}
-
-		.button-style:hover {
-			background-color: rgba(0,255,0,1) !important;
-		}
-	
-		.navbar-burger span {
-		    background-color: rgba(31,31,73,.85) !important; /* Change this to any color you like */
-		}
-	
-		.navbar-menu.is-active {
-		    background-color: rgba(31,31,73,1); /* semi-transparent black */
-		}
-	
-		.link {
-			color: orange !important;
-			transition: color .5s !important;
-		}
-
-		.link:hover {
-			color: white !important;
-		}
-	
-		#about {
-			background-color: rgba(255,255,255,1) !important;
-		}
-	
-		.about {
-			color: black !important;
-			text-shadow: 0em 0em 0em rgba(0,0,0,0) !important;
-		}
-	
-		#media {
-			background-color: rgba(31,31,73,1) !important; /* campaign blue */
-		}
-	
 		
+		/*
 		
-		/* revised css below */
+	    #texas-map {
+			background-color: rgba(0,255,0,0.5) !important;
+		    width: 100% !important;
+		    height: 100vh !important;
+	    }
 		
-		.font-1 {font-family: 'Montserrat' !important;}
-
-		.navbar {
-		    position: fixed !important;
-		    top: 0 !important; /* stick to top */
-			left: 0 !important;
-			width: 100% !important;
-		    z-index: 100 !important; /* make sure it floats above content */
-		    background-color: rgba(255,255,255,0) !important; /* transparent white */
-		}
-	
-		.logo {
-			background-color: white !important;
-			transition: transform 0.25s ease !important;
-		}
-	
-		.logo:hover {
-			transform: scale(1.25) !important;
-		}
-	
-		.anchor {
-			color: white !important; /* campaign blue */
-			transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease !important;
-		}
-	
-		.anchor:hover {
-			color: white !important;
-			background-color: rgba(31,31,73,1) !important; /* campaign blue */
-			transform: scale(1.1) !important;
-		}
-	
-		.donate {
-			color: white !important;
-			background-color: rgba(0,255,0,1) !important;
-			text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.25) !important;
-			transition: transform 0.25s ease !important;
-			font-weight: 800 !important;
-		}
-	
-		.donate:hover {
-			transform: scale(1.1) !important;
-		}
-	
-		@media (max-width: 1023px) {
-		  .navbar-menu .navbar-item i {
-		    margin-right: 0.5em; /* space between icon & text on mobile */
-		  }
+		#counties path {
+			fill:rgba(0,0,0,1) !important;
+			stroke:rgba(255,255,255,1) !important;
+			stroke-width:0.5 !important;
+		    transform-box: fill-box !important;
+		    transform-origin: center !important;
+			transition: fill .25s ease, transform .25s ease !important;
 		}
 		
-		.banner {color: rgba(255,255,255,1) !important;}
-		
-		.b-title {
-			text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.75) !important;
-			margin-bottom: 0.2em !important;
+		#counties path:hover {
+		    fill: #1a73e8 !important;
+		    transform: scale(2) !important;
+		    cursor: pointer !important;
 		}
 		
-		.b-subtitle {
-			text-shadow: 0.05em 0.05em 0em rgba(0,0,0,1) !important;
-			margin-bottom: 0.75em !important;
-		}
-	
-		.expand {transition: transform .25s ease !important;}
+		*/
 		
-		.expand:hover {transform: scale(1.15) !important;}
-	
 	</style>
 	
 </head>
@@ -231,28 +139,28 @@
 		
 	</header>
 	
-	<section class="hero is-fullheight" id="home">
+	<section class="hero is-fullheight font-1" id="home">
 		
 		<div class="hero-body">
 			
 			<div class="container has-text-right">
 				
-				<h1 class="title font-1 banner b-title">
-					Chris Bell <span class="for">for</span> Texas Governor &nbsp;<i class="fa-solid fa-bolt-lightning"></i>&nbsp; 2026
+				<h1 class="title b-color b-title">
+					Chris Bell <span class="b-title-for">for</span> Texas Governor &nbsp;<i class="fa-solid fa-bolt-lightning"></i>&nbsp; 2026
 				</h1>
 				
-				<h2 class="subtitle font-1 banner b-subtitle is-size-7-mobile">
+				<h2 class="subtitle b-color b-subtitle is-size-7-mobile">
 					Enough is enough. Texans deserve better.
 				</h2>
 				
 				<!-- cta -->
 				<div class="buttons is-right">
 					
-					<a class="button button-style is-rounded expand" href="https://secure.actblue.com/donate/chris-bell-texas" target="_blank">
+					<a class="button b-button b-color is-rounded expand" href="https://secure.actblue.com/donate/chris-bell-texas" target="_blank">
 						<i class="fa-solid fa-hand-holding-dollar"></i>&nbsp;Donate
 					</a>
 					
-					<a class="button button-style is-rounded expand" href="https://www.votetexas.gov/index.html" target="_blank">
+					<a class="button b-button b-color is-rounded expand" href="https://www.votetexas.gov/index.html" target="_blank">
 						<i class="fa-solid fa-check-to-slot"></i>&nbsp;Vote
 					</a>
 					
@@ -266,13 +174,13 @@
 		
 	</section>
 	
-	<section class="section font-1" id="about">
+	<section class="section font-1 a-color" id="about">
 		
 		<div class="container">
 			
-			<h2 class="title about">Meet Chris Bell</h2>
+			<h2 class="title">Meet Chris Bell</h2>
 			
-			<p class="subtitle about">
+			<p class="subtitle">
 				Chris Bell stands up for what’s right — no matter the odds. He has served as a:<br><br>
 				<i class="fa-solid fa-democrat"></i> Lifelong Democrat<br><br>
 				<i class="fa-solid fa-glasses"></i> Journalist<br><br>
@@ -284,9 +192,9 @@
 			
 			<br>
 			
-			<h3 class="title about">A True Texan</h3>
+			<h3 class="title">A True Texan</h3>
 			
-			<p class="subtitle about">
+			<p class="subtitle">
 				Chris is from all over Texas.<br><br>
 				Born in Abilene and raised in Dallas — Chris attended The University of Texas at Austin, where he earned a journalism degree and led efforts to reinstate Student Government as president of the Interfraternity Council. After college, he became an award-winning broadcast journalist, covering local government and exposing corruption.
 				<br><br>
@@ -295,9 +203,9 @@
 			
 			<br>
 			
-			<h3 class="title about">City Council to Congress</h3>
+			<h3 class="title">City Council to Congress</h3>
 			
-			<p class="subtitle about">
+			<p class="subtitle">
 				After earning his law degree from South Texas College of Law, the voters of Houston and Harris County elected Chris to the Houston City Council. He championed transparency, ethics, and accountability in city government.
 				<br><br>
 				His record of reform earned him the trust and support of the voters who would elect him to a seat in the U.S. House of Representatives, representing Houston’s 25th Congressional District.
@@ -307,9 +215,9 @@
 			
 			<br>
 			
-			<h3 class="title about">Courage, Integrity, Ethics</h3>
+			<h3 class="title">Courage, Integrity, Ethics</h3>
 			
-			<p class="subtitle about">
+			<p class="subtitle">
 				Then, a moment that showed his unflinching character.
 				<br><br>
 				In 2004, Chris filed a historic ethics complaint against then-House Majority Leader Tom DeLay. With this act, Chris exposed corruption and broke free from a seven-year bipartisan silence on congressional ethics. The House Ethics Committee unanimously admonished DeLay — a landmark victory for honesty in government and a testament to Chris’s courage and integrity.
@@ -327,7 +235,7 @@
 		
 		<div class="container">
 			
-			<h2 class="title font-1">Media Coverage</h2>
+			<h2 class="title font-1 has-text-white">Media Coverage</h2>
 			
 			<div class="timeline has-text-white font-1 is-size-7-mobile">
 				
@@ -740,6 +648,13 @@
   			 }
 			 
   	</script>
+	
+	<script>
+	document.getElementById('texas-outline')
+	  .addEventListener('mouseenter', () => {
+	    console.log('hovered texas');
+	  });
+	</script>
 	
 </body>
 
