@@ -32,7 +32,7 @@
 }
 
 .anchor {
-	color: white !important; /* campaign blue */
+	color: white !important;
 	transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease !important;
 }
 
@@ -54,12 +54,16 @@
 	transform: scale(1.1) !important;
 }
 
+.navbar-burger {
+	background-color: rgba(31,31,73,1) !important; /* campaign blue - hamburger bg */
+}
+
 .navbar-burger span {
-    background-color: rgba(31,31,73,1) !important; /* campaign blue transparent */
+    background-color: rgba(255,255,255,1) !important; /* white - hamburger */
 }
 
 .navbar-menu.is-active {
-    background-color: rgba(31,31,73,1); /* campaign blue */
+    background-color: rgba(31,31,73,1); /* campaign blue - mobile dropdown bg */
 }
 
 @media (max-width: 1023px) {
@@ -110,6 +114,7 @@
 
 #about {
 	background-color: rgba(255,255,255,1) !important;
+	color: rgba(31,31,73,1) !important; /* campaign blue */
 }
 
 /* about end */
