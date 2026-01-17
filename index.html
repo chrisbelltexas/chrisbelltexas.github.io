@@ -15,21 +15,25 @@ Site remains in archived status.
 Ld+Json schema updated to reflect this.
 Meta/OG text from 01-16 moved to front of descriptions, titles.
    (i.e. "Archived site") 
-GA4 analytics added w Account Data Sharing Settings turned off added to see if psa modal is helpful.
+ga4 analytics added w Account Data Sharing Settings turned off, ip anonymized, and location data removed — to see if psa modal is helpful.
 -->
 
 <html>
 
 <head>
 	
-	<!-- Added 2026-01-17: Google tag (gtag.js) -->
+	<!-- Added 2026-01-17: ga4 analytics google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WFECMM0VJQ"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'G-WFECMM0VJQ');
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		// initialize GA4 analytics
+		gtag('js', new Date());
+		// anonymize ip & disable ads features / location reporting
+		gtag('config', 'G-WFECMM0VJQ', {
+		    'anonymize_ip': true,          // chops last part of IP
+		    'allow_ad_personalization_signals': false // stops some profiling
+		});
 	</script>
 	
 	<meta charset="utf-8">
@@ -754,6 +758,7 @@ GA4 analytics added w Account Data Sharing Settings turned off added to see if p
 	</footer>
 	
 	<!-- Added 2026-01-16: <div id="contactForm" class="modal"> ... </div> -->
+	<!-- 2026-01-17: added id="primary_cta" & id="secondary_cta" for analytics -->
 	<div id="contactForm" class="modal is-active">
 		
 		<div class="modal-background"></div>
@@ -891,21 +896,25 @@ GA4 analytics added w Account Data Sharing Settings turned off added to see if p
 	  const timerInterval = setInterval(updateCountdown, 1000);
 	</script>
 	  
-	<!-- Added 2026-01-17: <script>// analytics ... </script> -->
+	<!-- Added 2026-01-17: <script>// ga4 analytics ... </script> -->
     <script>
-		// analytics
+		// ga4 analytics
 		const primary = document.getElementById('primary_cta');
 		const secondary = document.getElementById('secondary_cta');
 		
 		if(primary) {
 			primary.addEventListener('click', () => {
-				gtag('event', 'primary_cta_clicked');
+				gtag('event', 'primary_cta_clicked', {
+					'event_label': 'register to vote'
+				});
 			});
 		}
 		
 		if(secondary) {
 			secondary.addEventListener('click', () => {
-				gtag('event', 'secondary_cta_clicked');
+				gtag('event', 'secondary_cta_clicked', {
+					'event_label': 'visit archived site'
+				});
 			});
 		}
     </script>
