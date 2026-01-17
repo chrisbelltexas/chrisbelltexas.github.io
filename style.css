@@ -1,3 +1,13 @@
+/* Added 2026-01-16: .modal-background{ ... } .modal-content{ ... } .modal.is-active { ...} */
+.modal-background {background-color: rgba(15,42,131,0.95) !important;}
+.modal-content {
+	
+	padding-right: 2em !important;
+	padding-left: 2em !important;
+	
+}
+.modal.is-active {z-index: 9999;}
+
 .font-1 {
 	font-family: 'Montserrat' !important;
 }

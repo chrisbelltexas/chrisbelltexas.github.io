@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 
+<!--
+2026-01-16:
+Site transitioned to archived status.
+No longer maintained
+Not affiliated with any active campaign.
+Meta/OG updated to reflect this.
+Forms disabled.
+Modal added for voter info.
+Controlled by domain owner, not campaign staff.
+-->
+
 <html>
 
 <head>
@@ -7,7 +18,8 @@
 	<meta charset="utf-8">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Official campaign website for former US Rep Chris Bell, Democrat running for Texas Governor in 2026 primary election. Updates on media coverage, campaign events, and policy positions.">
+	<!-- Added 2026-01-16: "... | Archived site. No longer maintained. Not affiliated with any active campaign." -->
+	<meta name="description" content="Official campaign website for former US Rep Chris Bell, Democrat running for Texas Governor in 2026 primary election. Updates on media coverage, campaign events, and policy positions. | Archived site. No longer maintained. Not affiliated with any active campaign.">
 	<meta name="keywords" content="">
 	<meta name="author" content="Abhinav Kumar">
 	<meta name="robots" content="index, follow">
@@ -16,12 +28,15 @@
 	
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://chrisbelltexas.com/photo_home.png" />
-	<meta property="og:title" content="Chris Bell: True Texas Democrat for Governor | 2026 Primary Election Campaign & News" />
+	<!-- Added 2026-01-16: "... | Archived Site." -->
+	<meta property="og:title" content="Chris Bell: True Texas Democrat for Governor | 2026 Primary Election Campaign & News | Archived Site." />
 	<meta property="og:url" content="https://chrisbelltexas.com" />
-	<meta property="og:description" content="Chris Bell is a true Texan. Born in Abilene, raised in Dallas, educated in Austin, and elected to City Council & United States Congress in Houston. He fights corruption. Official campaign website for former US Rep Chris Bell, Democrat running for Texas Governor in 2026 primary election. Updates on media coverage, campaign events, and policy positions." />
+	<!-- Added 2026-01-16: "... | Archived site. No longer maintained. Not affiliated with any active campaign." -->
+	<meta property="og:description" content="Chris Bell is a true Texan. Born in Abilene, raised in Dallas, educated in Austin, and elected to City Council & United States Congress in Houston. He fights corruption. Official campaign website for former US Rep Chris Bell, Democrat running for Texas Governor in 2026 primary election. Updates on media coverage, campaign events, and policy positions. | Archived site. No longer maintained. Not affiliated with any active campaign." />
 	<meta property="og:locale" content="en_US" />
 	
-	<title>Chris Bell: Experienced Texas Democrat for Governor | 2026 Primary Election Campaign & News</title>
+	<!-- Added 2026-01-16: "... | Archived Site." -->
+	<title>Chris Bell: Experienced Texas Democrat for Governor | 2026 Primary Election Campaign & News | Archived Site.</title>
 	
 	<link rel="icon" href="/favicon.ico" sizes="32x32" type="image/x-icon">
 	<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -88,6 +103,8 @@
 
 <body>
 	
+	<!-- Added 2026-01-16: "... onclick="alert('⚠️ Form submissions are disabled. This site is archived.'); return false;" -->
+	<!-- Added 2026-01-16: "... onclick="document.getElementById('contactForm').classList.add('is-active'); return false;" -->
 	<header class="navbar font-1">
 		
 		<div class="container">
@@ -95,7 +112,7 @@
 			<div class="navbar-brand">
 				
 				<!-- logo -->
-				<a class="navbar-item logo" href="#home">
+				<a class="navbar-item logo" href="#home" onclick="document.getElementById('contactForm').classList.add('is-active'); return false;">
 					<img src="logo.webp" alt="Campgaign Logo" />
 				</a>
 				
@@ -130,7 +147,7 @@
 						<i class="fa-solid fa-message"></i>Contact
 					</a>
 					
-					<a class="navbar-item donate" href="https://secure.actblue.com/donate/chris-bell-texas" target="_blank">
+					<a class="navbar-item donate" href="https://secure.actblue.com/donate/chris-bell-texas" target="_blank" onclick="alert('⚠️ Form submissions are disabled. This site is archived.'); return false;">
 						<i class="fa-solid fa-hand-holding-dollar"></i>Donate
 					</a>
 					
@@ -142,6 +159,7 @@
 		
 	</header>
 	
+	<!-- Added 2026-01-16: "... onclick="alert('⚠️ Form submissions are disabled. This site is archived.'); return false;" -->
 	<section id="home" class="hero is-fullheight font-1">
 		
 		<div class="hero-body">
@@ -159,7 +177,7 @@
 				<!-- cta -->
 				<div class="buttons is-right">
 					
-					<a class="button b-button b-color is-rounded expand" href="https://secure.actblue.com/donate/chris-bell-texas" target="_blank">
+					<a class="button b-button b-color is-rounded expand" href="https://secure.actblue.com/donate/chris-bell-texas" target="_blank" onclick="alert('⚠️ Form submissions are disabled. This site is archived.'); return false;">
 						<i class="fa-solid fa-hand-holding-dollar"></i>&nbsp;Donate
 					</a>
 					
@@ -680,10 +698,12 @@
 		
 	</section>
 	
+	<!-- Added 2026-01-16: "... onclick="alert('⚠️ Form submissions are disabled. This site is archived.'); return false;" -->
+	<!-- Added 2026-01-16: <p>⚠️<em>Note: This is an archived site & not affiliated with any active campaign.</em></p> -->
 	<footer id="contact" class="footer font-1">
 	  <div class="content has-text-centered">
 	    <p>
-			<a class="title" href="https://submit.jotform.com/253225811742049" target="_blank">
+			<a class="title" href="#" target="_blank" onclick="alert('⚠️ Form submissions are disabled. This site is archived.'); return false;">
 				<i class="fa-solid fa-envelope expand"></i>
 			</a>
 			<a class="title" href="https://facebook.com/chrisbelltexas" target="_blank">
@@ -704,8 +724,45 @@
 			Houston, Texas<br>
 			77252
 	    </p>
+		
+		<p>
+			⚠️
+			<em>Note: This is an archived site & not affiliated with any active campaign.</em>
+		</p>
 	  </div>
 	</footer>
+	
+	<!-- Added 2026-01-16: <div id="contactForm" class="modal"> ... </div> -->
+	<div id="contactForm" class="modal is-active">
+		
+		<div class="modal-background"></div>
+		
+		<div class="modal-content">
+			
+			<div class="container has-text-centered">
+				
+				<h1 class="title b-color b-title">2026 Texas Primary Election</h1>
+				
+				<br>
+				
+				<h2 id ="countdown" class="subtitle b-color "></h2>
+				
+				<!-- cta -->
+				<div class="buttons is-centered">
+					
+					<a class="button b-button b-color is-rounded expand is-large" href="https://www.votetexas.gov/" target="_blank">
+						⚠️ Register to vote
+					</a>
+					
+				</div>
+				
+				<a onclick="document.getElementById('contactForm').classList.remove('is-active'); return false;" class='is-size-7' style="text-decoration: underline !important; color: gray !important;">Continue to visit archived site</a>
+				
+			</div>
+			
+		</div>
+	
+	</div>
 	
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 	
@@ -754,6 +811,60 @@
 	  .addEventListener('mouseenter', () => {
 	    console.log('hovered texas');
 	  });
+	</script>
+	  
+	<!-- Added 2026-01-16: <script>// webform ... </script>-->
+	<script>
+  		// webform
+  		document.addEventListener('DOMContentLoaded', () => {
+			
+  			function openModal($el) {$el.classList.add('is-active');}
+  			function closeModal($el) {$el.classList.remove('is-active');}
+  			function closeAllModals() {(document.querySelectorAll('.modal') || []).forEach(($modal) => {closeModal($modal);});}
+			
+  			// Add a click event on buttons to open a specific modal
+  			(document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {const modal = $trigger.dataset.target;const $target = document.getElementById(modal);$trigger.addEventListener('click', () => {openModal($target);});});
+
+  			// Add a click event on various child elements to close the parent modal
+  			(document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {const $target = $close.closest('.modal');$close.addEventListener('click', () => {closeModal($target);});});
+			
+  			// Add a keyboard event to close all modals
+  			document.addEventListener('keydown', (event) => {if(event.key === "Escape") {closeAllModals();}});
+		
+  		});
+  	</script>
+	
+	<!-- Added 2026-01-16: <script>// countdown ... </script>-->	
+	<script>
+	  // countdown
+	  // set the target date
+	  const targetDate = new Date("2026-02-02T00:00:00").getTime(); // primary election date
+
+	  const countdownEl = document.getElementById("countdown");
+
+	  function updateCountdown() {
+	    const now = new Date().getTime();
+	    const diff = targetDate - now;
+
+	    if(diff <= 0) {
+	      countdownEl.innerHTML = "Voter registration deadline is today!";
+	      clearInterval(timerInterval);
+	      return;
+	    }
+
+	    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+	    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
+	    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
+	    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+	    countdownEl.innerHTML = `Voter registration cutoff:<br><br>${days} days ${hours}h ${minutes}m ${seconds}s`;
+	  }
+
+	  // first run immediately
+	  updateCountdown();
+
+	  // update every second
+	  const timerInterval = setInterval(updateCountdown, 1000);
 	</script>
 	
 </body>
