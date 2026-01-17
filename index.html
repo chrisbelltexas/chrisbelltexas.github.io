@@ -9,17 +9,35 @@ Meta/OG updated to reflect this.
 Forms disabled.
 Modal added for voter info.
 Controlled by domain owner, not campaign staff.
+
+2026-01-17:
+Site remains in archived status.
+Ld+Json schema updated to reflect this.
+Meta/OG text from 01-16 moved to front of descriptions, titles.
+   (i.e. "Archived site") 
+GA4 analytics added w Account Data Sharing Settings turned off added to see if psa modal is helpful.
 -->
 
 <html>
 
 <head>
 	
+	<!-- Added 2026-01-17: Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WFECMM0VJQ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-WFECMM0VJQ');
+	</script>
+	
 	<meta charset="utf-8">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Added 2026-01-16: "... | Archived site. No longer maintained. Not affiliated with any active campaign." -->
-	<meta name="description" content="Official campaign website for former US Rep Chris Bell, Democrat running for Texas Governor in 2026 primary election. Updates on media coverage, campaign events, and policy positions. | Archived site. No longer maintained. Not affiliated with any active campaign.">
+	<!-- 2026-01-17: Moved "Archived site" text to front of description. -->
+	<meta name="description" content="Archived site | Official campaign website for former US Rep Chris Bell, Democrat running for Texas Governor in 2026 primary election. Updates on media coverage, campaign events, and policy positions. | No longer maintained. Not affiliated with any active campaign.">
 	<meta name="keywords" content="">
 	<meta name="author" content="Abhinav Kumar">
 	<meta name="robots" content="index, follow">
@@ -29,14 +47,17 @@ Controlled by domain owner, not campaign staff.
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://chrisbelltexas.com/photo_home.png" />
 	<!-- Added 2026-01-16: "... | Archived Site." -->
-	<meta property="og:title" content="Chris Bell: True Texas Democrat for Governor | 2026 Primary Election Campaign & News | Archived Site." />
+	<!-- 2026-01-17: Moved "Archived site" text to front of title. -->
+	<meta property="og:title" content="Chris Bell (Archived Site): True Texas Democrat for Governor | 2026 Primary Election Campaign & News" />
 	<meta property="og:url" content="https://chrisbelltexas.com" />
 	<!-- Added 2026-01-16: "... | Archived site. No longer maintained. Not affiliated with any active campaign." -->
-	<meta property="og:description" content="Chris Bell is a true Texan. Born in Abilene, raised in Dallas, educated in Austin, and elected to City Council & United States Congress in Houston. He fights corruption. Official campaign website for former US Rep Chris Bell, Democrat running for Texas Governor in 2026 primary election. Updates on media coverage, campaign events, and policy positions. | Archived site. No longer maintained. Not affiliated with any active campaign." />
+	<!-- 2026-01-17: Moved "Archived site" text to front of description. -->
+	<meta property="og:description" content="Archived site | Chris Bell is a true Texan. Born in Abilene, raised in Dallas, educated in Austin, and elected to City Council & United States Congress in Houston. He fights corruption. Official campaign website for former US Rep Chris Bell, Democrat running for Texas Governor in 2026 primary election. Updates on media coverage, campaign events, and policy positions. | No longer maintained. Not affiliated with any active campaign." />
 	<meta property="og:locale" content="en_US" />
 	
 	<!-- Added 2026-01-16: "... | Archived Site." -->
-	<title>Chris Bell: Experienced Texas Democrat for Governor | 2026 Primary Election Campaign & News | Archived Site.</title>
+	<!-- 2026-01-17: Moved "Archived site" text to front of title. -->
+	<title>Chris Bell (Archived Site): Experienced Texas Democrat for Governor | 2026 Primary Election Campaign & News</title>
 	
 	<link rel="icon" href="/favicon.ico" sizes="32x32" type="image/x-icon">
 	<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -750,13 +771,13 @@ Controlled by domain owner, not campaign staff.
 				<!-- cta -->
 				<div class="buttons is-centered">
 					
-					<a class="button b-button b-color is-rounded expand is-large" href="https://www.votetexas.gov/" target="_blank">
+					<a id="primary_cta" class="button b-button b-color is-rounded expand is-large" href="https://www.votetexas.gov/" target="_blank">
 						⚠️ Register to vote
 					</a>
 					
 				</div>
 				
-				<a onclick="document.getElementById('contactForm').classList.remove('is-active'); return false;" class='is-size-7' style="text-decoration: underline !important; color: gray !important;">Continue to visit archived site</a>
+				<a id="secondary_cta" onclick="document.getElementById('contactForm').classList.remove('is-active'); return false;" class='is-size-7' style="text-decoration: underline !important; color: gray !important;">Continue to visit archived site</a>
 				
 			</div>
 			
@@ -786,12 +807,14 @@ Controlled by domain owner, not campaign staff.
 	<script>
 	  AOS.init();
 	</script>
-	  
+	
+	<!-- 2026-01-17: replaced @type "PoliticalCandidate" w "Person" & added disambiguatingDescription -->  
   	<script type="application/ld+json">
 		
   		{
   			"@context": "https://schema.org",
-  			"@type": "PoliticalCandidate",
+  			"@type": "Person",
+			"disambiguatingDescription": "Archived campaign website; not affiliated with any active campaign."
   			"name": "Chris Bell",
   			"url": "https://chrisbelltexas.com",
   			"jobTitle": "Candidate for Texas Governor",
@@ -813,9 +836,10 @@ Controlled by domain owner, not campaign staff.
 	  });
 	</script>
 	  
-	<!-- Added 2026-01-16: <script>// webform ... </script>-->
+	<!-- Added 2026-01-16: <script>// modal ... </script> -->
+	<!-- 2026-01-17: replaced previous comments "// webform" w "// modal" -->
 	<script>
-  		// webform
+  		// modal
   		document.addEventListener('DOMContentLoaded', () => {
 			
   			function openModal($el) {$el.classList.add('is-active');}
@@ -834,7 +858,7 @@ Controlled by domain owner, not campaign staff.
   		});
   	</script>
 	
-	<!-- Added 2026-01-16: <script>// countdown ... </script>-->	
+	<!-- Added 2026-01-16: <script>// countdown ... </script> -->
 	<script>
 	  // countdown
 	  // set the target date
@@ -866,6 +890,25 @@ Controlled by domain owner, not campaign staff.
 	  // update every second
 	  const timerInterval = setInterval(updateCountdown, 1000);
 	</script>
+	  
+	<!-- Added 2026-01-17: <script>// analytics ... </script> -->
+    <script>
+		// analytics
+		const primary = document.getElementById('primary_cta');
+		const secondary = document.getElementById('secondary_cta');
+		
+		if(primary) {
+			primary.addEventListener('click', () => {
+				gtag('event', 'primary_cta_clicked');
+			});
+		}
+		
+		if(secondary) {
+			secondary.addEventListener('click', () => {
+				gtag('event', 'secondary_cta_clicked');
+			});
+		}
+    </script>
 	
 </body>
 
