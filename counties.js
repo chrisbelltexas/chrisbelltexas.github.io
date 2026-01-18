@@ -28,7 +28,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       const li = document.createElement("li");
       li.textContent = c.county;
       li.style.cursor = "pointer";
-      li.onclick = () => window.location.href = c.url;
+	  li.onclick = () => {
+	    const targetUrl = c.url && c.url.trim() ? c.url : c.fallback;
+	    window.open(targetUrl, "_blank","noopener,noreferrer"); 
+	  };
       results.appendChild(li);
     });
   });
