@@ -129,6 +129,32 @@ Added county search function.
 		
 		*/
 		
+		border-radius: 5em !important;
+		border: 0.1em solid rgba(255,255,255,0.5) !important;
+		color: rgba(255,255,255,1) !important;
+		background-color: rgba(0,0,0,0) !important;
+		font-size: 1.1em !important;
+		font-weight: bold !important;
+		padding: 1rem 1rem;
+	}
+
+	#county-search::placeholder {
+	  color: rgba(255,255,255,0.5) !important;
+	  font-weight: normal !important;
+	}
+
+	#results li {
+		color: white !important;
+		transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease !important;
+	}
+
+	#results li:hover {
+		color: white !important;
+		background-color: rgba(31,31,73,1) !important;
+		transform: scale(1.05) !important;
+		cursor: pointer !important;
+	}
+		
 	</style>
 	
 </head>
@@ -794,7 +820,7 @@ Added county search function.
 						class="has-text-centered anchor"
 						/>
 					
-						<ul id="results" class="anchor"></ul>
+						<ul id="results"></ul>
 					
 					</div>
 				</div>
