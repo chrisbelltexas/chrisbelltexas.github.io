@@ -774,24 +774,24 @@ Added county search function.
 		
 		<div class="modal-content b-color has-text-centered is-vcentered">
 			<h1 class="title">2026 Texas Primary Election</h1>
-			<div class="buttons is-centered">
-				<a id="primary_cta" class="button b-button b-color is-rounded expand is-large" href="https://www.votetexas.gov/register-to-vote/index.html" target="_blank">⚠️ Register to vote</a>
-			</div>
 			<div class="columns">
 				<div class="column">
-					<h2 class="subtitle"><strong>Voter registration deadline</strong></h2>
-					<p id ="countdown" class="subtitle" style="color: orange !important;"></p>
+					<h2 class="subtitle"><strong>Register to vote:</strong></h2>
+					
+					<div class="buttons is-centered">
+						<a id="primary_cta" class="button b-button is-rounded expand is-large" href="https://www.votetexas.gov/register-to-vote/index.html" target="_blank"><p id ="countdown"></p></a>
+					</div>
 				</div>
 				<div class="column">
-					<h2 class="subtitle"><strong>County search</strong></h2>
+					<h2 class="subtitle"><strong>Or search by county:</strong></h2>
 					<div class="container">
 					
 						<input
 						id="county-search"
 						type="text"
-						placeholder="My county name"
+						placeholder="🔍 My county name"
 						autocomplete="off"
-						class="has-text-centered"
+						class="has-text-centered anchor"
 						/>
 					
 						<ul id="results" class="anchor"></ul>
@@ -885,35 +885,41 @@ Added county search function.
 	<!-- Added 2026-01-16: <script>// countdown ... </script> -->
 	<!-- 2026-01-18: removed "// primary election date" comment from const targetDate -->
 	<script>
-	  // countdown
-	  // set the target date
-	  const targetDate = new Date("2026-02-02T00:00:00").getTime();
-
-	  const countdownEl = document.getElementById("countdown");
-
-	  function updateCountdown() {
-	    const now = new Date().getTime();
-	    const diff = targetDate - now;
-
-	    if(diff <= 0) {
-	      countdownEl.innerHTML = "Voter registration deadline is today!";
-	      clearInterval(timerInterval);
-	      return;
-	    }
-
-	    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-	    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
-	    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
-	    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-	    countdownEl.innerHTML = `${days} days ${hours}h ${minutes}m ${seconds}s`;
-	  }
-
-	  // first run immediately
-	  updateCountdown();
-
-	  // update every second
-	  const timerInterval = setInterval(updateCountdown, 1000);
+		// countdown
+		// set the target date
+		const targetDate = new Date("2026-02-02T00:00:00").getTime();
+		
+		const countdownEl = document.getElementById("countdown");
+		
+		function updateCountdown() {
+			
+			const now = new Date().getTime();
+			
+			const diff = targetDate - now;
+			
+			if(diff <= 0) {
+				countdownEl.innerHTML = "Voter registration deadline is today!";
+				clearInterval(timerInterval);
+				return;
+			}
+			
+			const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+			
+			const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
+			
+			const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
+			
+			const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+			
+			countdownEl.innerHTML = `⏳ ${days} days ${hours}h ${minutes}m ${seconds}s`;
+		
+		}
+		
+		// first run immediately
+		updateCountdown();
+		
+		// update every second
+		const timerInterval = setInterval(updateCountdown, 1000);
 	</script>
 	  
 	<!-- Added 2026-01-17: <script>// ga4 analytics ... </script> -->
@@ -939,7 +945,7 @@ Added county search function.
 		}
     </script>
 	
-	<!-- 2026-01-18: added county search function --> 	
+	<!-- 2026-01-18: added custom county search function --> 	
 	<script src="counties.js" defer></script>
 	
 </body>

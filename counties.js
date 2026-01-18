@@ -1,4 +1,4 @@
-// 2026-01-18: added county search function
+// 2026-01-18: added custom county search function
 document.addEventListener("DOMContentLoaded", async () => {
   const input = document.getElementById("county-search");
   const results = document.getElementById("results");
