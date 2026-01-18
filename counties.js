@@ -20,15 +20,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (!query) return;
 
-    counties
+    const matches = counties
       .filter(c => c.county.toLowerCase().includes(query))
-      .forEach(c => {
-        const li = document.createElement("li");
-        li.textContent = c.county;
-        li.style.cursor = "pointer";
-        li.onclick = () => window.location.href = c.url;
-        results.appendChild(li);
-      });
+      .slice(0, 5); // <-- cap to first 5 matches
+
+    matches.forEach(c => {
+      const li = document.createElement("li");
+      li.textContent = c.county;
+      li.style.cursor = "pointer";
+      li.onclick = () => window.location.href = c.url;
+      results.appendChild(li);
+    });
   });
 });
-
