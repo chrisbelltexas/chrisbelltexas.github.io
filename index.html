@@ -16,6 +16,13 @@ Ld+Json schema updated to reflect this.
 Meta/OG text from 01-16 moved to front of descriptions, titles.
    (i.e. "Archived site") 
 ga4 analytics added w Account Data Sharing Settings turned off, ip anonymized, and location data removed — to see if psa modal is helpful.
+
+2026-01-18:
+Site remains in archived status.
+Ld+Json schema corrected.
+Modal primary cta link updated and inner scroll removed.
+Removed unused comment and commented out unused js.
+Added custom county search function.
 -->
 
 <html>
@@ -725,6 +732,7 @@ ga4 analytics added w Account Data Sharing Settings turned off, ip anonymized, a
 	
 	<!-- Added 2026-01-16: "... onclick="alert('⚠️ Form submissions are disabled. This site is archived.'); return false;" -->
 	<!-- Added 2026-01-16: <p>⚠️<em>Note: This is an archived site & not affiliated with any active campaign.</em></p> -->
+	<!-- 2026-01-18: added "... Info retained for historical accuracy." -->
 	<footer id="contact" class="footer font-1">
 	  <div class="content has-text-centered">
 	    <p>
@@ -752,40 +760,46 @@ ga4 analytics added w Account Data Sharing Settings turned off, ip anonymized, a
 		
 		<p>
 			⚠️
-			<em>Note: This is an archived site & not affiliated with any active campaign.</em>
+			<em>Note: This is an archived site & not affiliated with any active campaign. Info retained for historical accuracy.</em>
 		</p>
 	  </div>
 	</footer>
 	
 	<!-- Added 2026-01-16: <div id="contactForm" class="modal"> ... </div> -->
 	<!-- 2026-01-17: added id="primary_cta" & id="secondary_cta" for analytics -->
+	<!-- 2026-01-18: replaced votexas.com w register-to-vote url -->
 	<div id="contactForm" class="modal is-active">
 		
 		<div class="modal-background"></div>
 		
-		<div class="modal-content">
-			
-			<div class="container has-text-centered">
-				
-				<h1 class="title b-color b-title">2026 Texas Primary Election</h1>
-				
-				<br>
-				
-				<h2 id ="countdown" class="subtitle b-color "></h2>
-				
-				<!-- cta -->
-				<div class="buttons is-centered">
+		<div class="modal-content b-color has-text-centered is-vcentered">
+			<h1 class="title">2026 Texas Primary Election</h1>
+			<div class="columns">
+				<div class="column">
+					<h2 class="subtitle"><strong>Voter registration deadline:</strong></h2>
 					
-					<a id="primary_cta" class="button b-button b-color is-rounded expand is-large" href="https://www.votetexas.gov/" target="_blank">
-						⚠️ Register to vote
-					</a>
-					
+					<div class="buttons is-centered">
+						<a id="primary_cta" class="button b-button is-rounded expand is-large" href="https://www.votetexas.gov/register-to-vote/index.html" target="_blank"><p id ="countdown"></p></a>
+					</div>
 				</div>
-				
-				<a id="secondary_cta" onclick="document.getElementById('contactForm').classList.remove('is-active'); return false;" class='is-size-7' style="text-decoration: underline !important; color: gray !important;">Continue to visit archived site</a>
-				
+				<div class="column">
+					<h2 class="subtitle">County search:</h2>
+					<div class="container">
+					
+						<input
+						id="county-search"
+						type="text"
+						placeholder="🔍 My county name"
+						autocomplete="off"
+						class="has-text-centered anchor"
+						/>
+					
+						<ul id="results"></ul>
+					
+					</div>
+				</div>
 			</div>
-			
+			<a id="secondary_cta" onclick="document.getElementById('contactForm').classList.remove('is-active'); return false;" class='is-size-7' style="text-decoration: underline !important; color: gray !important;">Continue to visit archived site</a>
 		</div>
 	
 	</div>
@@ -813,13 +827,14 @@ ga4 analytics added w Account Data Sharing Settings turned off, ip anonymized, a
 	  AOS.init();
 	</script>
 	
-	<!-- 2026-01-17: replaced @type "PoliticalCandidate" w "Person" & added disambiguatingDescription -->  
+	<!-- 2026-01-17: replaced @type "PoliticalCandidate" w "Person" & added disambiguatingDescription -->
+	<!-- 2026-01-18: added missing comma to end of disambiguatingDescription -->  
   	<script type="application/ld+json">
 		
   		{
   			"@context": "https://schema.org",
   			"@type": "Person",
-			"disambiguatingDescription": "Archived campaign website; not affiliated with any active campaign."
+			"disambiguatingDescription": "Archived campaign website; not affiliated with any active campaign.",
   			"name": "Chris Bell",
   			"url": "https://chrisbelltexas.com",
   			"jobTitle": "Candidate for Texas Governor",
@@ -834,12 +849,16 @@ ga4 analytics added w Account Data Sharing Settings turned off, ip anonymized, a
 			 
   	</script>
 	
+	<!-- 2026-01-18: commented out this unused javascript: 
+	
 	<script>
 	document.getElementById('texas-outline')
 	  .addEventListener('mouseenter', () => {
 	    console.log('hovered texas');
 	  });
 	</script>
+	
+	-->
 	  
 	<!-- Added 2026-01-16: <script>// modal ... </script> -->
 	<!-- 2026-01-17: replaced previous comments "// webform" w "// modal" -->
@@ -864,36 +883,43 @@ ga4 analytics added w Account Data Sharing Settings turned off, ip anonymized, a
   	</script>
 	
 	<!-- Added 2026-01-16: <script>// countdown ... </script> -->
+	<!-- 2026-01-18: removed "// primary election date" comment from const targetDate -->
 	<script>
-	  // countdown
-	  // set the target date
-	  const targetDate = new Date("2026-02-02T00:00:00").getTime(); // primary election date
-
-	  const countdownEl = document.getElementById("countdown");
-
-	  function updateCountdown() {
-	    const now = new Date().getTime();
-	    const diff = targetDate - now;
-
-	    if(diff <= 0) {
-	      countdownEl.innerHTML = "Voter registration deadline is today!";
-	      clearInterval(timerInterval);
-	      return;
-	    }
-
-	    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-	    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
-	    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
-	    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-	    countdownEl.innerHTML = `Voter registration cutoff:<br><br>${days} days ${hours}h ${minutes}m ${seconds}s`;
-	  }
-
-	  // first run immediately
-	  updateCountdown();
-
-	  // update every second
-	  const timerInterval = setInterval(updateCountdown, 1000);
+		// countdown
+		// set the target date
+		const targetDate = new Date("2026-02-02T00:00:00").getTime();
+		
+		const countdownEl = document.getElementById("countdown");
+		
+		function updateCountdown() {
+			
+			const now = new Date().getTime();
+			
+			const diff = targetDate - now;
+			
+			if(diff <= 0) {
+				countdownEl.innerHTML = "Voter registration deadline is today!";
+				clearInterval(timerInterval);
+				return;
+			}
+			
+			const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+			
+			const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
+			
+			const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
+			
+			const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+			
+			countdownEl.innerHTML = `⏳ ${days} days ${hours}h ${minutes}m ${seconds}s`;
+		
+		}
+		
+		// first run immediately
+		updateCountdown();
+		
+		// update every second
+		const timerInterval = setInterval(updateCountdown, 1000);
 	</script>
 	  
 	<!-- Added 2026-01-17: <script>// ga4 analytics ... </script> -->
@@ -918,6 +944,9 @@ ga4 analytics added w Account Data Sharing Settings turned off, ip anonymized, a
 			});
 		}
     </script>
+	
+	<!-- 2026-01-18: added custom county search function --> 	
+	<script src="counties.js" defer></script>
 	
 </body>
 

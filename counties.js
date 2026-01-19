@@ -1,5 +1,6 @@
 // 2026-01-18: added custom county search function
 document.addEventListener("DOMContentLoaded", async () => {
+  const GLOBAL_FALLBACK = "https://www.sos.state.tx.us/elections/voter-registration.shtml";
   const input = document.getElementById("county-search");
   const results = document.getElementById("results");
 
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       li.textContent = c.county;
       li.style.cursor = "pointer";
 	  li.onclick = () => {
-	    const targetUrl = c.url && c.url.trim() ? c.url : c.fallback;
+	    const targetUrl = c.url && c.url.trim() ? c.url : GLOBAL_FALLBACK;
 	    window.open(targetUrl, "_blank","noopener,noreferrer"); 
 	  };
       results.appendChild(li);
