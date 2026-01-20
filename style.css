@@ -25,7 +25,7 @@
 
 /* Added 2026-01-16: .modal-background{ ... } .modal-content{ ... } .modal.is-active { ...} */
 /* 2026-01-18: added height & overflow-y styling to stop modal-content scroll */
-.modal-background {background-color: rgba(15,42,131,0.95) !important;}
+.modal-background {background-color: rgba(15,42,131,0.85) !important;}
 .modal-content {
 	
 	padding-right: 2em !important;
