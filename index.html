@@ -23,6 +23,10 @@ Ld+Json schema corrected.
 Modal primary cta link updated and inner scroll removed.
 Removed unused comment and commented out unused js.
 Added custom county search function.
+
+2026-01-19:
+Site remains in archived status.
+Improved modal styling.
 -->
 
 <html>
@@ -773,33 +777,91 @@ Added custom county search function.
 		<div class="modal-background"></div>
 		
 		<div class="modal-content b-color has-text-centered is-vcentered">
-			<h1 class="title">2026 Texas Primary Election</h1>
-			<div class="columns">
-				<div class="column">
-					<h2 class="subtitle"><strong>Voter registration deadline:</strong></h2>
-					
+			<hr style="background-color: rgba(255,255,255,0.5) !important;">
+			<h1 class="title">2026 TX Primary Elections</h1>
+			<hr style="background-color: rgba(255,255,255,0.5) !important;">
+			<div class="columns is-multiline">
+				
+				<div class="column is-full">
+					<br>
 					<div class="buttons is-centered">
-						<a id="primary_cta" class="button b-button is-rounded expand is-large" href="https://www.votetexas.gov/register-to-vote/index.html" target="_blank"><p id ="countdown"></p></a>
+						<a id="primary_cta" class="button b-button is-rounded expand is-large" href="https://www.votetexas.gov/register-to-vote/index.html" target="_blank">Register me to vote</a>
 					</div>
 				</div>
-				<div class="column">
-					<h2 class="subtitle">County search:</h2>
+				
+				<div class="column is-full">
 					<div class="container">
 					
 						<input
 						id="county-search"
 						type="text"
-						placeholder="🔍 My county name"
+						placeholder="Or find my county"
 						autocomplete="off"
 						class="has-text-centered anchor"
 						/>
 					
+						<br>
 						<ul id="results"></ul>
 					
 					</div>
 				</div>
+				
+				<div class="column is-full">
+					<h2 class="subtitle"><strong>Voter registration deadline</strong></h2>
+					<h2>⌛️ <span id ="countdown" class="subtitle"></span></h2>
+				</div>
+				
+				<div class="column is-full">
+					<br>
+					<p>
+						<a
+						id="secondary_cta"
+						onclick="document.getElementById('contactForm').classList.remove('is-active'); return false;"
+						class="is-size-7"
+						style="text-decoration: underline !important; color: gray !important;">
+							Visit archived site
+						</a>
+					</p>
+					<p>
+						<a
+						class="is-size-7"
+						style="text-decoration: underline !important; color: gray !important;"
+						href="https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login"
+						target="_blank">
+							Am I Registered?
+						</a>
+					</p>
+					<p>
+						<a
+						class="is-size-7"
+						style="text-decoration: underline !important; color: gray !important;"
+						href="https://www.votetexas.gov/register-to-vote/update-voter-registration.html"
+						target="_blank">
+							Register to Vote
+						</a>
+					</p>
+					<p>
+						<a
+						class="is-size-7"
+						style="text-decoration: underline !important; color: gray !important;"
+						href="https://www.sos.state.tx.us/elections/index.shtml"
+						target="_blank">
+							Texas Elections
+						</a>
+					</p>
+					<p>
+						<a
+						class="is-size-7"
+						style="text-decoration: underline !important; color: gray !important;"
+						href="https://www.votetexas.gov/"
+						target="_blank">
+							Vote Texas
+						</a>
+					</p>
+				</div>
+				
 			</div>
-			<a id="secondary_cta" onclick="document.getElementById('contactForm').classList.remove('is-active'); return false;" class='is-size-7' style="text-decoration: underline !important; color: gray !important;">Continue to visit archived site</a>
+			
 		</div>
 	
 	</div>
@@ -911,7 +973,7 @@ Added custom county search function.
 			
 			const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 			
-			countdownEl.innerHTML = `⏳ ${days} days ${hours}h ${minutes}m ${seconds}s`;
+			countdownEl.innerHTML = `${days} days ${hours}h ${minutes}m ${seconds}s`;
 		
 		}
 		
