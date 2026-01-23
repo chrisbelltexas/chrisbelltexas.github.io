@@ -1,4 +1,31 @@
-/* 2026-01-18: added county-search styling*/
+/* */
+#modal-fireworks {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 41 !important; /* between bg (40) and content (50) */
+    pointer-events: none !important;
+}
+
+#modal-fireworks canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none !important; /* double tap */
+}
+
+.modal-content {
+    position: relative;
+    z-index: 50 !important; /* ensure it's on top */
+    padding-right: 2em !important;
+    padding-left: 2em !important;
+    height: 100dvh;
+    overflow-y: auto;
+}
+
+/* 2026-01-18: added county-search styling */
 #county-search {
 	border-radius: 5em !important;
 	border: 0.1em solid rgba(255,255,255,0.5) !important;
@@ -25,15 +52,15 @@
 
 /* Added 2026-01-16: .modal-background{ ... } .modal-content{ ... } .modal.is-active { ...} */
 /* 2026-01-18: added height & overflow-y styling to stop modal-content scroll */
-.modal-background {background-color: rgba(15,42,131,0.9) !important;}
-.modal-content {
+.modal-background {background-color: rgba(15,42,131,0.85) !important;}
+/*.modal-content {
 	
 	padding-right: 2em !important;
 	padding-left: 2em !important;
   	height: 100dvh;
   	overflow-y: auto;
 	
-}
+}*/
 .modal.is-active {z-index: 9999;}
 
 .font-1 {
