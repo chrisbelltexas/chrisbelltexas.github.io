@@ -737,6 +737,7 @@ Improved modal styling.
 	<!-- Added 2026-01-16: "... onclick="alert('⚠️ Form submissions are disabled. This site is archived.'); return false;" -->
 	<!-- Added 2026-01-16: <p>⚠️<em>Note: This is an archived site & not affiliated with any active campaign.</em></p> -->
 	<!-- 2026-01-18: added "... Info retained for historical accuracy." -->
+	<!-- 2026-01-23: replaced "former volunteer" with "site owner" -->
 	<footer id="contact" class="footer font-1">
 	  <div class="content has-text-centered">
 	    <p>
@@ -764,7 +765,7 @@ Improved modal styling.
 		
 		<p>
 			⚠️
-			<em>Note: This is an archived site & not affiliated with any active campaign. Info retained for historical accuracy. Candidate may still be active.</em>
+			<em>Note: This is an archived site & not affiliated with any active campaign. Info retained for historical accuracy by site owner. Candidate may still be active.</em>
 		</p>
 	  </div>
 	</footer>
@@ -772,6 +773,7 @@ Improved modal styling.
 	<!-- Added 2026-01-16: <div id="contactForm" class="modal"> ... </div> -->
 	<!-- 2026-01-17: added id="primary_cta" & id="secondary_cta" for analytics -->
 	<!-- 2026-01-18: replaced votexas.com w register-to-vote url -->
+	<!-- 2026-01-23: replaced "former volunteer" with "site owner" -->
 	<div id="contactForm" class="modal is-active">
 		
 		<div class="modal-background"></div>
@@ -810,16 +812,6 @@ Improved modal styling.
 				</div>
 				
 				<div class="column is-full">
-					<p>
-						<a
-						id="secondary_cta"
-						onclick="document.getElementById('contactForm').classList.remove('is-active'); return false;"
-						class="is-size-7"
-						style="text-decoration: underline !important; color: gray !important;">
-							<strong>📦 Continue to archived campaign site</strong>
-						</a>
-					</p>
-					<br>
 					<p class="is-size-7" style="color: gray !important;">
 						<strong>Other resources:</strong>
 					</p>
@@ -861,7 +853,16 @@ Improved modal styling.
 					</p>
 					<br>
 					<p class="is-size-7" style="color: gray !important;">
-						⚠️ Note: Campaign site archived.<br>Candidate may still be active.
+						⚠️ Note:
+						<a
+						id="secondary_cta"
+						onclick="document.getElementById('contactForm').classList.remove('is-active'); return false;"
+						class="is-size-7"
+						style="text-decoration: underline !important; color: gray !important;">
+							<strong>Campaign site is archived.</strong>
+						</a>
+						by site owner.
+						<br>Candidate may still be active.
 					</p>
 				</div>
 				
