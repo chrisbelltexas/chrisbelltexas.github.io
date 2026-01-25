@@ -1,4 +1,20 @@
-/* */
+/* 2026-01-24: added about-modal */
+
+#about-modal {
+    z-index: 10000 !important; /* higher than psa's 9999 */
+}
+
+#about-modal .modal-content {
+    position: relative;
+    z-index: 10001 !important;
+    padding: 2em;
+}
+
+#about-modal .modal-background {
+    background-color: rgba(0,0,0,0.95) !important; /* almost black */
+}
+
+/* 2026-01-23: added fireworks */
 #modal-fireworks {
     position: fixed !important;
     top: 0 !important;
