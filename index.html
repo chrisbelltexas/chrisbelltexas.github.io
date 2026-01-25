@@ -32,6 +32,11 @@ Improved modal styling.
 Site remains in archived status.
 Revised footer disclaimer.
 Added fireworks.
+
+2026-01-24:
+Site remains in archived status.
+Renamed modal to 'psa' and added 'about-modal'.
+Revised firworks.
 -->
 
 <html>
@@ -146,6 +151,7 @@ Added fireworks.
 	
 	<!-- Added 2026-01-16: "... onclick="alert('⚠️ Form submissions are disabled. This site is archived.'); return false;" -->
 	<!-- Added 2026-01-16: "... onclick="document.getElementById('contactForm').classList.add('is-active'); return false;" -->
+	<!-- 2026-01-24: Replaced "https://secure.actblue.com/donate/chris-bell-texas" donate link with "#", and renamed "contactForm" as "psa"-->
 	<header class="navbar font-1">
 		
 		<div class="container">
@@ -153,7 +159,7 @@ Added fireworks.
 			<div class="navbar-brand">
 				
 				<!-- logo -->
-				<a class="navbar-item logo" href="#home" onclick="document.getElementById('contactForm').classList.add('is-active'); return false;">
+				<a class="navbar-item logo" href="#home" onclick="document.getElementById('psa').classList.add('is-active'); return false;">
 					<img src="logo.webp" alt="Campgaign Logo" />
 				</a>
 				
@@ -188,7 +194,7 @@ Added fireworks.
 						<i class="fa-solid fa-message"></i>Contact
 					</a>
 					
-					<a class="navbar-item donate" href="https://secure.actblue.com/donate/chris-bell-texas" target="_blank" onclick="alert('⚠️ Form submissions are disabled. This site is archived.'); return false;">
+					<a class="navbar-item donate" href="#" target="_blank" onclick="alert('⚠️ Form submissions are disabled. This site is archived.'); return false;">
 						<i class="fa-solid fa-hand-holding-dollar"></i>Donate
 					</a>
 					
@@ -779,7 +785,8 @@ Added fireworks.
 	<!-- 2026-01-17: added id="primary_cta" & id="secondary_cta" for analytics -->
 	<!-- 2026-01-18: replaced votexas.com w register-to-vote url -->
 	<!-- 2026-01-23: replaced "former volunteer" with "site owner" -->
-	<div id="contactForm" class="modal is-active">
+	<!-- 2026-01-24: renamed "contactForm" to "psa" -->
+	<div id="psa" class="modal is-active">
 		
 		<div class="modal-background"></div>
 		
@@ -860,16 +867,13 @@ Added fireworks.
 						</a>
 					</p>
 					<br>
-					<p class="is-size-7" style="color: gray !important;">
-						📦 Note:
-						<a
-						id="secondary_cta"
-						onclick="document.getElementById('contactForm').classList.remove('is-active'); return false;"
-						class="is-size-7"
-						style="text-decoration: underline !important; color: gray !important;">
-							<strong>Campaign site is archived by site owner.</strong>
-						</a>
-						<br>Candidate may still be active.
+					<p class="is-size-7" style=>
+						<a    
+					    id="about_trigger"
+					    onclick="document.getElementById('about-modal').classList.add('is-active'); return false;"
+					    style="text-decoration: underline !important; color: orange !important;">
+					        <i class="fa-solid fa-circle-question"></i> About this site
+					    </a>
 					</p>
 				</div>
 				
@@ -879,49 +883,83 @@ Added fireworks.
 	
 	</div>
 	
-	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+	<div id="about-modal" class="modal">
+		
+		<div class="modal-background" onclick="document.getElementById('about-modal').classList.remove('is-active');"></div>
+		
+		<div class="modal-content b-color has-text-centered is-vcentered">
+			
+			<div class="is-size-7" style="text-align: left; margin-bottom: 1em;">
+				<a
+				onclick="document.getElementById('about-modal').classList.remove('is-active'); return false;"
+				style="cursor: pointer; color: gray !important; text-decoration: underline !important;">
+					<i class="fa-solid fa-circle-chevron-left"></i> Back to PSA
+				</a>
+			</div>
+			
+			<h2 class="title">About</h2>
+    
+	        <p>
+				This site was created by a volunteer for a statewide campaign in the 2026 Texas primary election.
+				It is now maintained independently to support Texas voters.
+				It is not affiliated with any active campaign.
+	        </p>
+    
+	        <div style="margin-top: 2em;">
+				
+				<p>
+					<a
+					class="is-size-7"
+					style="text-decoration: underline !important; color: gray !important;"
+					onclick="document.getElementById('psa').classList.remove('is-active'); document.getElementById('about-modal').classList.remove('is-active'); return false;">
+						<i class="fa-solid fa-box-archive"></i> Visit archived campaign site
+					</a>
+				</p>
+				
+	        </div>
+			
+	    </div>
+		
+	</div>
 	
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 	<script>
-	$(document).ready(function() {
-
-	  // Check for click events on the navbar burger icon
-	  $(".navbar-burger").click(function() {
-
-	      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-	      $(".navbar-burger").toggleClass("is-active");
-	      $(".navbar-menu").toggleClass("is-active");
-
-	  });
-
-	});
+		$(document).ready(function() {
+			
+			// Check for click events on the navbar burger icon
+			$(".navbar-burger").click(function() {
+				
+				// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+				$(".navbar-burger").toggleClass("is-active");
+				$(".navbar-menu").toggleClass("is-active");
+				
+			});
+		});
 	</script>
 	
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	
 	<script>
-	  AOS.init();
+		AOS.init();
 	</script>
 	
 	<!-- 2026-01-17: replaced @type "PoliticalCandidate" w "Person" & added disambiguatingDescription -->
 	<!-- 2026-01-18: added missing comma to end of disambiguatingDescription -->  
   	<script type="application/ld+json">
-		
-  		{
-  			"@context": "https://schema.org",
-  			"@type": "Person",
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
 			"disambiguatingDescription": "Archived campaign website; not affiliated with any active campaign.",
-  			"name": "Chris Bell",
-  			"url": "https://chrisbelltexas.com",
-  			"jobTitle": "Candidate for Texas Governor",
-  			"affiliation": "Democratic Party",
-  			"image": "https://chrisbelltexas.com/photo_home.png",
-  			"logo": "https://chrisbelltexas.com/favicon-32.png",
-  			"sameAs":[
-  			     "https://facebook.com/chrisbelltexas",
-				 "https://www.tiktok.com/@chrisbelltexasgovernor"
-  				 ]
-  			 }
-			 
+			"name": "Chris Bell",
+			"url": "https://chrisbelltexas.com",
+			"jobTitle": "Candidate for Texas Governor",
+			"affiliation": "Democratic Party",
+			"image": "https://chrisbelltexas.com/photo_home.png",
+			"logo": "https://chrisbelltexas.com/favicon-32.png",
+			"sameAs":[
+				"https://facebook.com/chrisbelltexas",
+				"https://www.tiktok.com/@chrisbelltexasgovernor"
+			]
+		}	 
   	</script>
 	
 	<!-- 2026-01-18: commented out this unused javascript: 
@@ -1024,6 +1062,9 @@ Added fireworks.
 	<script src="counties.js" defer></script>
 	
 	<!-- 2026-01-23: added fireworks -->
+	<!-- 2026-01-24: renamed "contactForm" to "psa" -->
+	<!-- 2026-01-24: changed launchInterval from 800 to 2500 for fewer fireworks -->
+	<!-- 2026-01-24: updated constructor(), start(), and stop() for pause/restart animation when leaving/returning to tab-->
 	<script>
 	class SimpleFireworks {
 	    constructor(container) {
@@ -1037,6 +1078,15 @@ Added fireworks.
         
 	        this.resize();
 	        window.addEventListener('resize', () => this.resize());
+			
+			this.shouldBeRunning = false; // new flag
+			document.addEventListener('visibilitychange', () => {
+			    if (document.hidden) {
+			        if (this.running) this.stop(false); // don't clear intent
+			    } else if (this.shouldBeRunning && !this.running) {
+			        this.start();
+			    }
+			});
 	    }
     
 	    resize() {
@@ -1044,17 +1094,22 @@ Added fireworks.
 	        this.canvas.height = this.container.offsetHeight;
 	    }
     
-	    start() {
-	        if (this.running) return;
-	        this.running = true;
-	        this.animate();
-	        this.launchInterval = setInterval(() => this.launch(), 800);
-	    }
+		start() {
+		    if (this.running) return;
+		    this.running = true;
+		    this.shouldBeRunning = true; // track intent
+		    this.animate();
+		    this.launchInterval = setInterval(() => this.launch(), 2500);
+		}
     
-	    stop() {
-	        this.running = false;
-	        clearInterval(this.launchInterval);
-	    }
+		stop(clearIntent = true) {
+		    this.running = false;
+		    if (clearIntent) this.shouldBeRunning = false;
+		    clearInterval(this.launchInterval);
+		    this.particles = [];
+		    this.rockets = [];
+		    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+		}
     
 	    launch() {
 	        const x = Math.random() * this.canvas.width;
@@ -1149,14 +1204,19 @@ Added fireworks.
 	    }
     
 	    const fireworks = new SimpleFireworks(container);
-	    fireworks.start();
+	    // DON'T auto-start here
     
-	    const modal = document.getElementById('contactForm');
+	    const modal = document.getElementById('psa');
 	    const observer = new MutationObserver(() => {
 	        modal.classList.contains('is-active') ? fireworks.start() : fireworks.stop();
 	    });
     
 	    observer.observe(modal, { attributes: true, attributeFilter: ['class'] });
+    
+	    // check initial state
+	    if (modal.classList.contains('is-active')) {
+	        fireworks.start();
+	    }
 	});
 	</script>
 	
