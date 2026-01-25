@@ -793,15 +793,10 @@ Revised firworks.
 		<div id="modal-fireworks"></div>
 		
 		<div class="modal-content b-color has-text-centered is-vcentered">
-			<hr style="background-color: rgba(255,255,255,0.5) !important;">
+			<hr style="background-color: rgba(255,255,255,0.25) !important;">
 			<h1 class="title">2026 TX Primary Elections</h1>
-			<hr style="background-color: rgba(255,255,255,0.5) !important;">
-			<div class="columns is-multiline">
-				
-				<div class="column is-full">
-					<h2 class="subtitle"><strong>Voter registration deadline:</strong></h2>
-					<h2>⌛️ <span id ="countdown" class="subtitle" style="color: orange !important;"></span></h2>
-				</div>
+			<hr style="background-color: rgba(255,255,255,0.25) !important;">
+			<div class="columns is-multiline">				
 				
 				<div class="column is-full">
 					<div class="buttons is-centered">
@@ -827,8 +822,21 @@ Revised firworks.
 				</div>
 				
 				<div class="column is-full">
-					<p class="is-size-7" style="color: gray !important;">
-						<strong>Other resources:</strong>
+					<h2 class="is-size-7">Voter registration deadline</h2>
+					<h2 id ="countdown" class="subtitle" style="color: orange !important;"></h2>
+				</div>
+				
+				<div class="column is-full">
+					<p class="is-size-7" style="color: white !important;">
+						Other resources
+					</p>
+					<p class="is-size-7">
+						<a 
+						id="about_trigger" 
+						onclick="document.getElementById('about-modal').classList.add('is-active'); return false;" 
+						style="text-decoration: underline !important; color: orange !important;">
+							About this site
+						</a>
 					</p>
 					<p>
 						<a
@@ -867,14 +875,6 @@ Revised firworks.
 						</a>
 					</p>
 					<br>
-					<p class="is-size-7" style=>
-						<a    
-					    id="about_trigger"
-					    onclick="document.getElementById('about-modal').classList.add('is-active'); return false;"
-					    style="text-decoration: underline !important; color: orange !important;">
-					        <i class="fa-solid fa-circle-question"></i> About this site
-					    </a>
-					</p>
 				</div>
 				
 			</div>
@@ -923,6 +923,7 @@ Revised firworks.
 	</div>
 	
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+	
 	<script>
 		$(document).ready(function() {
 			
@@ -1099,7 +1100,7 @@ Revised firworks.
 		    this.running = true;
 		    this.shouldBeRunning = true; // track intent
 		    this.animate();
-		    this.launchInterval = setInterval(() => this.launch(), 2500);
+		    this.launchInterval = setInterval(() => this.launch(), 5000);
 		}
     
 		stop(clearIntent = true) {
@@ -1119,7 +1120,7 @@ Revised firworks.
 	            y: this.canvas.height,
 	            targetY: targetY,
 	            vx: (Math.random() - 0.5) * 1,
-	            vy: -10 - Math.random() * 3,
+	            vy: -5 - Math.random() * 3, // max height
 	            hue: Math.random() * 360,
 	            trail: []
 	        });
@@ -1128,7 +1129,7 @@ Revised firworks.
 	    explode(x, y, hue) {
 	        for (let i = 0; i < 80; i++) {
 	            const angle = (Math.PI * 2 * i) / 80;
-	            const velocity = 2 + Math.random() * 4;
+	            const velocity = 2 + Math.random() * 4; // how fast / far out it explodes 
 	            this.particles.push({
 	                x: x,
 	                y: y,
@@ -1174,9 +1175,9 @@ Revised firworks.
 		        const p = this.particles[i];
 		        p.x += p.vx;
 		        p.y += p.vy;
-		        p.vy += 0.08;
+		        p.vy += 0.1; // gravity
 		        p.vx *= 0.99;
-		        p.alpha -= 0.015;
+		        p.alpha -= 0.002; // how fast it disappears after exploding
         
 		        this.ctx.fillStyle = `hsla(${p.hue}, 100%, 60%, ${p.alpha})`;
 		        this.ctx.shadowBlur = 5;
