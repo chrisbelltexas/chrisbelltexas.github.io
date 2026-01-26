@@ -60,11 +60,13 @@
 }
 
 #psa-vr-county-results li {
-	transition: color 0.25s ease, text-decoration 0.25s ease !important;
+	transition:
+		color 1s ease,
+		transform 0.25s ease !important;
 }
 
 #psa-vr-county-results li:hover {
-	color: rgba(0,0,255,1) !important;
-	text-decoration: underline !important;
+	color: rgba(0,0,255,1) !important; /* blue */
+	transform: scale(1.325) !important;
 	cursor: pointer !important;
 }
