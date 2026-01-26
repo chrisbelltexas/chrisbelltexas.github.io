@@ -58,3 +58,13 @@
 	color: rgba(255,255,255,1) !important; /* white */
 	font-weight: normal !important;
 }
+
+#psa-vr-county-results li {
+	transition: color 0.25s ease, text-decoration 0.25s ease !important;
+}
+
+#psa-vr-county-results li:hover {
+	color: rgba(0,0,255,1) !important;
+	text-decoration: underline !important;
+	cursor: pointer !important;
+}
