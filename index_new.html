@@ -80,6 +80,18 @@
 			font-family: 'Montserrat' !important;
 		}
 		
+		.psa-info-nav {
+			color: rgba(255,255,255,0.5);
+			text-decoration: underline !important;
+			transition:
+				color 0.25s ease;
+		}
+
+		.psa-info-nav:hover {
+			color: rgba(25,25,255) !important; /* blue */
+			cursor: pointer !important;
+		}
+		
 	</style>
 	
 </head>
@@ -690,11 +702,11 @@
 		
 	</footer>
 	
-	<!--psa--><div id="psa-vr" class="modal is-active">
+	<!--psa-vr--><section id="psa-vr" class="modal is-active">
 		
-		<div id="psa-vr-bg" class="modal-background"></div>
+		<section id="psa-vr-bg" class="modal-background"></section>
 		
-		<div id="psa-vr-fireworks"></div>
+		<section id="psa-vr-fireworks"></section>
 		
 		<section id="psa-vr-main" class="hero is-fullheight has-text-centered">
 			
@@ -723,15 +735,50 @@
 				
 				<p class="mb-4 mt-5 subtitle is-size-7">Voter registration deadline for March 3rd elections:</p>
 				
-				<p id="countdown" class="mb-5 subtitle has-text-warning-50" data-aos="zoom-out-right" data-aos-duration="3000"></p>
+				<p id="countdown" class="mb-6 subtitle has-text-warning-50" data-aos="zoom-out-right" data-aos-duration="3000"></p>
 				
-				<a class="subtitle is-size-7 is-underlined has-text-grey-dark">📦 Campaign site</a>
+				<!--go-info--><div class="mb-6 is-size-7"><a
+				onclick="document.getElementById('psa-info').classList.add('is-active'); return false;"
+				class="is-size-7 psa-info-nav">
+					🔒 Campaign site
+				</a></div>
 				
 			</div></div>
 			
 		</section>
 	
-	</div>
+	</section>
+	
+	<!--psa-info--><section id="psa-info" class="modal">
+		
+		<section id="psa-info-bg" class="modal-background has-background-black"></section>
+		
+		<section id="psa-info-main" class="hero is-fullheight has-text-centered" style="z-index: 3 !important;">
+			
+			<div class="hero-body"><div class="mx-6 container">
+				
+				<!--go-back--><div class="mb-6 is-size-3"><a
+				onclick="document.getElementById('psa-info').classList.remove('is-active'); return false;"
+				class="psa-info-nav">
+					<i class="fa-solid fa-circle-chevron-left"></i>
+				</a></div>
+				
+				<h2 class="mb-4 is-size-4">Information</h2>
+				
+				<p class="mb-6 subtitle is-size-6">This site was initially created by a volunteer for a statewide campaign. It is now maintained independently to support Texas voters. The site is not affiliated with any active campaign. </p>
+				
+				<!--go-archive--><div class="mb-6 is-size-7"><a
+				onclick="document.getElementById('psa-vr').classList.remove('is-active');
+				document.getElementById('psa-info').classList.remove('is-active'); return false;"
+				class="psa-info-nav">
+					🔒 Visit archived campaign site</i>
+				</a></div>
+				
+			</div></div>
+			
+		</section>
+		
+	</section>
 	
 	<!--js-aos--><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
