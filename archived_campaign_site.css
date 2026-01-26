@@ -1,0 +1,113 @@
+#logo {
+	background-color: white !important;
+	transition: transform 0.25s ease !important;
+}
+
+#logo:hover {
+	transform: scale(1.25) !important;
+}
+
+.cta {
+	color: white !important;
+	font-weight: 800 !important;
+	text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.25) !important;
+	border-width: 0 !important;
+	transition: background-color 0.5s ease, transform 0.25s ease !important;
+	background-color: rgba(6,199,9,1) !important; /* muted green */
+}	
+
+.cta:hover {
+	background-color: rgba(0,255,0,1) !important; /* bright green */
+	transform: scale(1.125) !important;
+}
+
+#campaign-nav {
+	background-color: transparent !important;
+    position: fixed !important;
+	width: 100% !important;
+}
+
+#campaign-nav .nav {
+	color: white !important;
+	transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease !important;
+}
+
+#campaign-nav .nav:hover {
+	color: white !important;
+	background-color: rgba(31,31,73,1) !important; /* campaign blue */
+	transform: scale(1.1) !important;
+}
+
+#campaign-nav .navbar-burger {
+	background-color: rgba(31,31,73,1) !important; /* dark blue bg */
+}
+
+#campaign-nav .navbar-burger span {
+    background-color: rgba(255,255,255,1) !important; /* white lines */
+}
+
+#campaign-nav .navbar-menu.is-active {
+    background-color: rgba(31,31,73,1) !important; /* dark blue mobile bg */
+}
+
+@media (max-width: 1023px) {
+  #campaign-nav .navbar-menu .navbar-item i {
+    margin-right: 0.5em; /* space between icon & text on mobile */
+  }
+}
+
+#campaign-main {
+	background-image: url('photo_home.webp'), url('photo_home.png') !important;
+	background-size: cover !important;
+	background-position: center !important;
+}
+
+#campaign-main .title {
+	text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.75) !important;
+	margin-bottom: 0.2em !important;
+}
+
+#campaign-main .for {
+	font-family: 'Island Moments' !important; 
+	text-shadow: 0.05em 0.05em 0em rgba(0,0,0,1) !important;
+}
+
+#campaign-main .subtitle {
+	color: white !important;
+	text-shadow: 0.05em 0.05em 0em rgba(0,0,0,1) !important;
+	margin-bottom: 0.75em !important;
+}
+
+#campaign-main .hero-body {
+	margin-bottom: 3em !important;
+}
+
+#campaign-about, #campaign-issues {
+	background-color: rgba(255,255,255,1) !important;
+}
+
+#campaign-media {
+	background-color: rgba(31,31,73,1) !important; /* campaign blue */
+}
+
+#campaign-media .timeline-content * {
+	margin-bottom: 1em !important;
+}
+
+#campaign-media .media-link {
+	color: orange !important;
+	transition: color 0.25s ease !important;
+}
+
+#campaign-media .media-link:hover {
+	color: blue !important;
+}
+
+#campaign-contact a {
+	margin-left: 0.0825em !important;
+	margin-right: 0.0825em !important;
+}
+
+#social-media {
+	margin-bottom: 1.5em !important;
+}

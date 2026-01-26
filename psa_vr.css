@@ -1,0 +1,60 @@
+#psa-vr-bg {
+	background-color: rgba(0,0,50,0.9) !important;" /* dark blue - rgba(0,0,50,0.9) */
+}
+
+#psa-vr-main{
+	z-index: 2 !important; /* > psa-vr-fireworks */
+}
+
+#psa-vr-fireworks {
+    z-index: 1 !important; /* < psa-vr-main */
+	position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    pointer-events: none !important;
+}
+
+#psa-vr-fireworks canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none !important; /* double tap */
+}
+
+#psa-vr-cta {
+	color: white !important;
+	text-shadow: 0.05em 0.05em 0.05em rgba(0,0,0,0.5) !important;
+	font-size: 1.25em !important;
+	border-width: 0 !important;
+	background-color: rgba(0,0,255,0.65) !important; /* trans blue - rgba(0,0,255,0.65) */
+	transition:
+		background-color 0.5s ease,
+		transform 0.25s ease !important;
+}
+
+#psa-vr-cta:hover {
+	background-color: rgba(0,0,255,1) !important; /* blue */
+	transform: scale(1.125) !important;
+}
+
+#psa-vr-county-search {
+	width: 100% !important;
+	border-radius: 0.5em !important;
+	border: transparent !important;
+	background-color: rgba(0,0,255,0.65) !important; /* semi-transparent blue - rgba(0,0,255,0.65) */
+	color: rgba(255,255,255,1) !important; /* white */
+	font-size: 1.25em !important;
+	transition:
+		background-color 0.5s ease !important;
+}
+
+#psa-vr-county-search:hover {
+	background-color: rgba(0,0,255,1) !important; /* blue */
+}
+
+#psa-vr-county-search::placeholder {
+	color: rgba(255,255,255,1) !important; /* white */
+	font-weight: normal !important;
+}
