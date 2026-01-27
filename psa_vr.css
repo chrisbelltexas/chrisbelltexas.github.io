@@ -28,7 +28,7 @@
 	text-shadow: 0.05em 0.05em 0.05em rgba(0,0,0,0.5) !important;
 	font-size: 1.25em !important;
 	border-radius: 2em !important;
-	border: 0.25em solid blue !important;
+	border: 0.125em solid blue !important;
 	background-color: rgba(0,0,255,0.65) !important; /* trans blue - rgba(0,0,255,0.65) */
 	transition:
 		background-color 0.5s ease,
@@ -41,8 +41,8 @@
 }
 
 #psa-vr-county-search {
-	width: 75% !important;
-	border-radius: 0.05em !important;
+	width: 100% !important;
+	border-radius: 2em !important;
 	border: transparent !important;
 	border-bottom: 0.125em solid rgba(255,255,255,0.25) !important;
 	background-color: rgba(0,0,0,0.35) !important; /* trans black */

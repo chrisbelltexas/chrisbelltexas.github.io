@@ -720,22 +720,23 @@
 			
 			<div class="hero-body"><div class="container">
 				
-				<h2 class="mb-4 is-size-2 font-amiri icon-text">
-					<span class="icon">
-						<figure class="image"><img src="texas.png"></figure>
-					</span>
-					<span>T<span class="is-size-3">exas</span> P<span class="is-size-3">rimaries<span> <span class="is-size-3">2026</span></span>
+				<h2 class="mb-4 is-size-2 font-amiri">
+					T<span class="is-size-3">exas</span>
+					<span class="icon"><i class="image"><img src="texas.png"></i></span>
+					P<span class="is-size-3">rimaries</span>
+					<span class="is-size-3">2026</span>
 				</h2>
-				
-				
 				
 				<p class="mb-4 mt-5 subtitle is-size-7">Register to vote before the deadline:</p>
 				
 				<a id="psa-vr-cta"
-				class="mb-4 py-5 button is-fullwidth"
+				class="mb-4 py-4 button is-fullwidth"
 				href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN"
 				target="_blank">
-					🗳 Register me to vote
+					<span class="icon-text">
+						<span class="icon">🗳</span>
+						<span>Register me to vote</span>
+					</span>
 				</a>
 				
 				<p>
@@ -743,7 +744,7 @@
 					class="mb-2 py-4 font-montserrat has-text-centered" 
 					type="text" 
 					autocomplete="off" 
-					placeholder="🔍 Or find my county">
+					placeholder="🔍   Or find my county">
 				</p>
 			
 				<ul id="psa-vr-county-results"></ul>
@@ -754,8 +755,11 @@
 				
 				<!--go-info--><div class="mt-6 is-size-7"><a
 				onclick="document.getElementById('psa-info').classList.add('is-active'); return false;"
-				class="is-size-7 psa-info-nav">
-					Campaign site (archived)
+				class="is-size-7">
+					<span class="icon-text">
+						<span class="icon">📦</span>
+						<span class="psa-info-nav">Campaign site archive</span>
+					</span>
 				</a></div>
 				
 			</div></div>
@@ -773,16 +777,30 @@
 			<div class="hero-body"><div class="mx-6 container">
 				
 				<div class="modal-content">
-				
-					<h2 class="mb-4 is-size-4">📦</h2>
-				
-					<p class="mb-5 subtitle is-size-6">This site was initially created by a volunteer for a statewide campaign. It is now maintained independently to support Texas voters during the 2026 Texas primary elections. The site and domain are not affiliated with any active campaign.</p>
+					
+					<figure class="mb-3 image is-48x48">
+						<img src="cactus.png">
+					</figure>
+					
+					<h2 class="mb-4 is-size-4 font-amiri">
+						<span>H<span class="is-size-5">owdy,</span></span>
+					</h2>
+					
+					<p class="mb-4 is-size-6 font-amiri">
+						This site was initially created by a volunteer, for a statewide campaign. It is now maintained independently to support Texas voters during the 2026 primary elections.
+					</p>
+
+					<p class="mb-5 is-size-6 font-amiri">
+						The site and domain are not affiliated with any active campaign.
+					</p>
 				
 					<!--go-archive--><div class="mb-6 is-size-7"><a
 					onclick="document.getElementById('psa-vr').classList.remove('is-active');
-					document.getElementById('psa-info').classList.remove('is-active'); return false;"
-					class="psa-info-nav">
-						Visit campaign site (archived)
+					document.getElementById('psa-info').classList.remove('is-active'); return false;">
+						<span class="icon-text">
+							<span class="icon">📦</span>
+							<span class="psa-info-nav">Visit campaign site archive</span>
+						</span>
 					</a></div>
 					
 					<!--go-back--><div class="mt-6 is-size-4"><a
@@ -900,7 +918,7 @@
 			const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
 			const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
 			const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-			countdownEl.innerHTML = `${days} days ${hours}h ${minutes}m ${seconds}s`;
+			countdownEl.innerHTML = `${days} days • ${hours} h ${minutes} m ${seconds} s`;
 		}
 		updateCountdown();
 		const timerInterval = setInterval(updateCountdown, 1000);
