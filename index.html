@@ -11,7 +11,10 @@
 		// initialize GA4 analytics
 		gtag('js', new Date());
 		// anonymize ip & disable ads features / location reporting
-		gtag('config', 'G-WFECMM0VJQ', {'anonymize_ip': true,'allow_ad_personalization_signals': false});
+		gtag('config', 'G-WFECMM0VJQ', {
+			'anonymize_ip': true,
+			'allow_ad_personalization_signals': false
+		});
 	</script>
 	
 	<meta charset="utf-8">
@@ -749,9 +752,7 @@
 				
 				<p id="countdown" class="mb-6"></p>
 				
-				<!--go-info--><div class="mt-6"><a
-				onclick="document.getElementById('psa-info').classList.add('is-active'); return false;"
-				class="">
+				<!--go-info--><div class="mt-6"><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
 					<span class="icon-text is-size-6">
 						<span class="icon">🔔</span>
 						<span class="psa-info-nav is-size-7">Looking for the campaign site?</span>
@@ -789,7 +790,7 @@
 						— Abhi
 					</p>
 					
-					<!--go-archive--><div class="mb-2 ml-3 font-montserrat"><a
+					<!--go-archive--><div class="mb-2 ml-3 font-montserrat"><a id="quaternary_cta"
 					onclick="document.getElementById('psa-vr').classList.remove('is-active');
 					document.getElementById('psa-info').classList.remove('is-active'); return false;">
 						<span class="icon-text">
@@ -940,15 +941,17 @@
 	</script>
 	
 	<!--js-ga4-analytics-<script>-->
-    <script src="">
+    <script>
 		// ga4 analytics
-		const primary = document.getElementById('primary_cta');
+		const primary = document.getElementById('psa-vr-cta');
 		const secondary = document.getElementById('secondary_cta');
+		const tertiary = document.getElementById('psa-vr-county-search');
+		const quaternary = document.getElementById('quaternary_cta');
 		
 		if(primary) {
 			primary.addEventListener('click', () => {
 				gtag('event', 'primary_cta_clicked', {
-					'event_label': 'register to vote'
+					'event_label': 'register to vote through the state'
 				});
 			});
 		}
@@ -956,6 +959,14 @@
 		if(secondary) {
 			secondary.addEventListener('click', () => {
 				gtag('event', 'secondary_cta_clicked', {
+					'event_label': 'looking for campaign site?'
+				});
+			});
+		}
+		
+		if(quaternary) {
+			quaternary.addEventListener('click', () => {
+				gtag('event', 'quaternary_cta_clicked', {
 					'event_label': 'visit archived site'
 				});
 			});
