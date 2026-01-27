@@ -710,27 +710,23 @@
 		
 	</footer>
 	
-	<!--psa-vr--><section id="psa-vr" class="modal is-active" data-aos="zoom-out-right" data-aos-duration="2000">
+	<!--psa-vr--><section id="psa-vr" class="modal is-active">
 		
-		<section id="psa-vr-bg" class="modal-background"></section>
+		<section id="psa-vr-bg" class="modal-background" data-aos="flip-right" data-aos-duration="2000"></section>
 		
 		<section id="psa-vr-fireworks"></section>
 		
-		<section id="psa-vr-main" class="hero is-fullheight has-text-centered">
+		<section id="psa-vr-main" class="hero is-fullheight has-text-centered" data-aos="zoom-out-right" data-aos-duration="2000">
 			
 			<div class="hero-body"><div class="container">
 				
-				<h2 class="mb-4 is-size-2 font-amiri">
-					T<span class="is-size-3">exas</span>
-					<span class="icon"><i class="image"><img src="texas.png"></i></span>
-					P<span class="is-size-3">rimaries</span>
-					<span class="is-size-3">2026</span>
+				<h2 class="icon-text mb-4 is-size-3 is-size-4-mobile font-amiri has-text-left" style="display: inline-flex !important; align-items: center !important;">
+					<img class="mr-2" style="width: 2.5em !important; height: 2.5em !important;" src="texas.png">
+					Texas Primary<br>Elections 2026
 				</h2>
 				
-				<p class="mb-4 mt-5 subtitle is-size-7">Register to vote before the deadline:</p>
-				
 				<a id="psa-vr-cta"
-				class="mb-4 py-4 button is-fullwidth"
+				class="my-4 py-4 button is-fullwidth"
 				href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN"
 				target="_blank">
 					<span class="icon-text">
@@ -747,9 +743,9 @@
 					placeholder="🔍   Or find my county">
 				</p>
 			
-				<ul id="psa-vr-county-results"></ul>
+				<ul id="psa-vr-county-results" class="is-size-"></ul>
 				
-				<p class="mb-4 mt-5 subtitle is-size-7">Voter registration deadline:</p>
+				<p class="mb-4 mt-5 subtitle is-size-6">Voter registration deadline in</p>
 				
 				<p id="countdown" class="mb-6 subtitle has-text-warning-50"></p>
 				
@@ -758,7 +754,7 @@
 				class="is-size-7">
 					<span class="icon-text">
 						<span class="icon">📦</span>
-						<span class="psa-info-nav">Campaign site archive</span>
+						<span class="psa-info-nav">Looking for the campaign site?</span>
 					</span>
 				</a></div>
 				
@@ -774,36 +770,42 @@
 		
 		<section id="psa-info-main" class="hero is-fullheight has-text-left">
 			
-			<div class="hero-body"><div class="mx-6 container">
+			<div class="hero-body">
 				
-				<div class="modal-content">
+				<div class="modal-content is-size-6 font-amiri">
 					
-					<figure class="mb-3 image is-48x48">
+					<figure class="mb-1 image is-48x48">
 						<img src="cactus.png">
 					</figure>
 					
-					<h2 class="mb-4 is-size-4 font-amiri">
+					<h2 class="mb-1 is-size-4">
 						<span>H<span class="is-size-5">owdy,</span></span>
 					</h2>
 					
-					<p class="mb-4 is-size-6 font-amiri">
-						This site was initially created by a volunteer, for a statewide campaign. It is now maintained independently to support Texas voters during the 2026 primary elections.
+					<p class="mb-1">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A volunteer initially created this site for a statewide campaign. It is now kept up independently to support Texas voters during the 2026 primary elections. The site and domain are not affiliated with any active campaign.
 					</p>
-
-					<p class="mb-5 is-size-6 font-amiri">
-						The site and domain are not affiliated with any active campaign.
+					<p class="mb-5 mr-6 has-text-right">
+						— Abhi
 					</p>
-				
-					<!--go-archive--><div class="mb-6 is-size-7"><a
+					
+					<!--go-archive--><div class="mb-2 is-size-7 font-montserrat"><a
 					onclick="document.getElementById('psa-vr').classList.remove('is-active');
 					document.getElementById('psa-info').classList.remove('is-active'); return false;">
 						<span class="icon-text">
 							<span class="icon">📦</span>
-							<span class="psa-info-nav">Visit campaign site archive</span>
+							<span class="psa-info-nav">Visit archived campaign site</span>
 						</span>
 					</a></div>
 					
-					<!--go-back--><div class="mt-6 is-size-4"><a
+					<!--go-questions--><div class="mb-2 is-size-7 font-montserrat"><a class="js-modal-trigger" data-target="psa-info-contact-form">
+						<span class="icon-text">
+							<span class="icon">👋</span>
+							<span class="psa-info-nav">Questions?</span>
+						</span>
+					</a></div>
+					
+					<!--go-back--><div class="mt-6 is-size-4 has-text-centered"><a
 					onclick="document.getElementById('psa-info').classList.remove('is-active'); return false;"
 					class="psa-info-nav">
 						<i class="fa-solid fa-circle-chevron-left"></i>
@@ -811,9 +813,94 @@
 				
 				</div>
 				
-			</div></div>
+			</div>
 			
 		</section>
+		
+		<!-- webform -->
+		<section id="psa-info-contact-form" class="modal">
+		
+			<div class="modal-background has-background-black"></div>
+		
+			<div class="px-6 modal-content">
+				
+				<figure class="mb-4 image is-48x48">
+					<img src="cactus.png">
+				</figure>
+			
+				<form action="https://formsubmit.co/politexas@proton.me" method="POST" class="">
+				
+					<input type="hidden" name="_template" value="box">
+					<input type="hidden" name="_next" value="https://chrisbelltexas.com/index.html?sent=true">
+					<input type="hidden" name="_subject" value="New email from psa-info-contact-form">
+					<!-- <input type="hidden" name="_captcha" value="false"> -->
+					<input type="hidden" name="_autoresponse" value="Thank you for reaching out! I will get back to you asap — Abhi">
+					<input type="hidden" name="_replyto" value="email">
+				
+					<!-- name -->
+					<div class="field">
+					
+						<label class="screen-reader" for="name"></label>
+					
+						<div class="control">
+						
+							<input class="input font-montserrat" type="text" name="name" placeholder="👤   My name..." required>
+						
+						</div>
+					
+					</div>
+				
+					<!-- email -->
+					<div class="field">
+					
+						<label class="screen-reader" for="email"></label>
+					
+						<div class="control">
+						
+							<input class="input font-montserrat" type="email" name="email" placeholder="✉️   My email..." required>
+						
+						</div>
+					
+					</div>
+				
+					<!-- message -->
+					<div class="field">
+					
+						<label class="screen-reader" for="message"></label>
+					
+						<div class="control">
+						
+							<textarea class="textarea font-montserrat" type="text" name="message" placeholder="🖊   My question..." required></textarea>
+						
+						</div>
+					
+					</div>
+				
+					<!-- send -->
+					<div class="buttons">
+					
+						<button class="button button-style is-rounded" type="submit">
+							
+							<span class="icon-text">
+								<span class="icon">📱</span>
+								<span>Send my question</span>
+							</span>
+						
+						</button>
+					
+					</div>
+				
+				</form>
+				
+				<!--go-back--><div class="mt-6 is-size-4 has-text-centered"><a
+				onclick="document.getElementById('psa-info-contact-form').classList.remove('is-active'); return false;"
+				class="psa-info-nav">
+					<i class="fa-solid fa-circle-chevron-left"></i>
+				</a></div>
+			
+			</div>
+	
+		</div>
 		
 	</section>
 	
@@ -902,7 +989,7 @@
   		});
   	</script>
 
-	<!--js-countdown-<script>-->
+	<!--js-psa-vr-countdown-<script>-->
 	<script>
 		const targetDate = new Date("2026-02-02T00:00:00").getTime();
 		const countdownEl = document.getElementById("countdown");
@@ -924,7 +1011,7 @@
 		const timerInterval = setInterval(updateCountdown, 1000);
 	</script>
 		
-	<!--js-fireworks-<script>-->
+	<!--js-psa-vr-fireworks-<script>-->
 	<script>
 		class SimpleFireworks {
 			constructor(container) {
@@ -1068,7 +1155,7 @@
 		});
 	</script>
 		
-	<!--js-county-search--><script src="psa_vr_county_search.js" defer></script>
+	<!--js-psa-vr-county-search--><script src="psa_vr_county_search.js" defer></script>
 		
 </body>
 
