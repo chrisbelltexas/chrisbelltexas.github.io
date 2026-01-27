@@ -40,7 +40,7 @@
 	
 	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 	
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Island+Moments&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Amiri:wght@400;700&display=swap">
 	
 	<!-- > mvp-->
 	
@@ -80,6 +80,10 @@
 			font-family: 'Montserrat' !important;
 		}
 		
+		.font-amiri {
+			font-family: 'Amiri' !important;
+		}
+		
 		.psa-info-nav {
 			color: rgba(255,255,255,0.5); /* semi-trans white */
 			text-decoration: underline !important;
@@ -90,6 +94,10 @@
 		.psa-info-nav:hover {
 			color: rgba(25,25,255) !important; /* lighter blue */
 			cursor: pointer !important;
+		}
+		
+		#psa-info-main {
+			z-index: 3 !important;
 		}
 		
 	</style>
@@ -712,35 +720,35 @@
 			
 			<div class="hero-body"><div class="container">
 				
-				<h2 class="mb-4 is-size-4">Texas Primary Elections 2026</h2>
+				<h2 class="mb-4 is-size-2 font-amiri">TX Primaries 2026</h2>
 				
-				<p class="mb-4 mt-5 subtitle is-size-7">Register to vote with secretary of state or your county government:</p>
+				<p class="mb-4 mt-5 subtitle is-size-7">Register to vote with the state or county:</p>
 				
 				<a id="psa-vr-cta"
 				class="mb-4 py-5 button is-fullwidth"
 				href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN"
 				target="_blank">
-					🗳 Register me to vote
+					Register me to vote
 				</a>
 				
 				<p>
 					<input id="psa-vr-county-search" 
-					class="mb-4 py-5 font-montserrat has-text-centered" 
+					class="mb-2 py-4 font-montserrat has-text-centered" 
 					type="text" 
 					autocomplete="off" 
-					placeholder="🏛 Check my county">
+					placeholder="🔍 Or find my county">
 				</p>
 			
 				<ul id="psa-vr-county-results"></ul>
 				
-				<p class="mb-4 mt-5 subtitle is-size-7">Voter registration deadline for March 3rd elections:</p>
+				<p class="mb-4 mt-5 subtitle is-size-7">Voter registration deadline:</p>
 				
 				<p id="countdown" class="mb-6 subtitle has-text-warning-50" data-aos="zoom-out-right" data-aos-duration="3000"></p>
 				
-				<!--go-info--><div class="mb-6 is-size-7"><a
+				<!--go-info--><div class="mt-6 is-size-7"><a
 				onclick="document.getElementById('psa-info').classList.add('is-active'); return false;"
 				class="is-size-7 psa-info-nav">
-					🔒 Campaign site
+					Campaign site (archived)
 				</a></div>
 				
 			</div></div>
@@ -753,26 +761,30 @@
 		
 		<section id="psa-info-bg" class="modal-background has-background-black"></section>
 		
-		<section id="psa-info-main" class="hero is-fullheight has-text-centered" style="z-index: 3 !important;">
+		<section id="psa-info-main" class="hero is-fullheight has-text-left">
 			
 			<div class="hero-body"><div class="mx-6 container">
 				
-				<!--go-back--><div class="mb-6 is-size-3"><a
-				onclick="document.getElementById('psa-info').classList.remove('is-active'); return false;"
-				class="psa-info-nav">
-					<i class="fa-solid fa-circle-chevron-left"></i>
-				</a></div>
+				<div class="modal-content">
 				
-				<h2 class="mb-4 is-size-4">Information</h2>
+					<h2 class="mb-4 is-size-4">📦</h2>
 				
-				<p class="mb-6 subtitle is-size-6">This site was initially created by a volunteer for a statewide campaign. It is now maintained independently to support Texas voters. The site is not affiliated with any active campaign. </p>
+					<p class="mb-5 subtitle is-size-6">This site was initially created by a volunteer for a statewide campaign. It is now maintained independently to support Texas voters during the 2026 Texas primary elections. The site and domain are not affiliated with any active campaign.</p>
 				
-				<!--go-archive--><div class="mb-6 is-size-7"><a
-				onclick="document.getElementById('psa-vr').classList.remove('is-active');
-				document.getElementById('psa-info').classList.remove('is-active'); return false;"
-				class="psa-info-nav">
-					🔒 Visit archived campaign site</i>
-				</a></div>
+					<!--go-archive--><div class="mb-6 is-size-7"><a
+					onclick="document.getElementById('psa-vr').classList.remove('is-active');
+					document.getElementById('psa-info').classList.remove('is-active'); return false;"
+					class="psa-info-nav">
+						Visit campaign site (archived)
+					</a></div>
+					
+					<!--go-back--><div class="mt-6 is-size-4"><a
+					onclick="document.getElementById('psa-info').classList.remove('is-active'); return false;"
+					class="psa-info-nav">
+						<i class="fa-solid fa-circle-chevron-left"></i>
+					</a></div>
+				
+				</div>
 				
 			</div></div>
 			
@@ -918,7 +930,7 @@
 				this.running = true;
 				this.shouldBeRunning = true; // track intent
 				this.animate();
-				this.launchInterval = setInterval(() => this.launch(), 5000);
+				this.launchInterval = setInterval(() => this.launch(), 10000);
 			}
 			stop(clearIntent = true) {
 				this.running = false;
