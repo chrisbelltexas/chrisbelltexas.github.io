@@ -1,5 +1,5 @@
 #psa-vr-bg {
-	background-color: rgba(0,0,50,0.9) !important;" /* dark blue - rgba(0,0,50,0.9) */
+	background-color: rgba(0,0,50,0.9) !important;" /* semi-trans dark blue - rgba(0,0,50,0.9) */
 }
 
 #psa-vr-main{
@@ -31,7 +31,7 @@
 	border: 0.125em solid blue !important;
 	background-color: rgba(0,0,255,0.65) !important; /* trans blue - rgba(0,0,255,0.65) */
 	transition:
-		background-color 0.5s ease,
+		background-color 0.5s ease !important,
 		transform 0.25s ease !important;
 }
 
@@ -43,11 +43,23 @@
 #psa-vr-county-search {
 	width: 100% !important;
 	border-radius: 2em !important;
-	border: transparent !important;
-	border-bottom: 0.125em solid rgba(255,255,255,0.25) !important;
-	background-color: rgba(0,0,0,0.35) !important; /* trans black */
+	border: 0.05em solid rgba(245,171,0,1) !important; /* has-warning-50 orange */
+	background-color: rgba(0,0,0,0.75) !important; /* trans black */
 	color: rgba(255,255,255,1) !important; /* white */
-	font-size: 1.25em !important;
+	transition:
+		border 0.5s ease,
+		background-color 0.5s ease,
+		transform 0.25s ease !important;
+}
+
+#psa-vr-county-search:hover {
+	background-color: rgba(245,171,0,1) !important; /* has-warning-50 orange */
+	transform:
+		scale(1.1) !important;
+}
+
+#psa-vr-county-search:focus {
+	outline: 0.1em solid rgba(245,171,0,1) !important; /* has-warning-50 orange */
 }
 
 #psa-vr-county-search::placeholder {
@@ -62,7 +74,7 @@
 }
 
 #psa-vr-county-results li:hover {
-	color: rgba(0,0,255,1) !important; /* blue */
+	color: rgba(245,171,0,1) !important; /* has-warning-50 orange */
 	transform: scale(1.325) !important;
 	cursor: pointer !important;
 }
