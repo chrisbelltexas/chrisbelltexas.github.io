@@ -23,6 +23,8 @@
 	
 	<link rel="preload" href="photo_home.webp" as="image" importance="high">
 	
+	<link rel="preload" href="texas.webp" as="image" importance="high">
+	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -723,7 +725,7 @@
 	
 	<!---->
 	
-	<!--psa-vr--><section id="psa-vr" class="psaVariant modal is-active">
+	<!--psa-vr--><section id="psa-vr" class="psaVariant modal">
 		
 		<section id="psa-vr-bg" class="modal-background" data-aos="flip-right" data-aos-duration="2000"></section>
 		
@@ -733,8 +735,8 @@
 			
 			<div class="hero-body"><div class="container">
 				
-				<h2 class="icon-text mb-6 is-size-3 is-size-4-mobile font-amiri has-text-left" style="display: inline-flex !important; align-items: center !important;">
-					<img class="mr-2" style="width: 2.5em !important; height: 2.5em !important;" src="texas.png">
+				<h2 class="icon-text mb-6 is-size-3 is-size-4-mobile font-amiri has-text-left has-text-white" style="display: inline-flex !important; align-items: center !important;">
+					<img class="mr-2" style="width: 2.5em !important; height: 2.5em !important;" src="texas.webp">
 					Texas Primary<br>Elections 2026
 				</h2>
 				
@@ -788,6 +790,43 @@
 	
 	</section>
 	
+	<!--psa-variant-1--><section id="psa-variant-1" class="psaVariant modal">
+		
+		<section class="modal-background has-background-danger-dark" data-aos="flip-left" data-aos-duration="2000" style="opacity: 92.5% !important;"></section>
+		
+		<section class="hero is-fullheight has-text-centered" data-aos="zoom-out-left" data-aos-duration="2000">
+			
+			<div class="hero-body"><div class="container">
+				
+				<h2 class="icon-text mb-6 is-size-3 is-size-4-mobile font-amiri has-text-left has-text-white" style="display: inline-flex !important; align-items: center !important;">
+					<img class="mr-2" style="width: 2.5em !important; height: 2.5em !important;" src="texas.webp">
+					Texas Primary<br>Elections 2026
+				</h2>
+				
+				<p class="mb-4 mt-2 subtitle is-size-6">Did they <em><s>cancel</s></em> my voter registration?</p>
+					
+				<a id="psa-variant-1-cta" class="mb-2 py-4 is-size-4 button is-fullwidth"
+				href="https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login"
+				target="_blank">
+					<span class="icon-text">
+						<span class="icon is-size-5">👀</span>
+						<span>Check my status</span>
+					</span>
+				</a>
+				
+				<!--go-info--><div class="mt-6"><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
+					<span class="icon-text is-size-6">
+						<span class="icon">🔔</span>
+						<span class="psa-info-nav is-size-7">Looking for the campaign site?</span>
+					</span>
+				</a></div>
+				
+			</div></div>
+			
+		</section>
+		
+	</section>
+	
 	<!--psa-info--><section id="psa-info" class="modal">
 		
 		<section class="modal-background has-background-black"></section>
@@ -799,7 +838,7 @@
 				<div class="modal-content is-size-6 font-amiri">
 					
 					<figure class="mb-1 image is-48x48">
-						<img src="cactus.png">
+						<img src="cactus.webp">
 					</figure>
 					
 					<h2 class="mb-1 is-size-4">
@@ -849,7 +888,7 @@
 			<div class="px-6 modal-content">
 				
 				<figure class="mb-4 mx-auto image is-48x48">
-					<img src="cactus.png">
+					<img src="cactus.webp">
 				</figure>
 			
 				<form action="https://formsubmit.co/d0a457d95408de24f80f6c01e8b49ede" method="POST">
@@ -930,8 +969,7 @@
 	
 	<!---->
 	
-	<!--js-variant-randomizer
-	<script>
+	<!--js-variant-randomizer--><script>
 		document.addEventListener('DOMContentLoaded', () => {
 		    const variants = [
 		        'psa-vr',
@@ -952,7 +990,6 @@
 		    document.getElementById(picked)?.classList.add('is-active');
 		});
 	</script>
-		-->
 	
 	<!--js-aos--><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
