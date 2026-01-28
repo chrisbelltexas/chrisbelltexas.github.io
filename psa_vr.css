@@ -49,7 +49,8 @@
 	transition:
 		border 0.5s ease,
 		background-color 0.5s ease,
-		transform 0.25s ease !important;
+		transform 0.25s ease,
+		outline 0.125s ease !important;
 }
 
 #psa-vr-county-search:hover {
@@ -60,6 +61,7 @@
 
 #psa-vr-county-search:focus {
 	outline: 0.1em solid rgba(245,171,0,1) !important; /* has-warning-50 orange */
+	background-color: rgba(0,0,0,0.75) !important; /* trans black */
 }
 
 #psa-vr-county-search::placeholder {

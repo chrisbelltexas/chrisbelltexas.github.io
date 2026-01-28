@@ -758,7 +758,7 @@
 					autocomplete="off" 
 					placeholder="🔍 Find my county">
 					
-					<div class="mb-6">
+					<div>
 						<a id="secondary_cta" href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN" target="_blank">
 							<span class="icon-text is-size-6">
 								<span class="icon">🐄</span>
@@ -771,7 +771,7 @@
 			
 				<ul id="psa-vr-county-results" class="mb-4 is-size-6"></ul>
 				
-				<p class="mb-1 mt-5 subtitle is-size-6">Registration cutoff:</p>
+				<p class="mb-1 mt-6 subtitle is-size-6">Registration cutoff:</p>
 				
 				<p id="countdown" class="mb-6"></p>
 				
@@ -786,146 +786,6 @@
 			
 		</section>
 	
-	</section>
-	
-	<!--psa-variant-1--><section id="psa-variant-1" class="psaVariant modal">
-		
-		<section class="modal-background has-background-black"></section>
-		
-		<section class="hero is-fullheight has-text-left">
-			
-			<div class="hero-body">
-				
-				<div class="modal-content is-size-6 font-amiri">
-					
-					<figure class="mb-1 image is-48x48">
-						<img src="cactus.png">
-					</figure>
-					
-					<h2 class="mb-1 is-size-4">
-						H<span class="is-size-5">owdy,</span>
-					</h2>
-					
-					<p class="mb-1">
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A volunteer initially created this site for a statewide campaign. It is now kept up independently to support Texas voters during the 2026 primary elections. The site and domain are not affiliated with any active campaign.
-					</p>
-					<p class="mb-5 mr-6 has-text-right">
-						— Abhi
-					</p>
-					
-					<!--go-archive--><div class="mb-2 ml-3 font-montserrat"><a id="quaternary_cta"
-					onclick="document.getElementById('psa-vr').classList.remove('is-active');
-					document.getElementById('psa-info').classList.remove('is-active'); return false;">
-						<span class="icon-text">
-							<span class="icon is-size-6">📦</span>
-							<span class="psa-info-nav is-size-7">Visit archived campaign site</span>
-						</span>
-					</a></div>
-					
-					<!--go-questions--><div class="mb-2 ml-3 font-montserrat"><a class="js-modal-trigger" data-target="psa-info-contact-form">
-						<span class="icon-text">
-							<span class="icon is-size-6">👋</span>
-							<span class="psa-info-nav is-size-7">Questions?</span>
-						</span>
-					</a></div>
-					
-					<!--go-back--><div class="mt-6 is-size-4 has-text-centered"><a
-					onclick="document.getElementById('psa-info').classList.remove('is-active'); return false;"
-					class="psa-info-nav">
-						<i class="fa-solid fa-circle-chevron-left"></i>
-					</a></div>
-				
-				</div>
-				
-			</div>
-			
-		</section>
-		
-		<!-- webform -->
-		<section id="psa-info-contact-form" class="modal">
-		
-			<div class="modal-background has-background-black"></div>
-		
-			<div class="px-6 modal-content">
-				
-				<figure class="mb-4 mx-auto image is-48x48">
-					<img src="cactus.png">
-				</figure>
-			
-				<form action="https://formsubmit.co/d0a457d95408de24f80f6c01e8b49ede" method="POST">
-				
-					<input type="hidden" name="_template" value="box">
-					<input type="hidden" name="_next" value="https://chrisbelltexas.com/thankyou.html?sent=true">
-					<input type="hidden" name="_subject" value="New email from psa-info-contact-form">
-					<input type="hidden" name="_captcha" value="false">
-					<input type="hidden" name="_autoresponse" value="Thank you for reaching out! I will get back to you asap — Abhi">
-					<input type="hidden" name="_replyto" value="email">
-				
-					<!-- name -->
-					<div class="field">
-					
-						<label class="screen-reader" for="name"></label>
-					
-						<div class="control">
-						
-							<input class="input font-montserrat" type="text" name="name" placeholder="👤   My name..." required>
-						
-						</div>
-					
-					</div>
-				
-					<!-- email -->
-					<div class="field">
-					
-						<label class="screen-reader" for="email"></label>
-					
-						<div class="control">
-						
-							<input class="input font-montserrat" type="email" name="email" placeholder="✉️   My email..." required>
-						
-						</div>
-					
-					</div>
-				
-					<!-- message -->
-					<div class="field">
-					
-						<label class="screen-reader" for="message"></label>
-					
-						<div class="control">
-						
-							<textarea class="textarea font-montserrat" type="text" name="message" placeholder="🖊   My question..." required></textarea>
-						
-						</div>
-					
-					</div>
-				
-					<!-- send -->
-					<div class="buttons is-centered">
-					
-						<button class="button button-style is-rounded" type="submit">
-							
-							<span class="icon-text">
-								<span class="icon">📱</span>
-								<span>Send my question</span>
-							</span>
-						
-						</button>
-					
-					</div>
-				
-				</form>
-				
-				<!--go-back--><div class="mt-6 is-size-4 has-text-centered"><a
-				onclick="document.getElementById('psa-info-contact-form').classList.remove('is-active'); return false;"
-				class="psa-info-nav">
-					<i class="fa-solid fa-circle-chevron-left"></i>
-				</a></div>
-			
-			</div>
-	
-		</div>
-		
 	</section>
 	
 	<!--psa-info--><section id="psa-info" class="modal">
