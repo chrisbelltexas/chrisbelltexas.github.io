@@ -725,6 +725,18 @@
 	
 	<!---->
 	
+	<!-- Add this right after your </footer> tag, before the PSA sections -->
+	<div id="shared-countdown-container" class="has-text-centered" style="position: fixed; bottom: 3rem; left: 50%; transform: translateX(-50%); z-index:41;">
+	  <p class="mb-1 subtitle is-size-6" data-aos="fade-up" data-aos-duration="2000">Registration cutoff:</p>
+	  <p id="countdown" class="mb-6" data-aos="fade-down" data-aos-duration="2000"></p>
+	<!--go-info--><div class="mt-0"><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
+		<span class="icon-text is-size-6">
+			<span class="icon">🔔</span>
+			<span class="psa-info-nav is-size-7">Looking for the campaign site?</span>
+		</span>
+	</a></div>
+	</div>
+	
 	<!--psa-vr--><section id="psa-vr" class="psaVariant modal">
 		
 		<section id="psa-vr-bg" class="modal-background" data-aos="flip-right" data-aos-duration="2000"></section>
@@ -773,16 +785,16 @@
 			
 				<ul id="psa-vr-county-results" class="mb-4 is-size-6"></ul>
 				
-				<p class="mb-1 mt-6 subtitle is-size-6">Registration cutoff:</p>
+				<!--<p class="mb-1 mt-6 subtitle is-size-6">Registration cutoff:</p>
 				
-				<p id="countdown" class="mb-6"></p>
+				<p id="countdown" class="mb-6"></p>-->
 				
-				<!--go-info--><div class="mt-6"><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
+				<!--go-info<div class="mt-6"><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
 					<span class="icon-text is-size-6">
 						<span class="icon">🔔</span>
 						<span class="psa-info-nav is-size-7">Looking for the campaign site?</span>
 					</span>
-				</a></div>
+				</a></div>-->
 				
 			</div></div>
 			
@@ -814,20 +826,13 @@
 					</span>
 				</a>
 				
-				<!--go-info--><div class="mt-6"><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
-					<span class="icon-text is-size-6">
-						<span class="icon">🔔</span>
-						<span class="psa-info-nav is-size-7">Looking for the campaign site?</span>
-					</span>
-				</a></div>
-				
 			</div></div>
 			
 		</section>
 		
 	</section>
 	
-	<!--psa-info--><section id="psa-info" class="modal">
+	<!--psa-info--><section id="psa-info" class="modal" style="z-index:50">
 		
 		<section class="modal-background has-background-black"></section>
 		
@@ -969,7 +974,8 @@
 	
 	<!---->
 	
-	<!--js-variant-randomizer--><script>
+	<!--js-variant-randomizer-->
+	<script>
 		document.addEventListener('DOMContentLoaded', () => {
 		    const variants = [
 		        'psa-vr',
