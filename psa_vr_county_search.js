@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
 	const GLOBAL_FALLBACK = "https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN";
-	const input = document.getElementById("psa-vr-county-search");
-	const results = document.getElementById("psa-vr-county-results");
+	const input = document.getElementById("mvp-county-search");
+	const results = document.getElementById("mvp-county-results");
 	let counties = [];
 	try {
 		const res = await fetch('counties.json');
