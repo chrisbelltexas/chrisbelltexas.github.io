@@ -1,3 +1,86 @@
+/*.mvp {
+	opacity: 0% !important;
+}*/
+
+.mvq {
+	opacity: 100% !important;
+}
+
+#mvp-bg1>.modal-background {
+	background-color: rgba(0,0,50,0.9) !important;" /* semi-trans dark blue - rgba(0,0,50,0.9) */
+}
+
+#mvp-bg2>.modal-background {
+	background-color: rgba(46,3,12,0.9) !important;" /* semi-trans dark red - rgba(46,3,12,0.9) */
+}
+
+#mvp-bg3>.modal-background {
+	background-color: rgba(0,0,0,0.9) !important;" /* semi-trans black */
+}
+
+#mvp-bg4>.modal-background {
+	background-color: rgba(0,56,48,0.9) !important;" /* semi-trans dark green - rgba(0,56,48,0.9) */
+}
+
+#mvp-main h2 {
+	align-items: center !important;
+}
+
+#mvp-main img {
+	width: 2.5em !important; 
+	height: 2.5em !important;
+}
+
+#mvp-county-search {
+	background-color: rgba(0,0,0,0.5) !important; /* trans black */
+	color: rgba(255,255,255,1) !important; /* white */
+	border: 0.05em solid rgba(245,171,0,1) !important; /* has-warning-50 orange */
+	border-radius: 2em !important;
+	width: 100% !important;
+	transition:
+		background-color 0.5s ease,
+		border 0.5s ease,
+		transform 0.2s ease !important;
+}
+
+#mvp-county-search:hover {
+	background-color: rgba(0,0,0,1) !important; /* semi-trans has-warning-25 orange */
+	transform: scale(1.1) !important;
+}
+
+#mvp-county-search:focus {
+	outline: 0.1em solid rgba(245,171,0,1) !important; /* has-warning-50 orange */
+}
+
+#mvp-county-search::placeholder {
+	color: rgba(255,255,255,1) !important; /* white */
+	font-weight: normal !important;
+}
+
+#mvp-county-results li {
+	transition:
+		color 1s ease,
+		transform 0.125s ease !important;
+}
+
+#mvp-county-results li:hover {
+	color: rgba(245,171,0,1) !important; /* has-warning-50 orange */
+	transform: scale(1.325) !important;
+	cursor: pointer !important;
+}
+
+.mvp-open-info {
+	color: rgba(255,255,255,0.5) !important; /* trans white */
+	text-decoration: underline !important;
+	transition:
+		color 0.25s ease;
+}
+
+.mvp-open-info:hover {
+	color: rgba(154,109,2,1) !important; /* has-warning-35 orange */
+	cursor: pointer !important;
+}
+
 #psa-vr-bg {
 	background-color: rgba(0,0,50,0.9) !important;" /* semi-trans dark blue - rgba(0,0,50,0.9) */
 }
@@ -49,19 +132,17 @@
 	transition:
 		border 0.5s ease,
 		background-color 0.5s ease,
-		transform 0.25s ease,
-		outline 0.125s ease !important;
+		transform 0.25s ease !important;
 }
 
 #psa-vr-county-search:hover {
-	background-color: rgba(245,171,0,1) !important; /* has-warning-50 orange */
+	background-color: rgba(163,114,1,0.75) !important; /* semi-trans has-warning-25 orange */
 	transform:
 		scale(1.1) !important;
 }
 
 #psa-vr-county-search:focus {
 	outline: 0.1em solid rgba(245,171,0,1) !important; /* has-warning-50 orange */
-	background-color: rgba(0,0,0,0.75) !important; /* trans black */
 }
 
 #psa-vr-county-search::placeholder {
@@ -81,21 +162,14 @@
 	cursor: pointer !important;
 }
 
-#psa-variant-1-cta {
-	width: 100% !important;
-	border-radius: 2em !important;
-	border: 0.05em solid rgba(245,171,0,1) !important; /* has-warning-50 orange */
-	background-color: rgba(0,0,0,0.75) !important; /* trans black */
-	color: rgba(255,255,255,1) !important; /* white */
+.psa-info-nav {
+	color: rgba(255,255,255,0.5); /* semi-trans white */
+	text-decoration: underline !important;
 	transition:
-		border 0.5s ease,
-		background-color 0.5s ease,
-		transform 0.25s ease,
-		outline 0.125s ease !important;
+		color 0.25s ease;
 }
 
-#psa-variant-1-cta:hover {
-	background-color: rgba(245,171,0,1) !important; /* has-warning-50 orange */
-	transform:
-		scale(1.1) !important;
+.psa-info-nav:hover {
+	color: rgba(25,25,255) !important; /* lighter blue */
+	cursor: pointer !important;
 }

@@ -23,8 +23,6 @@
 	
 	<link rel="preload" href="photo_home.webp" as="image" importance="high">
 	
-	<link rel="preload" href="texas.webp" as="image" importance="high">
-	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +33,7 @@
 	
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 	
-	<link rel="stylesheet" href="psa_vr.css">
+	<link rel="stylesheet" href="psa_vr copy.css">
 	
 	<link rel="stylesheet" href="archived_campaign_site.css">
 	
@@ -45,7 +43,7 @@
 	
 	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 	
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Amiri:wght@400;700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Amiri:wght@400;700&family=Island+Moments&display=swap">
 	
 	<!-- > mvp-->
 	
@@ -87,18 +85,6 @@
 		
 		.font-amiri {
 			font-family: 'Amiri' !important;
-		}
-		
-		.psa-info-nav {
-			color: rgba(255,255,255,0.5); /* semi-trans white */
-			text-decoration: underline !important;
-			transition:
-				color 0.25s ease;
-		}
-
-		.psa-info-nav:hover {
-			color: rgba(25,25,255) !important; /* lighter blue */
-			cursor: pointer !important;
 		}
 		
 		.psaVariant.modal {
@@ -725,114 +711,219 @@
 	
 	<!---->
 	
-	<!-- Add this right after your </footer> tag, before the PSA sections -->
-	<div id="shared-countdown-container" class="has-text-centered" style="position: fixed; bottom: 3rem; left: 50%; transform: translateX(-50%); z-index:41;">
-	  <p class="mb-1 subtitle is-size-6" data-aos="fade-up" data-aos-duration="2000">Registration cutoff:</p>
-	  <p id="countdown" class="mb-1" data-aos="fade-down" data-aos-duration="2000"></p>
-	<!--go-info--><div class="mt-0"><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
-		<span class="icon-text is-size-6">
-			<span class="icon">🔔</span>
-			<span class="psa-info-nav is-size-7">Looking for the campaign site?</span>
-		</span>
-	</a></div>
-	</div>
-	
-	<!--psa-vr--><section id="psa-vr" class="psaVariant modal">
+	<!--mvp--><section id="mvp-bg1" class="psaVariant modal">
 		
-		<section id="psa-vr-bg" class="modal-background" data-aos="flip-right" data-aos-duration="2000"></section>
+		<section class="modal-background" data-aos="flip-left" data-aos-duration="1500">
+		</section>
 		
-		<section id="psa-vr-fireworks"></section>
-		
-		<section id="psa-vr-main" class="hero is-fullheight has-text-centered" data-aos="zoom-out-right" data-aos-duration="2000">
-			
-			<div class="hero-body"><div class="container">
-				
-				<h2 class="icon-text mb-3 is-size-3 is-size-4-mobile font-amiri has-text-left has-text-white" style="display: inline-flex !important; align-items: center !important;">
-					<img class="mr-2" style="width: 2.5em !important; height: 2.5em !important;" src="texas.webp">
-					Texas Primary<br>Elections 2026
-				</h2>
-				
-				<p class="mb-4 mt-2 subtitle is-size-6">Register me to vote:</p>
-				
-				<!--<a id="psa-vr-cta"
-				class="my-4 py-4 button is-fullwidth"
-				href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN"
-				target="_blank">
-					<span class="icon-text">
-						<span class="icon">🗳</span>
-						<span>...through the state</span>
-					</span>
-				</a>-->
-				
-				<p>
+		<section id="mvp-main" class="hero is-fullheight has-text-centered" data-aos="zoom-out-right" data-aos-duration="2000">
+			<div class="hero-body">
+				<div class="container"><!--stacks content vertically instead of side-by-side-->
 					
-					<input id="psa-vr-county-search" 
-					class="mb-2 py-4 is-size-4 font-montserrat has-text-centered" 
-					type="text" 
-					autocomplete="off" 
-					placeholder="🔍 Find my county">
-					
+					<h2 class="mb-6 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left">
+						<img src="texas.webp">
+						Texas Primary<br>&nbsp;Elections 2026
+					</h2>
+				
+					<p class="mb-2">Register me to vote:</p>
+				
+					<!--cta1--><input id="mvp-county-search" 
+					class="mb-2 py-4 is-size-4 is-size-5-mobile font-montserrat has-text-centered" 
+					type="text" autocomplete="off" 
+					placeholder="🌳  Find my county  🐴">
+				
 					<div>
-						<a id="secondary_cta" href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN" target="_blank">
-							<span class="icon-text is-size-6">
-								<span class="icon">🐄</span>
-								<span class="psa-info-nav is-size-7">Or register via the state</span>
+					<!--cta2--><a id="secondary_cta"
+					href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN"
+					target="_blank">
+						<span class="icon-text is-size-7">
+							<span class="icon">🐄</span>
+							<span class="mvp-open-info">
+								Or go through the state
 							</span>
-						</a>
-					</div>
-					
-				</p>
+						</span>
+					</a>
+				</div>	
 			
-				<ul id="psa-vr-county-results" class="mb-4 is-size-6"></ul>
+				<ul id="mvp-county-results" class="mb-6 is-size-6"></ul>
 				
-				<!--<p class="mb-1 mt-6 subtitle is-size-6">Registration cutoff:</p>
+					<p class="is-size-6">Deadline for 3/3:</p>
 				
-				<p id="countdown" class="mb-6"></p>-->
+					<p id="countdown" class="mb-5"></p>
 				
-				<!--go-info<div class="mt-6"><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
-					<span class="icon-text is-size-6">
+					<!--go-info--><div ><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
+					<span class="mt-6 icon-text is-size-7">
 						<span class="icon">🔔</span>
-						<span class="psa-info-nav is-size-7">Looking for the campaign site?</span>
+						<span class="psa-info-nav is-size-7">About the campaign site</span>
 					</span>
-				</a></div>-->
+				</a></div>
 				
-			</div></div>
-			
+				</div>
+			</div>
 		</section>
 	
 	</section>
 	
-	<!--psa-variant-1--><section id="psa-variant-1" class="psaVariant modal">
+	<!--mvp--><section id="mvp-bg2" class="psaVariant modal">
 		
-		<section class="modal-background has-background-danger-dark" data-aos="flip-left" data-aos-duration="2000" style="opacity: 92.5% !important;"></section>
+		<section class="modal-background" data-aos="flip-left" data-aos-duration="1500">
+		</section>
 		
-		<section class="hero is-fullheight has-text-centered" data-aos="zoom-out-left" data-aos-duration="2000">
-			
-			<div class="hero-body"><div class="container">
-				
-				<h2 class="icon-text mb-3 is-size-3 is-size-4-mobile font-amiri has-text-left has-text-white" style="display: inline-flex !important; align-items: center !important;">
-					<img class="mr-2" style="width: 2.5em !important; height: 2.5em !important;" src="texas.webp">
-					Texas Primary<br>Elections 2026
-				</h2>
-				
-				<p class="mb-4 mt-2 subtitle is-size-6">Did they <em><s>cancel</s></em> my voter registration?</p>
+		<section id="mvp-main" class="hero is-fullheight has-text-centered" data-aos="zoom-out-right" data-aos-duration="2000">
+			<div class="hero-body">
+				<div class="container"><!--stacks content vertically instead of side-by-side-->
 					
-				<a id="psa-variant-1-cta" class="mb-2 py-4 is-size-4 button is-fullwidth"
-				href="https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login"
-				target="_blank">
-					<span class="icon-text">
-						<span class="icon is-size-5">👀</span>
-						<span>Check my status</span>
-					</span>
-				</a>
+					<h2 class="mb-6 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left">
+						<img src="texas.webp">
+						Texas Primary<br>&nbsp;Elections 2026
+					</h2>
 				
-			</div></div>
+					<p class="mb-2">Register me to vote:</p>
+				
+					<!--cta1--><input id="mvp-county-search" 
+					class="mb-2 py-4 is-size-4 is-size-5-mobile font-montserrat has-text-centered" 
+					type="text" autocomplete="off" 
+					placeholder="🌳  Find my county  🐴">
+				
+					<div>
+					<!--cta2--><a id="secondary_cta"
+					href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN"
+					target="_blank">
+						<span class="icon-text is-size-7">
+							<span class="icon">🐄</span>
+							<span class="mvp-open-info">
+								Or go through the state
+							</span>
+						</span>
+					</a>
+				</div>	
 			
+				<ul id="mvp-county-results" class="mb-6 is-size-6"></ul>
+				
+					<p class="is-size-6">Deadline for 3/3:</p>
+				
+					<p id="countdown" class="mb-5"></p>
+				
+					<!--go-info--><div ><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
+					<span class="mt-6 icon-text is-size-7">
+						<span class="icon">🔔</span>
+						<span class="psa-info-nav is-size-7">About the campaign site</span>
+					</span>
+				</a></div>
+				
+				</div>
+			</div>
 		</section>
-		
+	
 	</section>
 	
-	<!--psa-info--><section id="psa-info" class="modal" style="z-index:50">
+	<!--mvp--><section id="mvp-bg3" class="psaVariant modal">
+		
+		<section class="modal-background" data-aos="flip-left" data-aos-duration="1500">
+		</section>
+		
+		<section id="mvp-main" class="hero is-fullheight has-text-centered" data-aos="zoom-out-right" data-aos-duration="2000">
+			<div class="hero-body">
+				<div class="container"><!--stacks content vertically instead of side-by-side-->
+					
+					<h2 class="mb-6 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left">
+						<img src="texas.webp">
+						Texas Primary<br>&nbsp;Elections 2026
+					</h2>
+				
+					<p class="mb-2">Register me to vote:</p>
+				
+					<!--cta1--><input id="mvp-county-search" 
+					class="mb-2 py-4 is-size-4 is-size-5-mobile font-montserrat has-text-centered" 
+					type="text" autocomplete="off" 
+					placeholder="🌳  Find my county  🐴">
+				
+					<div>
+					<!--cta2--><a id="secondary_cta"
+					href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN"
+					target="_blank">
+						<span class="icon-text is-size-7">
+							<span class="icon">🐄</span>
+							<span class="mvp-open-info">
+								Or go through the state
+							</span>
+						</span>
+					</a>
+				</div>	
+			
+				<ul id="mvp-county-results" class="mb-6 is-size-6"></ul>
+				
+					<p class="is-size-6">Deadline for 3/3:</p>
+				
+					<p id="countdown" class="mb-5"></p>
+				
+					<!--go-info--><div ><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
+					<span class="mt-6 icon-text is-size-7">
+						<span class="icon">🔔</span>
+						<span class="psa-info-nav is-size-7">About the campaign site</span>
+					</span>
+				</a></div>
+				
+				</div>
+			</div>
+		</section>
+	
+	</section>
+	
+	<!--mvp--><section id="mvp-bg4" class="psaVariant modal">
+		
+		<section class="modal-background" data-aos="flip-left" data-aos-duration="1500">
+		</section>
+		
+		<section id="mvp-main" class="hero is-fullheight has-text-centered" data-aos="zoom-out-right" data-aos-duration="2000">
+			<div class="hero-body">
+				<div class="container"><!--stacks content vertically instead of side-by-side-->
+					
+					<h2 class="mb-6 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left">
+						<img src="texas.webp">
+						Texas Primary<br>&nbsp;Elections 2026
+					</h2>
+				
+					<p class="mb-2">Register me to vote:</p>
+				
+					<!--cta1--><input id="mvp-county-search" 
+					class="mb-2 py-4 is-size-4 is-size-5-mobile font-montserrat has-text-centered" 
+					type="text" autocomplete="off" 
+					placeholder="🌳  Find my county  🐴">
+				
+					<div>
+					<!--cta2--><a id="secondary_cta"
+					href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN"
+					target="_blank">
+						<span class="icon-text is-size-7">
+							<span class="icon">🐄</span>
+							<span class="mvp-open-info">
+								Or go through the state
+							</span>
+						</span>
+					</a>
+				</div>	
+			
+				<ul id="mvp-county-results" class="mb-6 is-size-6"></ul>
+				
+					<p class="is-size-6">Deadline for 3/3:</p>
+				
+					<p id="countdown" class="mb-5"></p>
+				
+					<!--go-info--><div ><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
+					<span class="mt-6 icon-text is-size-7">
+						<span class="icon">🔔</span>
+						<span class="psa-info-nav is-size-7">About the campaign site</span>
+					</span>
+				</a></div>
+				
+				</div>
+			</div>
+		</section>
+	
+	</section>
+	
+	<!--psa-info--><section id="psa-info" class="modal">
 		
 		<section class="modal-background has-background-black"></section>
 		
@@ -843,7 +934,7 @@
 				<div class="modal-content is-size-6 font-amiri">
 					
 					<figure class="mb-1 image is-48x48">
-						<img src="cactus.webp">
+						<img src="cactus.png">
 					</figure>
 					
 					<h2 class="mb-1 is-size-4">
@@ -851,25 +942,25 @@
 					</h2>
 					
 					<p class="mb-1">
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A volunteer initially created this site for a statewide campaign. It is now kept up independently to support Texas voters during the 2026 primary elections. The site and domain are not affiliated with any active campaign.
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This site was created by a volunteer for a statewide campaign. It is now maintained independently to support Texas voters during the 2026 primaries. The site and domain are not affiliated with any active campaign.
 					</p>
 					<p class="mb-5 mr-6 has-text-right">
+						<a class="js-modal-trigger psa-info-nav" data-target="psa-info-contact-form">
 						— Abhi
+						</a>
+						<br>
+						<span class="has-text-grey-dark">1/16/26</span>
 					</p>
 					
 					<!--go-archive--><div class="mb-2 ml-3 font-montserrat"><a id="quaternary_cta"
-					onclick="document.getElementById('psa-vr').classList.remove('is-active');
-					document.getElementById('psa-info').classList.remove('is-active'); document.getElementById('psa-variant-1').classList.remove('is-active'); return false;">
+					onclick="document.getElementById('mvp-bg1').classList.remove('is-active');
+					document.getElementById('mvp-bg2').classList.remove('is-active');
+					document.getElementById('mvp-bg3').classList.remove('is-active');
+					document.getElementById('mvp-bg4').classList.remove('is-active');
+					document.getElementById('psa-info').classList.remove('is-active'); return false;">
 						<span class="icon-text">
 							<span class="icon is-size-6">📦</span>
 							<span class="psa-info-nav is-size-7">Visit archived campaign site</span>
-						</span>
-					</a></div>
-					
-					<!--go-questions--><div class="mb-2 ml-3 font-montserrat"><a class="js-modal-trigger" data-target="psa-info-contact-form">
-						<span class="icon-text">
-							<span class="icon is-size-6">👋</span>
-							<span class="psa-info-nav is-size-7">Questions?</span>
 						</span>
 					</a></div>
 					
@@ -893,7 +984,7 @@
 			<div class="px-6 modal-content">
 				
 				<figure class="mb-4 mx-auto image is-48x48">
-					<img src="cactus.webp">
+					<img src="cactus.png">
 				</figure>
 			
 				<form action="https://formsubmit.co/d0a457d95408de24f80f6c01e8b49ede" method="POST">
@@ -912,7 +1003,7 @@
 					
 						<div class="control">
 						
-							<input class="input font-montserrat" type="text" name="name" placeholder="👤   My name..." required>
+							<input class="input font-montserrat" type="text" name="name" placeholder="👤   My name" required>
 						
 						</div>
 					
@@ -925,7 +1016,7 @@
 					
 						<div class="control">
 						
-							<input class="input font-montserrat" type="email" name="email" placeholder="✉️   My email..." required>
+							<input class="input font-montserrat" type="email" name="email" placeholder="✉️   My email" required>
 						
 						</div>
 					
@@ -938,7 +1029,7 @@
 					
 						<div class="control">
 						
-							<textarea class="textarea font-montserrat" type="text" name="message" placeholder="🖊   My question..." required></textarea>
+							<textarea class="textarea font-montserrat" type="text" name="message" placeholder="🖊   My message" required></textarea>
 						
 						</div>
 					
@@ -950,8 +1041,8 @@
 						<button class="button button-style is-rounded" type="submit">
 							
 							<span class="icon-text">
-								<span class="icon">📱</span>
-								<span>Send my question</span>
+								<span class="icon">🌵</span>
+								<span>Send my message</span>
 							</span>
 						
 						</button>
@@ -974,12 +1065,14 @@
 	
 	<!---->
 	
-	<!--js-variant-randomizer-->
+	js-variant-randomizer
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
 		    const variants = [
-		        'psa-vr',
-		        'psa-variant-1'
+		        'mvp-bg1',
+		        'mvp-bg2',
+		        'mvp-bg3',
+		        'mvp-bg4'
 		        // add more
 		    ];
     
@@ -1120,7 +1213,7 @@
 			${days} days
 			</span>
 			<br>
-			<span class="is-size-6 has-text-warning-35">
+			<span class="has-text-warning-35">
 			${hours}h ${minutes}m ${seconds}s
 			</span>`;
 		}
