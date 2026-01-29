@@ -101,7 +101,7 @@
 	
 <body class="font-montserrat">
 	
-	<!--archived-campaign-site--><section>
+	<!--archived-campaign-site--><section id="campaign">
 		
 		<!--navbar--><header id="campaign-nav" class="navbar"><div class="container">
 			
@@ -711,18 +711,20 @@
 	
 	<!---->
 	
-	<!--mvp--><section id="mvp-bg1" class="psaVariant modal">
+	<!--mvp--><section id="mvp" class="psaVariant modal">
 		
 		<section class="modal-background" data-aos="flip-left" data-aos-duration="1500">
 		</section>
 		
-		<section id="mvp-main" class="hero is-fullheight has-text-centered" data-aos="zoom-out-right" data-aos-duration="2000">
+		<section id="mvp-fireworks"></section>
+		
+		<section id="mvp-main" class="hero is-fullheight has-text-centered" data-aos="fade-in" data-aos-duration="1000">
 			<div class="hero-body">
 				<div class="container"><!--stacks content vertically instead of side-by-side-->
 					
-					<h2 class="mb-6 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left">
-						<img src="texas.webp">
-						Texas Primary<br>&nbsp;Elections 2026
+					<h2 class="mb-6 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left" data-aos="zoom-in" data-aos-duration="2000">
+						<img src="texas.webp" data-aos="fade-down-right" data-aos-duration="1000">
+						<span data-aos="fade-down-left" data-aos-duration="2000">Texas Primary<br>&nbsp;Elections 2026</span>
 					</h2>
 				
 					<p class="mb-2">Register me to vote:</p>
@@ -733,189 +735,30 @@
 					placeholder="🌳  Find my county  🐴">
 				
 					<div>
-					<!--cta2--><a id="secondary_cta"
-					href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN"
-					target="_blank">
-						<span class="icon-text is-size-7">
-							<span class="icon">🐄</span>
-							<span class="mvp-open-info">
-								Or go through the state
+						<!--cta2--><a id="secondary_cta"
+						href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN"
+						target="_blank">
+							<span class="icon-text is-size-7">
+								<span class="icon">🐄</span>
+								<span class="mvp-open-info">
+									Or go through the state
+								</span>
 							</span>
-						</span>
-					</a>
-				</div>	
+						</a>
+					</div>	
 			
-				<ul id="mvp-county-results" class="mb-6 is-size-6"></ul>
+					<ul id="mvp-county-results" class="mb-6 is-size-6"></ul>
 				
-					<p class="is-size-6">Deadline for 3/3:</p>
+					<p class="is-size-6">Voter reg. deadline for 3/3:</p>
 				
-					<p id="countdown" class="mb-5"></p>
+					<p id="mvp-countdown" class="mb-5" data-aos="fade-left" data-aos-duration="1750"></p>
 				
-					<!--go-info--><div ><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
-					<span class="mt-6 icon-text is-size-7">
-						<span class="icon">🔔</span>
-						<span class="psa-info-nav is-size-7">About the campaign site</span>
-					</span>
-				</a></div>
-				
-				</div>
-			</div>
-		</section>
-	
-	</section>
-	
-	<!--mvp--><section id="mvp-bg2" class="psaVariant modal">
-		
-		<section class="modal-background" data-aos="flip-left" data-aos-duration="1500">
-		</section>
-		
-		<section id="mvp-main" class="hero is-fullheight has-text-centered" data-aos="zoom-out-right" data-aos-duration="2000">
-			<div class="hero-body">
-				<div class="container"><!--stacks content vertically instead of side-by-side-->
-					
-					<h2 class="mb-6 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left">
-						<img src="texas.webp">
-						Texas Primary<br>&nbsp;Elections 2026
-					</h2>
-				
-					<p class="mb-2">Register me to vote:</p>
-				
-					<!--cta1--><input id="mvp-county-search" 
-					class="mb-2 py-4 is-size-4 is-size-5-mobile font-montserrat has-text-centered" 
-					type="text" autocomplete="off" 
-					placeholder="🌳  Find my county  🐴">
-				
-					<div>
-					<!--cta2--><a id="secondary_cta"
-					href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN"
-					target="_blank">
-						<span class="icon-text is-size-7">
-							<span class="icon">🐄</span>
-							<span class="mvp-open-info">
-								Or go through the state
+					<!--go-info--><div><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
+							<span class="mt-6 icon-text is-size-7">
+								<span class="icon">🔔</span>
+								<span class="psa-info-nav is-size-7">About the campaign site</span>
 							</span>
-						</span>
-					</a>
-				</div>	
-			
-				<ul id="mvp-county-results" class="mb-6 is-size-6"></ul>
-				
-					<p class="is-size-6">Deadline for 3/3:</p>
-				
-					<p id="countdown" class="mb-5"></p>
-				
-					<!--go-info--><div ><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
-					<span class="mt-6 icon-text is-size-7">
-						<span class="icon">🔔</span>
-						<span class="psa-info-nav is-size-7">About the campaign site</span>
-					</span>
-				</a></div>
-				
-				</div>
-			</div>
-		</section>
-	
-	</section>
-	
-	<!--mvp--><section id="mvp-bg3" class="psaVariant modal">
-		
-		<section class="modal-background" data-aos="flip-left" data-aos-duration="1500">
-		</section>
-		
-		<section id="mvp-main" class="hero is-fullheight has-text-centered" data-aos="zoom-out-right" data-aos-duration="2000">
-			<div class="hero-body">
-				<div class="container"><!--stacks content vertically instead of side-by-side-->
-					
-					<h2 class="mb-6 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left">
-						<img src="texas.webp">
-						Texas Primary<br>&nbsp;Elections 2026
-					</h2>
-				
-					<p class="mb-2">Register me to vote:</p>
-				
-					<!--cta1--><input id="mvp-county-search" 
-					class="mb-2 py-4 is-size-4 is-size-5-mobile font-montserrat has-text-centered" 
-					type="text" autocomplete="off" 
-					placeholder="🌳  Find my county  🐴">
-				
-					<div>
-					<!--cta2--><a id="secondary_cta"
-					href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN"
-					target="_blank">
-						<span class="icon-text is-size-7">
-							<span class="icon">🐄</span>
-							<span class="mvp-open-info">
-								Or go through the state
-							</span>
-						</span>
-					</a>
-				</div>	
-			
-				<ul id="mvp-county-results" class="mb-6 is-size-6"></ul>
-				
-					<p class="is-size-6">Deadline for 3/3:</p>
-				
-					<p id="countdown" class="mb-5"></p>
-				
-					<!--go-info--><div ><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
-					<span class="mt-6 icon-text is-size-7">
-						<span class="icon">🔔</span>
-						<span class="psa-info-nav is-size-7">About the campaign site</span>
-					</span>
-				</a></div>
-				
-				</div>
-			</div>
-		</section>
-	
-	</section>
-	
-	<!--mvp--><section id="mvp-bg4" class="psaVariant modal">
-		
-		<section class="modal-background" data-aos="flip-left" data-aos-duration="1500">
-		</section>
-		
-		<section id="mvp-main" class="hero is-fullheight has-text-centered" data-aos="zoom-out-right" data-aos-duration="2000">
-			<div class="hero-body">
-				<div class="container"><!--stacks content vertically instead of side-by-side-->
-					
-					<h2 class="mb-6 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left">
-						<img src="texas.webp">
-						Texas Primary<br>&nbsp;Elections 2026
-					</h2>
-				
-					<p class="mb-2">Register me to vote:</p>
-				
-					<!--cta1--><input id="mvp-county-search" 
-					class="mb-2 py-4 is-size-4 is-size-5-mobile font-montserrat has-text-centered" 
-					type="text" autocomplete="off" 
-					placeholder="🌳  Find my county  🐴">
-				
-					<div>
-					<!--cta2--><a id="secondary_cta"
-					href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN"
-					target="_blank">
-						<span class="icon-text is-size-7">
-							<span class="icon">🐄</span>
-							<span class="mvp-open-info">
-								Or go through the state
-							</span>
-						</span>
-					</a>
-				</div>	
-			
-				<ul id="mvp-county-results" class="mb-6 is-size-6"></ul>
-				
-					<p class="is-size-6">Deadline for 3/3:</p>
-				
-					<p id="countdown" class="mb-5"></p>
-				
-					<!--go-info--><div ><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
-					<span class="mt-6 icon-text is-size-7">
-						<span class="icon">🔔</span>
-						<span class="psa-info-nav is-size-7">About the campaign site</span>
-					</span>
-				</a></div>
+						</a></div>
 				
 				</div>
 			</div>
@@ -952,12 +795,7 @@
 						<span class="has-text-grey-dark">1/16/26</span>
 					</p>
 					
-					<!--go-archive--><div class="mb-2 ml-3 font-montserrat"><a id="quaternary_cta"
-					onclick="document.getElementById('mvp-bg1').classList.remove('is-active');
-					document.getElementById('mvp-bg2').classList.remove('is-active');
-					document.getElementById('mvp-bg3').classList.remove('is-active');
-					document.getElementById('mvp-bg4').classList.remove('is-active');
-					document.getElementById('psa-info').classList.remove('is-active'); return false;">
+					<!--go-archive--><div class="mb-2 ml-3 font-montserrat"><a id="quaternary_cta" onclick="document.getElementById('mvp').classList.remove('is-active'); document.getElementById('psa-info').classList.remove('is-active'); return false; return false;">
 						<span class="icon-text">
 							<span class="icon is-size-6">📦</span>
 							<span class="psa-info-nav is-size-7">Visit archived campaign site</span>
@@ -1065,14 +903,10 @@
 	
 	<!---->
 	
-	js-variant-randomizer
-	<script>
+	<!--js-variant-randomizer--><script>
 		document.addEventListener('DOMContentLoaded', () => {
 		    const variants = [
-		        'mvp-bg1',
-		        'mvp-bg2',
-		        'mvp-bg3',
-		        'mvp-bg4'
+		        'mvp'
 		        // add more
 		    ];
     
@@ -1193,15 +1027,15 @@
   		});
   	</script>
 
-	<!--js-psa-vr-countdown-<script>-->
+	<!--js-mvp-countdown-<script>-->
 	<script>
 		const targetDate = new Date("2026-02-02T17:00:00").getTime();
-		const countdownEl = document.getElementById("countdown");
+		const countdownEl = document.getElementById("mvp-countdown");
 		function updateCountdown() {
 			const now = new Date().getTime();
 			const diff = targetDate - now;
 			if(diff <= 0) {
-				countdownEl.innerHTML = "Voter registration deadline is today!";
+				countdownEl.innerHTML = "Voter registration deadline: 2/2";
 				clearInterval(timerInterval);
 				return;
 			}
@@ -1221,7 +1055,7 @@
 		const timerInterval = setInterval(updateCountdown, 1000);
 	</script>
 		
-	<!--js-psa-vr-fireworks-<script>-->
+	<!--js-mvp-fireworks-<script>-->
 	<script>
 		class SimpleFireworks {
 			constructor(container) {
@@ -1344,14 +1178,14 @@
 			}
 		}
 		document.addEventListener('DOMContentLoaded', function() {
-			const container = document.getElementById('psa-vr-fireworks');
+			const container = document.getElementById('mvp-fireworks');
 			if (!container) {
-				console.error('psa-vr-fireworks not found');
+				console.error('mvp-fireworks not found');
 				return;
 			}
 			const fireworks = new SimpleFireworks(container);
 			// DON'T auto-start here
-			const modal = document.getElementById('psa-vr');
+			const modal = document.getElementById('mvp');
 			const observer = new MutationObserver(() => {
 				modal.classList.contains('is-active') ? fireworks.start() : fireworks.stop();
 			});

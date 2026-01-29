@@ -1,25 +1,13 @@
-/*.mvp {
-	opacity: 0% !important;
-}*/
-
-.mvq {
-	opacity: 100% !important;
+#campaign {
+	z-index: 0 !important;
 }
 
-#mvp-bg1>.modal-background {
+#mvp>.modal-background {
 	background-color: rgba(0,0,50,0.9) !important;" /* semi-trans dark blue - rgba(0,0,50,0.9) */
 }
 
-#mvp-bg2>.modal-background {
-	background-color: rgba(46,3,12,0.9) !important;" /* semi-trans dark red - rgba(46,3,12,0.9) */
-}
-
-#mvp-bg3>.modal-background {
-	background-color: rgba(0,0,0,0.9) !important;" /* semi-trans black */
-}
-
-#mvp-bg4>.modal-background {
-	background-color: rgba(0,56,48,0.9) !important;" /* semi-trans dark green - rgba(0,56,48,0.9) */
+#mvp-main{
+	z-index: 2 !important; /* #campaign < #mvp-fireworks < #mvp-main < psa-info */
 }
 
 #mvp-main h2 {
@@ -69,6 +57,23 @@
 	cursor: pointer !important;
 }
 
+#mvp-fireworks {
+    z-index: 1 !important; /* < mvp-main */
+	position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    pointer-events: none !important;
+}
+
+#mvp-fireworks canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none !important; /* double tap */
+}
+
 .mvp-open-info {
 	color: rgba(255,255,255,0.5) !important; /* trans white */
 	text-decoration: underline !important;
@@ -80,6 +85,8 @@
 	color: rgba(154,109,2,1) !important; /* has-warning-35 orange */
 	cursor: pointer !important;
 }
+
+
 
 #psa-vr-bg {
 	background-color: rgba(0,0,50,0.9) !important;" /* semi-trans dark blue - rgba(0,0,50,0.9) */
