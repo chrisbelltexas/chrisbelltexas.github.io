@@ -122,6 +122,11 @@
 }
 
 
+#var2>.modal-background {
+	background-color: rgba(0,50,0,0.9) !important; /* semi trans dark green */
+}
+
+
 #psa-vr-bg {
 	background-color: rgba(0,0,50,0.9) !important;" /* semi-trans dark blue - rgba(0,0,50,0.9) */
 }
