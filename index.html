@@ -711,20 +711,20 @@
 	
 	<!---->
 	
-	<!--mvp--><section id="mvp" class="psaVariant modal">
+	<!--mvp-registertovote--><section id="mvp" class="psaVariant modal">
 		
 		<section class="modal-background" data-aos="flip-left" data-aos-duration="1500">
 		</section>
 		
-		<section id="mvp-fireworks"></section>
+		<!--<section id="mvp-fireworks"></section>-->
 		
 		<section id="mvp-main" class="hero is-fullheight has-text-centered" data-aos="fade-in" data-aos-duration="1000">
 			<div class="hero-body">
 				<div class="container"><!--stacks content vertically instead of side-by-side-->
 					
-					<h2 class="mb-6 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left" data-aos="zoom-in" data-aos-duration="2000">
-						<img src="texas.webp" data-aos="fade-down-right" data-aos-duration="1000">
-						<span data-aos="fade-down-left" data-aos-duration="2000">Texas Primary<br>&nbsp;Elections 2026</span>
+					<h2 class="mb-6 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left gbl-title-txt" data-aos="zoom-in" data-aos-duration="1500">
+						<img class= "gbl-title-img" src="texas.webp" data-aos="fade-right" data-aos-duration="1000">
+						<span data-aos="fade-down-left" data-aos-duration="1250">Texas Primary<br>&nbsp;Elections 2026</span>
 					</h2>
 				
 					<p class="mb-2">Register me to vote:</p>
@@ -740,7 +740,7 @@
 						target="_blank">
 							<span class="icon-text is-size-7">
 								<span class="icon">🐄</span>
-								<span class="mvp-open-info">
+								<span class="gbl-link-orange35">
 									Or go through the state
 								</span>
 							</span>
@@ -751,12 +751,61 @@
 				
 					<p class="is-size-6">Voter reg. deadline for 3/3:</p>
 				
-					<p id="mvp-countdown" class="mb-5" data-aos="fade-left" data-aos-duration="1750"></p>
+					<p id="mvp-countdown" class="mb-5" data-aos="fade-up" data-aos-duration="2000"></p>
 				
 					<!--go-info--><div><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
 							<span class="mt-6 icon-text is-size-7">
 								<span class="icon">🔔</span>
-								<span class="psa-info-nav is-size-7">About the campaign site</span>
+								<span class="gbl-link-ltblue is-size-7">About the campaign site</span>
+							</span>
+						</a></div>
+				
+				</div>
+			</div>
+		</section>
+	
+	</section>
+	
+	<!--var1-earlyvotingstarts--><section id="var1" class="psaVariant modal">
+		
+		<section class="modal-background" data-aos="flip-left" data-aos-duration="1500">
+		</section>
+		
+		<!--<section id="mvp-fireworks"></section>-->
+		
+		<section id="var1-main" class="hero is-fullheight has-text-centered" data-aos="fade-in" data-aos-duration="1000">
+			<div class="hero-body">
+				<div class="container"><!--stacks content vertically instead of side-by-side-->
+					
+					<h2 class="mb-5 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left gbl-title-txt" data-aos="zoom-in" data-aos-duration="1500">
+						<img class="gbl-title-img" src="texas.webp" data-aos="fade-right" data-aos-duration="1000">
+						<span data-aos="fade-down-left" data-aos-duration="1250">Texas Primary<br>&nbsp;Elections 2026</span>
+					</h2>
+				
+					<p class="mb-2">Find my early voting location:</p>
+				
+					<a href="https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login" target="_blank"><img id="var1-image" src="early_voting.webp" class="mb-2"></a>
+				
+					<div class="mb-5">
+						<a href="https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login"
+						target="_blank">
+							<span class="icon-text is-size-7">
+								<span class="icon">🔑</span>
+								<span class="gbl-link-orange35">
+									Login to the state voter portal
+								</span>
+							</span>
+						</a>
+					</div>	
+									
+					<p class="is-size-6">Early voting starts in:</p>
+				
+					<p id="var1-countdown" class="mb-2" data-aos="fade-up" data-aos-duration="2000"></p>
+				
+					<!--go-info--><div><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
+							<span class="mt-6 icon-text is-size-7">
+								<span class="icon">🔔</span>
+								<span class="gbl-link-ltblue is-size-7">About the campaign site</span>
 							</span>
 						</a></div>
 				
@@ -788,23 +837,23 @@
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This site was created by a volunteer for a statewide campaign. It is now maintained independently to support Texas voters during the 2026 primaries. The site and domain are not affiliated with any active campaign.
 					</p>
 					<p class="mb-5 mr-6 has-text-right">
-						<a class="js-modal-trigger psa-info-nav" data-target="psa-info-contact-form">
+						<a class="js-modal-trigger gbl-link-ltblue" data-target="psa-info-contact-form">
 						— Abhi
 						</a>
 						<br>
 						<span class="has-text-grey-dark">1/16/26</span>
 					</p>
 					
-					<!--go-archive--><div class="mb-2 ml-3 font-montserrat"><a id="quaternary_cta" onclick="document.getElementById('mvp').classList.remove('is-active'); document.getElementById('psa-info').classList.remove('is-active'); return false; return false;">
+					<!--go-archive--><div class="mb-2 ml-3 font-montserrat"><a id="quaternary_cta" onclick="document.getElementById('mvp').classList.remove('is-active'); document.getElementById('var1').classList.remove('is-active'); document.getElementById('psa-info').classList.remove('is-active'); return false; return false;">
 						<span class="icon-text">
 							<span class="icon is-size-6">📦</span>
-							<span class="psa-info-nav is-size-7">Visit archived campaign site</span>
+							<span class="gbl-link-ltblue is-size-7">Visit archived campaign site</span>
 						</span>
 					</a></div>
 					
 					<!--go-back--><div class="mt-6 is-size-4 has-text-centered"><a
 					onclick="document.getElementById('psa-info').classList.remove('is-active'); return false;"
-					class="psa-info-nav">
+					class="gbl-link-ltblue">
 						<i class="fa-solid fa-circle-chevron-left"></i>
 					</a></div>
 				
@@ -891,7 +940,7 @@
 				
 				<!--go-back--><div class="mt-6 is-size-4 has-text-centered"><a
 				onclick="document.getElementById('psa-info-contact-form').classList.remove('is-active'); return false;"
-				class="psa-info-nav">
+				class="gbl-link-ltblue">
 					<i class="fa-solid fa-circle-chevron-left"></i>
 				</a></div>
 			
@@ -906,7 +955,8 @@
 	<!--js-variant-randomizer--><script>
 		document.addEventListener('DOMContentLoaded', () => {
 		    const variants = [
-		        'mvp'
+		        'mvp',
+				'var1'
 		        // add more
 		    ];
     
@@ -1029,30 +1079,62 @@
 
 	<!--js-mvp-countdown-<script>-->
 	<script>
-		const targetDate = new Date("2026-02-02T17:00:00").getTime();
-		const countdownEl = document.getElementById("mvp-countdown");
-		function updateCountdown() {
-			const now = new Date().getTime();
-			const diff = targetDate - now;
-			if(diff <= 0) {
-				countdownEl.innerHTML = "Voter registration deadline: 2/2";
-				clearInterval(timerInterval);
-				return;
+		(function() {
+			const targetDate = new Date("2026-02-02T17:00:00").getTime();
+			const countdownEl = document.getElementById("mvp-countdown");
+			function updateCountdown() {
+				const now = new Date().getTime();
+				const diff = targetDate - now;
+				if(diff <= 0) {
+					countdownEl.innerHTML = "Voter registration deadline: 2/2";
+					clearInterval(mvpTimerInterval);
+					return;
+				}
+				const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+				const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
+				const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
+				const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+				countdownEl.innerHTML = `<span class="is-size-3 has-text-warning-50">
+				${days} days
+				</span>
+				<br>
+				<span class="has-text-warning-35">
+				${hours}h ${minutes}m ${seconds}s
+				</span>`;
 			}
-			const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-			const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
-			const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
-			const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-			countdownEl.innerHTML = `<span class="is-size-3 has-text-warning-50">
-			${days} days
-			</span>
-			<br>
-			<span class="has-text-warning-35">
-			${hours}h ${minutes}m ${seconds}s
-			</span>`;
-		}
-		updateCountdown();
-		const timerInterval = setInterval(updateCountdown, 1000);
+			updateCountdown();
+			const mvpTimerInterval = setInterval(updateCountdown, 1000);
+		})();
+	</script>
+		
+	<!--js-var1-countdown-<script>-->
+	<script>
+		(function() {
+			const targetDate = new Date("2026-02-17T07:00:00").getTime();
+			const countdownEl = document.getElementById("var1-countdown");
+			function updateCountdown() {
+				const now = new Date().getTime();
+				const diff = targetDate - now;
+				if(diff <= 0) {
+					countdownEl.innerHTML = "Early voting starts 2/17 & ends 2/27";
+					clearInterval(var1TimerInterval);
+					return;
+				}
+				const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+				const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
+				const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
+				const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+				countdownEl.innerHTML = `<span class="is-size-3 has-text-warning-50">
+				${days} days
+				</span>
+				<br>
+				<span class="has-text-warning-35">
+				${hours}h ${minutes}m ${seconds}s
+				</span>`;
+			}
+			updateCountdown();
+			const var1TimerInterval = setInterval(updateCountdown, 1000);
+		})();
 	</script>
 		
 	<!--js-mvp-fireworks-<script>-->

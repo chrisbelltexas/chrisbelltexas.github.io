@@ -2,21 +2,42 @@
 	z-index: 0 !important;
 }
 
+
+.gbl-title-txt {
+	align-items: center !important;
+}
+.gbl-title-img {
+	width: 2.5em !important; 
+	height: 2.5em !important;
+}
+.gbl-link-orange35 {
+	color: rgba(255,255,255,0.5) !important; /* trans white */
+	text-decoration: underline !important;
+	transition:
+		color 0.25s ease;
+}
+.gbl-link-orange35:hover {
+	color: rgba(154,109,2,1) !important; /* has-warning-35 orange */
+	cursor: pointer !important;
+}
+.gbl-link-ltblue {
+	color: rgba(255,255,255,0.5); /* semi-trans white */
+	text-decoration: underline !important;
+	transition:
+		color 0.25s ease;
+}
+.gbl-link-ltblue:hover {
+	color: rgba(25,25,255) !important; /* lighter blue */
+	cursor: pointer !important;
+}
+
+
 #mvp>.modal-background {
 	background-color: rgba(0,0,50,0.9) !important;" /* semi-trans dark blue - rgba(0,0,50,0.9) */
 }
 
 #mvp-main{
 	z-index: 2 !important; /* #campaign < #mvp-fireworks < #mvp-main < psa-info */
-}
-
-#mvp-main h2 {
-	align-items: center !important;
-}
-
-#mvp-main img {
-	width: 2.5em !important; 
-	height: 2.5em !important;
 }
 
 #mvp-county-search {
@@ -27,7 +48,6 @@
 	width: 100% !important;
 	transition:
 		background-color 0.5s ease,
-		border 0.5s ease,
 		transform 0.2s ease !important;
 }
 
@@ -74,18 +94,32 @@
     pointer-events: none !important; /* double tap */
 }
 
-.mvp-open-info {
-	color: rgba(255,255,255,0.5) !important; /* trans white */
-	text-decoration: underline !important;
+
+#var1>.modal-background {
+	background-color: rgba(50,0,0,0.9) !important;" /* semi-trans dark red - rgba(50,0,0,0.9) */
+}
+
+#var1-image {
+	opacity: 50% !important;
+	border: 0.25em solid rgba(245,171,0,1) !important; /* has-warning-50 orange */
+	border-radius: 2em !important;
+	width: 20% !important;
 	transition:
-		color 0.25s ease;
+		opacity 0.5s ease,
+		transform 0.2s ease !important;
+	;
 }
 
-.mvp-open-info:hover {
-	color: rgba(154,109,2,1) !important; /* has-warning-35 orange */
-	cursor: pointer !important;
+#var1-image:hover {
+	opacity: 100% !important;
+	transform: scale(1.05) !important;
 }
 
+@media screen and (max-width: 768px) {
+	#var1-image {
+		width: 50% !important;
+	}
+}
 
 
 #psa-vr-bg {
@@ -166,17 +200,5 @@
 #psa-vr-county-results li:hover {
 	color: rgba(245,171,0,1) !important; /* has-warning-50 orange */
 	transform: scale(1.325) !important;
-	cursor: pointer !important;
-}
-
-.psa-info-nav {
-	color: rgba(255,255,255,0.5); /* semi-trans white */
-	text-decoration: underline !important;
-	transition:
-		color 0.25s ease;
-}
-
-.psa-info-nav:hover {
-	color: rgba(25,25,255) !important; /* lighter blue */
 	cursor: pointer !important;
 }
