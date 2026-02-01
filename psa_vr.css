@@ -10,14 +10,14 @@
 	width: 2.5em !important; 
 	height: 2.5em !important;
 }
-.gbl-link-orange35 {
-	color: rgba(255,255,255,0.5) !important; /* trans white */
+.gbl-link-orange50 {
+	color: rgba(255,255,255,1) !important; /* white */
 	text-decoration: underline !important;
 	transition:
 		color 0.25s ease;
 }
-.gbl-link-orange35:hover {
-	color: rgba(154,109,2,1) !important; /* has-warning-35 orange */
+.gbl-link-orange50:hover {
+	color: rgba(245,171,0,1) !important; /* has-warning-50 orange */
 	cursor: pointer !important;
 }
 .gbl-link-ltblue {
@@ -41,7 +41,7 @@
 }
 
 #mvp-county-search {
-	background-color: rgba(0,0,0,0.5) !important; /* trans black */
+	background-color: rgba(0,0,0,0.75) !important; /* trans black */
 	color: rgba(255,255,255,1) !important; /* white */
 	border: 0.05em solid rgba(245,171,0,1) !important; /* has-warning-50 orange */
 	border-radius: 2em !important;
@@ -52,7 +52,7 @@
 }
 
 #mvp-county-search:hover {
-	background-color: rgba(0,0,0,1) !important; /* semi-trans has-warning-25 orange */
+	background-color: rgba(0,0,0,1) !important; /* black */
 	transform: scale(1.1) !important;
 }
 
@@ -66,8 +66,9 @@
 }
 
 #mvp-county-results li {
+	text-decoration: underline !important;
 	transition:
-		color 1s ease,
+		color 0.25s ease,
 		transform 0.125s ease !important;
 }
 

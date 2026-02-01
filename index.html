@@ -711,7 +711,7 @@
 	
 	<!---->
 	
-	<!--mvp-registertovote--><section id="mvp" class="psaVariant modal">
+	<!--mvp-registertovote--><section id="mvp" class="psaVariant modal is-active">
 		
 		<section class="modal-background" data-aos="flip-left" data-aos-duration="1500">
 		</section>
@@ -722,12 +722,12 @@
 			<div class="hero-body">
 				<div class="container"><!--stacks content vertically instead of side-by-side-->
 					
-					<h2 class="mb-6 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left gbl-title-txt" data-aos="zoom-in" data-aos-duration="1500">
+					<h2 class="mb-6 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left gbl-title-txt has-text-white" data-aos="zoom-in" data-aos-duration="1500">
 						<img class= "gbl-title-img" src="texas.webp" data-aos="fade-right" data-aos-duration="1000">
 						<span data-aos="fade-down-left" data-aos-duration="1250">Texas Primary<br>&nbsp;Elections 2026</span>
 					</h2>
 				
-					<p class="mb-2">Register me to vote:</p>
+					<p class="mb-2 has-text-white">Register me to vote:</p>
 				
 					<!--cta1--><input id="mvp-county-search" 
 					class="mb-2 py-4 is-size-4 is-size-5-mobile font-montserrat has-text-centered" 
@@ -740,7 +740,7 @@
 						target="_blank">
 							<span class="icon-text is-size-7">
 								<span class="icon">🐄</span>
-								<span class="gbl-link-orange35">
+								<span class="gbl-link-orange50">
 									Or go through the state
 								</span>
 							</span>
@@ -749,14 +749,14 @@
 			
 					<ul id="mvp-county-results" class="mb-6 is-size-6"></ul>
 				
-					<p class="is-size-6">Voter reg. deadline for 3/3:</p>
+					<p class="is-size-6 has-text-white">Voter registration deadline:</p>
 				
 					<p id="mvp-countdown" class="mb-5" data-aos="fade-up" data-aos-duration="2000"></p>
 				
-					<!--go-info--><div><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
+					<!--go-info--><div><a id="mvp_info" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
 							<span class="mt-6 icon-text is-size-7">
 								<span class="icon">🔔</span>
-								<span class="gbl-link-ltblue is-size-7">About the campaign site</span>
+								<span class="gbl-link-orange50 is-size-7">About the campaign site</span>
 							</span>
 						</a></div>
 				
@@ -800,7 +800,7 @@
 				
 					<p id="var1-countdown" class="mb-2" data-aos="fade-up" data-aos-duration="2000"></p>
 				
-					<!--go-info--><div><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
+					<!--go-info--><div><a id="var1_info" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
 							<span class="mt-6 icon-text is-size-7">
 								<span class="icon">🔔</span>
 								<span class="gbl-link-ltblue is-size-7">About the campaign site</span>
@@ -848,19 +848,20 @@
 					<div class="mt-6 mb-6 mx-5 font-amiri is-size-3 is-size-4-mobile has-text-centered">
 						<div id="typed-strings" class="has-text-white">
 							<p class="has-text-centered">hello</p>
-						  	<p>this is a <i class="fa-solid fa-circle-exclamation fa-shake"></i> voter alert message</p>
-						  	<p>were you <i class="fa-solid fa-ban fa-fade"></i> <s>purged</s> from the county voter rolls recently?</p>
+						  	<p><i class="fa-solid fa-circle-exclamation fa-shake"></i> this is a voter alert message</p>
+						  	<p>were you <i class="fa-solid fa-ban fa-fade"></i> <s>purged</s> from your county voter rolls recently?</p>
 						  	<p>i.e. are you still <i class="fa-solid fa-flag-usa fa-spin-pulse"></i> registered to vote?</p>
-						  	<p>might as well double check <i class="fa-solid fa-check-double fa-bounce"></i></p>
-					  	  	<p class="">
+						  	<p>might as well double check</p>
+							<p><i class="fa-solid fa-check-double fa-bounce"></i></p>
+					  	  	<p>
 							  	🏛&nbsp;
-							  	<a href="https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login" target="_blank" class="gbl-link-orange35">Am I still registered?</a>
+							  	<a href="https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login" target="_blank" class="gbl-link-orange35">Am I still reg. to vote?</a>
 						  	</p>
 						</div>
 						<span id="typed"></span>						
 					</div>
 				
-					<!--go-info--><div><a id="secondary_cta" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
+					<!--go-info--><div><a id="var2_info" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
 							<span class="mt-6 icon-text is-size-7">
 								<span class="icon">🔔</span>
 								<span class="gbl-link-ltblue is-size-7">About the campaign site</span>
@@ -887,36 +888,36 @@
 						<img src="cactus.png">
 					</figure>
 					
-					<h2 class="mb-1 is-size-4">
+					<h2 class="mb-1 is-size-4 has-text-white">
 						H<span class="is-size-5">owdy,</span>
 					</h2>
 					
-					<p class="mb-1">
+					<p class="mb-1 has-text-white">
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I created this site as a volunteer for a statewide campaign. It is now repurposed and maintained independently as support and education for Texas voters during the 2026 primaries. The site and domain are not affiliated with any active campaign.
 					</p>
 					<p class="mb-5 mr-6 has-text-right">
 						<a class="js-modal-trigger" data-target="psa-info-contact-form">
 							<span class="icon-text">
 								<span class="icon is-size-6">🌵</span>
-								<span class="gbl-link-ltblue is-size-6">
+								<span class="gbl-link-orange50 is-size-6">
 									Abhi
 								</span>
 							</span>
 						</a>
 						<br>
-						<span class="has-text-grey-dark is-size-7">1/16/26</span>
+						<span class="is-size-7">1/16/26</span>
 					</p>
 					
 					<!--go-archive--><div class="mb-2 ml-3 font-montserrat"><a id="quaternary_cta" onclick="document.getElementById('mvp').classList.remove('is-active'); document.getElementById('var1').classList.remove('is-active'); document.getElementById('var2').classList.remove('is-active'); document.getElementById('psa-info').classList.remove('is-active'); return false; return false;">
 						<span class="icon-text">
 							<span class="icon is-size-6">📦</span>
-							<span class="gbl-link-ltblue is-size-7">Visit archived campaign site</span>
+							<span class="gbl-link-orange50 is-size-7">Visit archived campaign site</span>
 						</span>
 					</a></div>
 					
 					<!--go-back--><div class="mt-6 is-size-4 has-text-centered"><a
 					onclick="document.getElementById('psa-info').classList.remove('is-active'); return false;"
-					class="gbl-link-ltblue">
+					class="gbl-link-orange50">
 						<i class="fa-solid fa-circle-chevron-left"></i>
 					</a></div>
 				
@@ -1003,7 +1004,7 @@
 				
 				<!--go-back--><div class="mt-6 is-size-4 has-text-centered"><a
 				onclick="document.getElementById('psa-info-contact-form').classList.remove('is-active'); return false;"
-				class="gbl-link-ltblue">
+				class="gbl-link-orange50">
 					<i class="fa-solid fa-circle-chevron-left"></i>
 				</a></div>
 			
@@ -1018,9 +1019,9 @@
 	<!--js-variant-randomizer--><script>
 		document.addEventListener('DOMContentLoaded', () => {
 		    const variants = [
-		        'mvp',
+		        'mvp'/*,
 				'var1',
-				'var2'
+				'var2'*/
 		        // add more
 		    ];
     
@@ -1041,14 +1042,22 @@
 	<!--js-typewriter--><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 	
 	<script>
-    	var typed = new Typed('#typed', {
-			stringsElement: '#typed-strings',
-			startDelay: 1500,
-			typeSpeed: 25,
-			backDelay: 3000,
-			loop: false,
-			fadeOut: true
-    	});
+		var typed = new Typed('#typed', {
+		    stringsElement: '#typed-strings',
+		    startDelay: 1500,
+		    typeSpeed: 25,
+		    backDelay: 3000,
+		    loop: false,
+		    fadeOut: true,
+		    onComplete: function(self) {
+				setTimeout(() => {
+					document.querySelector('#var2-main h2')?.classList.add('show');
+					setTimeout(() => {
+						document.querySelector('#var2-info')?.classList.add('show');
+		            }, 300);
+		        }, 500);
+		    }
+		});
 	</script>
 	
 	
@@ -1172,11 +1181,11 @@
 				const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
 				const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
 				const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-				countdownEl.innerHTML = `<span class="is-size-3 has-text-warning-50">
-				${days} days
+				countdownEl.innerHTML = `<span class="is-size-3 has-text-warning-60">
+				${days} day
 				</span>
 				<br>
-				<span class="has-text-warning-35">
+				<span class="has-text-warning-60">
 				${hours}h ${minutes}m ${seconds}s
 				</span>`;
 			}
