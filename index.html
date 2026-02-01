@@ -735,7 +735,7 @@
 					placeholder="🌳  Find my county  🐴">
 				
 					<div>
-						<!--cta2--><a id="secondary_cta"
+						<!--cta2--><a id="mvp-txsos-portal"
 						href="https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN"
 						target="_blank">
 							<span class="icon-text is-size-7">
@@ -753,7 +753,7 @@
 				
 					<p id="mvp-countdown" class="mb-5" data-aos="fade-up" data-aos-duration="2000"></p>
 				
-					<!--go-info--><div><a id="mvp_info" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
+					<!--go-info--><div><a id="mvp-about" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
 							<span class="mt-6 icon-text is-size-7">
 								<span class="icon">🔔</span>
 								<span class="gbl-link-orange50 is-size-7">About the campaign site</span>
@@ -896,7 +896,7 @@
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I created this site as a volunteer for a statewide campaign. It is now repurposed and maintained independently as support and education for Texas voters during the 2026 primaries. The site and domain are not affiliated with any active campaign.
 					</p>
 					<p class="mb-5 mr-6 has-text-right">
-						<a class="js-modal-trigger" data-target="psa-info-contact-form">
+						<a id="about-contact" class="js-modal-trigger" data-target="psa-info-contact-form">
 							<span class="icon-text">
 								<span class="icon is-size-6">🌵</span>
 								<span class="gbl-link-orange50 is-size-6">
@@ -908,7 +908,7 @@
 						<span class="is-size-7">1/16/26</span>
 					</p>
 					
-					<!--go-archive--><div class="mb-2 ml-3 font-montserrat"><a id="quaternary_cta" onclick="document.getElementById('mvp').classList.remove('is-active'); document.getElementById('var1').classList.remove('is-active'); document.getElementById('var2').classList.remove('is-active'); document.getElementById('psa-info').classList.remove('is-active'); return false; return false;">
+					<!--go-archive--><div class="mb-2 ml-3 font-montserrat"><a id="about_archive" onclick="document.getElementById('mvp').classList.remove('is-active'); document.getElementById('var1').classList.remove('is-active'); document.getElementById('var2').classList.remove('is-active'); document.getElementById('psa-info').classList.remove('is-active'); return false; return false;">
 						<span class="icon-text">
 							<span class="icon is-size-6">📦</span>
 							<span class="gbl-link-orange50 is-size-7">Visit archived campaign site</span>
@@ -989,7 +989,7 @@
 					<!-- send -->
 					<div class="buttons is-centered">
 					
-						<button class="button button-style is-rounded" type="submit">
+						<button id="contact-submit" class="button button-style is-rounded" type="submit">
 							
 							<span class="icon-text">
 								<span class="icon">🌵</span>
@@ -1097,39 +1097,69 @@
 	<!--js-ga4-analytics-<script>-->
     <script>
 		// ga4 analytics
-		const primary = document.getElementById('psa-vr-cta');
-		const secondary = document.getElementById('secondary_cta');
-		const tertiary = document.getElementById('psa-vr-county-search');
-		const quaternary = document.getElementById('quaternary_cta');
+		const mvp_county_search = document.getElementById('mvp-county-search');
+		const mvp_county_results = document.getElementById('mvp-county-results');
+		const mvp_txsos_portal = document.getElementById('mvp-txsos-portal');
+		const mvp_about = document.getElementById('mvp-about');
+		const about_contact = document.getElementById('about-contact');
+		const about_archive = document.getElementById('about-archive');
+		const contact_submit = document.getElementById('contact-submit');
 		
-		if(primary) {
-			primary.addEventListener('click', () => {
-				gtag('event', 'primary_cta_clicked', {
-					'event_label': 'register to vote through the state'
+		if (mvp_county_search) {
+			mvp_county_search.addEventListener('focus', () => {
+				gtag('event', 'l1_county_search_bar_clicked', {
+					'event_label': 'county search focused'
 				});
 			});
 		}
 		
-		if(secondary) {
-			secondary.addEventListener('click', () => {
-				gtag('event', 'secondary_cta_clicked', {
-					'event_label': 'looking for campaign site?'
+		if (mvp_county_results) {
+			mvp_county_results.addEventListener('click', (e) => {
+				const link = e.target.closest('a');
+				if (link) {
+					gtag('event', 'l1_county_link_clicked', {
+						'event_label': link.textContent.trim()
+					});
+				}
+			});
+		}
+		
+		if (mvp_txsos_portal) {
+			mvp_txsos_portal.addEventListener('click', () => {
+				gtag('event', 'l1_txsos_portal_clicked', {
+					'event_label': 'tx sos voter reg'
 				});
 			});
 		}
 		
-		if(tertiary) {
-			tertiary.addEventListener('click', () => {
-				gtag('event', 'tertiary_cta_clicked', {
-					'event_label': 'county search'
+		if (mvp_about) {
+			mvp_about.addEventListener('click', () => {
+				gtag('event', 'l1_about_clicked', {
+					'event_label': 'about the campaign site'
 				});
 			});
 		}
 		
-		if(quaternary) {
-			quaternary.addEventListener('click', () => {
-				gtag('event', 'quaternary_cta_clicked', {
-					'event_label': 'visit archived site'
+		if (about_contact) {
+			about_contact.addEventListener('click', () => {
+				gtag('event', 'l2_contact_clicked', {
+					'event_label': 'contact'
+				});
+			});
+		}
+		
+		if (about_archive) {
+			about_archive.addEventListener('click', () => {
+				gtag('event', 'l2_archive_clicked', {
+					'event_label': 'archived campaign site'
+				});
+			});
+		}
+		
+		if (contact_submit) {
+			contact_submit.addEventListener('click', () => {
+				gtag('event', 'l3_form_submitted', {
+					'event_label': 'contact form sent'
 				});
 			});
 		}
