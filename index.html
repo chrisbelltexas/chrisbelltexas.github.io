@@ -1080,18 +1080,82 @@
 		{
 			"@context": "https://schema.org",
 			"@type": "Person",
-			"disambiguatingDescription": "Archived campaign website; not affiliated with any active campaign.",
+			"@id": "https://chrisbelltexas.com/#person",
 			"name": "Chris Bell",
 			"url": "https://chrisbelltexas.com",
-			"jobTitle": "Candidate for Texas Governor",
-			"affiliation": "Democratic Party",
 			"image": "https://chrisbelltexas.com/photo_home.png",
-			"logo": "https://chrisbelltexas.com/favicon-32.png",
-			"sameAs":[
+			"disambiguatingDescription": "Archived campaign website maintained by a former volunteer; not affiliated with any active campaign.",
+			"affiliation": {
+				"@type": "PoliticalParty",
+				"name": "Democratic Party"
+			},
+			"sameAs": [
+				"https://ballotpedia.org/Chris_Bell_(Texas)",
+				"https://en.wikipedia.org/wiki/Chris_Bell_(politician)",
 				"https://facebook.com/chrisbelltexas",
-				"https://www.tiktok.com/@chrisbelltexasgovernor"
-			]
-		}	 
+				"https://www.tiktok.com/@chrisbelltexasgovernor",
+				"https://instagram.com/chrisbelltexas"
+			],
+			"hasOccupation": {
+			  "@type": "PoliticalPosition",
+			  "name": "Candidate for Governor of Texas"
+			},
+			"subjectOf": {
+			  "@type": "WebPage",
+			  "url": "https://chrisbelltexas.com"
+			}
+		}
+	</script>
+		
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "PoliticalCandidate",
+			"@id": "https://chrisbelltexas.com/#candidate",
+			"name": "Chris Bell",
+			"url": "https://chrisbelltexas.com",
+			"memberOf": {
+				"@type": "PoliticalParty",
+				"name": "Democratic Party"
+			},
+			"candidateFor": {
+				"@type": "PoliticalOffice",
+				"name": "Governor of Texas"
+			},
+			"election": {
+				"@type": "Election",
+				"name": "2026 Texas Democratic Primary Election for Governor",
+				"electionDate": "2026-03-03"
+			},
+			"sameAs": "https://chrisbelltexas.com/#person"
+		}
+	</script>
+		
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Election",
+			"@id": "https://chrisbelltexas.com/#election-2026-tx-gov-dem",
+			"name": "2026 Texas Democratic Primary Election for Governor",
+			"officeContested": {
+				"@type": "PoliticalOffice",
+				"name": "Governor of Texas"
+			},
+			"candidate": [
+				{
+					"@type": "PoliticalCandidate",
+					"@id": "https://chrisbelltexas.com/#candidate"
+				},
+				{
+					"@type": "PoliticalCandidate",
+					"name": "Gina Hinojosa"
+				}
+			],
+			"isPartOf": {
+			  "@type": "WebPage",
+			  "url": "https://chrisbelltexas.com"
+			}
+		}
 	</script>
 	
 	<!--js-ga4-analytics-<script>-->
