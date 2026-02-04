@@ -824,7 +824,7 @@
 						</a>
 					</div>
 					
-					<div id="google_translate_element" style="display:none!important;"> </div>
+					<div id="google_translate_element"> </div>
 					
 					<div class="columns is-mobile has-text-left mb-0" style="white-space:nowrap!important">
 						
@@ -1798,8 +1798,11 @@
 		function translateTo(lang) {
 			var select = document.querySelector('.goog-te-combo');
 			if (select) {
-				select.value = lang;
+				// if going back to english, use empty string
+				select.value = (lang === 'en') ? '' : lang;
 				select.dispatchEvent(new Event('change'));
+			} else {
+				setTimeout(() => translateTo(lang), 500);
 			}
 		}
 	</script>

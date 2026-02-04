@@ -1,3 +1,16 @@
+/* hide google's top bar */
+body {
+  top: 0 !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+iframe.skiptranslate {
+  display: none !important;
+}
+
 /* hide google's ugly dropdown */
 .goog-te-combo {
   display: none;
@@ -5,6 +18,10 @@
 
 /* hide google's branding banner if it shows */
 .goog-te-banner-frame {
+  display: none !important;
+}
+
+#google_translate_element {
   display: none !important;
 }
 
