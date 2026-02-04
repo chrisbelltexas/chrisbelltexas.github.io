@@ -1,3 +1,21 @@
+/* hide google's translation feedback popup */
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+.goog-tooltip {
+  display: none !important;
+}
+
+.goog-tooltip:hover {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
 /* hide google's top bar */
 body {
   top: 0 !important;
