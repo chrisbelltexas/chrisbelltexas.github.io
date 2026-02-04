@@ -1791,7 +1791,8 @@
 			new google.translate.TranslateElement({
 				pageLanguage: 'en',
 				includedLanguages: 'es,vi,zh-CN,ko',
-				layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+				layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+				// or try .VERTICAL
 			}, 'google_translate_element');
 		}
 		function translateTo(lang) {
