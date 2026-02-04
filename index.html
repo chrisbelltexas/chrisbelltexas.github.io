@@ -4,6 +4,12 @@
 
 <head>
 	
+	<!--js-gtranslate--><script>
+		// clear any existing translation cookies on page load
+		document.cookie = 'googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+		document.cookie = 'googtrans=; path=/; domain=.' + window.location.hostname + '; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+	</script>
+	
 	<!--js-ga4-analytics--><script async src="https://www.googletagmanager.com/gtag/js?id=G-WFECMM0VJQ"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -1798,9 +1804,16 @@
 		function translateTo(lang) {
 			var select = document.querySelector('.goog-te-combo');
 			if (select) {
-				// if going back to english, use empty string
-				select.value = (lang === 'en') ? '' : lang;
-				select.dispatchEvent(new Event('change'));
+				if (lang === 'en') {
+					// clear google's cookies to reset to english
+					document.cookie = 'googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+					document.cookie = 'googtrans=; path=/; domain=.' + window.location.hostname + '; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+					// force reload to apply english
+					window.location.reload();
+				} else {
+					select.value = lang;
+					select.dispatchEvent(new Event('change'));
+				}
 			} else {
 				setTimeout(() => translateTo(lang), 500);
 			}
