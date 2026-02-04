@@ -1,3 +1,14 @@
+/* hide google's ugly dropdown */
+.goog-te-combo {
+  display: none;
+}
+
+/* hide google's branding banner if it shows */
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+
 #campaign {
 	z-index: 0 !important;
 }

@@ -779,17 +779,52 @@
 				
 				<div><!--stacks content vertically instead of side-by-side-->
 					
-					<h2 class="mb-6 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left gbl-title-txt has-text-white" data-aos="zoom-in" data-aos-duration="1500">
+					<h2 class="mb-2 icon-text is-size-3 is-size-4-mobile font-amiri has-text-left gbl-title-txt has-text-white" data-aos="zoom-in" data-aos-duration="1500">
 						
 						<img class= "gbl-title-img" src="texas.webp" data-aos="fade-up-right" data-aos-duration="1000">
 						
-						<span data-aos="fade-down-left" data-aos-duration="1250">Texas Primary<br>&nbsp;Elections 2026</span>
+						<span data-aos="fade-down-left" data-aos-duration="1250">
+							Texas Primary<br>
+							&nbsp;Elections 2026
+						</span>
 						
 					</h2>
 					
-					<div id="google_translate_element"
-					style="position: absolute; top: 1rem; right: 0rem; z-index: 9999;">
+					<div class="mb-6 is-size-6 is-size-7-mobile font-montserrat" data-aos="fade-left" data-aos-duration="3000">
+						&nbsp;&nbsp;
+						<a onclick="translateTo('es')">
+							<span class="icon-text">
+								<span class="icon">🇲🇽</span>
+								<span class="gbl-link-orange50">ES</span>
+							</span>
+						</a>
+						<a onclick="translateTo('en')">
+							<span class="icon-text">
+								<span class="icon">🇺🇸</span>
+								<span class="gbl-link-orange50">EN</span>
+							</span>
+						</a>
+						<a onclick="translateTo('vi')">
+							<span class="icon-text">
+								<span class="icon">🇻🇳</span>
+								<span class="gbl-link-orange50">VI</span>
+							</span>
+						</a>
+						<a onclick="translateTo('zh-CN')">
+							<span class="icon-text">
+								<span class="icon">🇨🇳</span>
+								<span class="gbl-link-orange50">中文</span>
+							</span>
+						</a>
+						<a onclick="translateTo('ko')">
+							<span class="icon-text">
+								<span class="icon">🇰🇷</span>
+								<span class="gbl-link-orange50">한국어</span>
+							</span>
+						</a>
 					</div>
+					
+					<div id="google_translate_element" style="display:none!important;"> </div>
 					
 					<div class="columns is-mobile has-text-left mb-0" style="white-space:nowrap!important">
 						
@@ -1758,6 +1793,13 @@
 				includedLanguages: 'es,vi,zh-CN,ko',
 				layout: google.translate.TranslateElement.InlineLayout.SIMPLE
 			}, 'google_translate_element');
+		}
+		function translateTo(lang) {
+			var select = document.querySelector('.goog-te-combo');
+			if (select) {
+				select.value = lang;
+				select.dispatchEvent(new Event('change'));
+			}
 		}
 	</script>
 		
