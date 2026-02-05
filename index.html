@@ -109,7 +109,7 @@
 	
 	<!--archived-campaign-site--><section id="campaign" class="notranslate">
 		
-		<!--navbar--><header id="campaign-nav" class="navbar"><div class="container">
+		<!--navbar--><header id="campaign-nav" class="notranslate navbar"><div class="container">
 			
 			<!--logo-burger--><div class="navbar-brand">
 				
@@ -146,7 +146,7 @@
 		
 		</div></header>
 		
-		<!--hero--><section id="campaign-main" class="hero is-fullheight">
+		<!--hero--><section id="campaign-main" class="notranslate hero is-fullheight">
 			
 			<div class="hero-body"><div class="container has-text-right">
 					
@@ -174,7 +174,7 @@
 		
 		</section>
 	
-		<!--about--><section id="campaign-about" class="section" data-theme="light">
+		<!--about--><section id="campaign-about" class="notranslate section" data-theme="light">
 		
 			<div class="container">
 			
@@ -213,7 +213,7 @@
 		
 		</section>
 	
-		<!--media--><section id="campaign-media" class="section" data-theme="dark">
+		<!--media--><section id="campaign-media" class="notranslate section" data-theme="dark">
 		
 			<div class="container has-text-light">
 			
@@ -661,7 +661,7 @@
 		
 		</section>
 	
-		<!--issues--><section id="campaign-issues" class="section" data-theme="light">
+		<!--issues--><section id="campaign-issues" class="notranslate section" data-theme="light">
 		
 			<div class="container">
 			
@@ -687,7 +687,7 @@
 		
 		</section>
 	
-		<!--contact--><footer id="campaign-contact" class="footer has-text-centered">
+		<!--contact--><footer id="campaign-contact" class="notranslate footer has-text-centered">
 		
 			<div class="content">
 			
@@ -796,33 +796,33 @@
 						
 					</h2>
 					
-					<div class="notranslate mb-6 is-size-6 is-size-7-mobile font-montserrat" data-aos="fade-left" data-aos-duration="3000">
+					<div class="notranslate mb-4 is-size-6 is-size-7-mobile font-montserrat" data-aos="fade-left" data-aos-duration="3000">
 						&nbsp;&nbsp;
-						<a href="#" onclick="translateTo('es'); return false;">
+						<a id="var1-trans-spanish" href="#" onclick="translateTo('es'); return false;">
 							<span class="icon-text">
 								<span class="icon">🇲🇽</span>
 								<span class="gbl-link-orange50">ES</span>
 							</span>
 						</a>
-						<a href="#" onclick="translateTo('en'); return false;">
+						<a id="var1-trans-english" href="#" onclick="translateTo('en'); return false;">
 							<span class="icon-text">
 								<span class="icon">🇺🇸</span>
 								<span class="gbl-link-orange50">EN</span>
 							</span>
 						</a>
-						<a href="#" onclick="translateTo('vi'); return false;">
+						<a id="var1-trans-vietnamese" href="#" onclick="translateTo('vi'); return false;">
 							<span class="icon-text">
 								<span class="icon">🇻🇳</span>
 								<span class="gbl-link-orange50">VI</span>
 							</span>
 						</a>
-						<a href="#" onclick="translateTo('zh-CN'); return false;">
+						<a  id="var1-trans-chinese" href="#" onclick="translateTo('zh-CN'); return false;">
 							<span class="icon-text">
 								<span class="icon">🇨🇳</span>
 								<span class="gbl-link-orange50">中文</span>
 							</span>
 						</a>
-						<a href="#" onclick="translateTo('ko'); return false;">
+						<a id="var1-trans-korean" href="#" onclick="translateTo('ko'); return false;">
 							<span class="icon-text">
 								<span class="icon">🇰🇷</span>
 								<span class="gbl-link-orange50">한국어</span>
@@ -830,7 +830,7 @@
 						</a>
 					</div>
 					
-					<div id="google_translate_element"> </div>
+					<div id="google_translate_element"></div>
 					
 					<div class="columns is-mobile has-text-left mb-0" style="white-space:nowrap!important">
 						
@@ -907,7 +907,7 @@
 						
 						<div class="column is-half" style="width:auto!important;">
 							
-							<p class="mb-2 has-text-white">Find my voting <strong><em>ballot:</em></strong></p>
+							<p class="mb-2 has-text-white">And my voting <strong><em>ballot:</em></strong></p>
 				
 							<div data-aos="fade-up-left" data-aos-duration="750">
 								<span class="icon-text is-size-6 is-size-7-mobile mb-2 ml-3">
@@ -970,7 +970,7 @@
 						<!--cta2--><a id="var1-txsos-portal"
 						href="https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login"
 						target="_blank">
-							<span class="icon-text is-size-6 mb-4">
+							<span class="icon-text is-size-6 is-size-7-mobile mb-4">
 								<span class="icon">🔑</span>
 								<span class="gbl-link-orange50">
 									Or check the statewide portal
@@ -1224,26 +1224,27 @@
 		});
 	</script>-->
 		
-	<!--js-typewriter<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-	
-	<script>
-		var typed = new Typed('#typed', {
-		    stringsElement: '#typed-strings',
-		    startDelay: 1500,
-		    typeSpeed: 25,
-		    backDelay: 3000,
-		    loop: false,
-		    fadeOut: true,
-		    onComplete: function(self) {
-				setTimeout(() => {
-					document.querySelector('#var2-main h2')?.classList.add('show');
+	<!--js-typewriter
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+		<script>
+			var typed = new Typed('#typed', {
+			    stringsElement: '#typed-strings',
+			    startDelay: 1500,
+			    typeSpeed: 25,
+			    backDelay: 3000,
+			    loop: false,
+			    fadeOut: true,
+			    onComplete: function(self) {
 					setTimeout(() => {
-						document.querySelector('#var2-info')?.classList.add('show');
-		            }, 300);
-		        }, 500);
-		    }
-		});
-	</script>-->
+						document.querySelector('#var2-main h2')?.classList.add('show');
+						setTimeout(() => {
+							document.querySelector('#var2-info')?.classList.add('show');
+			            }, 300);
+			        }, 500);
+			    }
+			});
+		</script>
+	-->
 	
 	
 	<!--js-aos--><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -1351,6 +1352,12 @@
 		const mvp_txsos_portal = document.getElementById('mvp-txsos-portal');
 		const mvp_about = document.getElementById('mvp-about');
 		
+		const var1_trans_spanish = document.getElementById('var1-trans-spanish');
+		const var1_trans_english = document.getElementById('var1-trans-english');
+		const var1_trans_vietnamese = document.getElementById('var1-trans-vietnamese');
+		const var1_trans_chinese = document.getElementById('var1-trans-chinese');
+		const var1_trans_korean = document.getElementById('var1-trans-korean');
+		
 		const var1_ev_dallas = document.getElementById('var1-ev-dallas');
 		const var1_ev_travis = document.getElementById('var1-ev-travis');
 		const var1_ev_harris = document.getElementById('var1-ev-harris');
@@ -1405,6 +1412,46 @@
 			mvp_about.addEventListener('click', () => {
 				gtag('event', 'l1_about_clicked', {
 					'event_label': 'about the campaign site'
+				});
+			});
+		}
+		
+		if (var1_trans_spanish) {
+			var1_trans_spanish.addEventListener('click', () => {
+				gtag('event', 'l1_trans_spanish_clicked', {
+					'event_label': 'spanish translation'
+				});
+			});
+		}
+		
+		if (var1_trans_english) {
+			var1_trans_english.addEventListener('click', () => {
+				gtag('event', 'l1_trans_english_clicked', {
+					'event_label': 'english translation'
+				});
+			});
+		}
+		
+		if (var1_trans_vietnamese) {
+			var1_trans_vietnamese.addEventListener('click', () => {
+				gtag('event', 'l1_trans_vietnamese_clicked', {
+					'event_label': 'vietnamese translation'
+				});
+			});
+		}
+		
+		if (var1_trans_chinese) {
+			var1_trans_chinese.addEventListener('click', () => {
+				gtag('event', 'l1_trans_chinese_clicked', {
+					'event_label': 'chinese translation'
+				});
+			});
+		}
+		
+		if (var1_trans_korean) {
+			var1_trans_korean.addEventListener('click', () => {
+				gtag('event', 'l1_trans_korean_clicked', {
+					'event_label': 'korean translation'
 				});
 			});
 		}
