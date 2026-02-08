@@ -81,6 +81,18 @@ iframe.skiptranslate {
 }
 
 
+.trans-link-orange50 {
+	color: rgba(255,255,255,0.5) !important; /* semi-trans white */
+	text-decoration: underline !important;
+	transition:
+		color 0.25s ease;
+}
+.trans-link-orange50:hover {
+	color: rgba(245,171,0,1) !important; /* has-warning-50 orange */
+	cursor: pointer !important;
+}
+
+
 #mvp-fireworks {
     z-index: 1 !important; /* < mvp-main */
 	position: fixed !important;
