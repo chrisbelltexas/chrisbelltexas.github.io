@@ -785,17 +785,20 @@
 				
 				<div><!--stacks content vertically instead of side-by-side-->
 					
-					<h2 class="mb-5 icon-text is-size-3 is-size-5-mobile gbl-title-txt" data-aos="zoom-in" data-aos-duration="1500">
+					<h2 class="mb-4 icon-text is-size-3 is-size-4-mobile gbl-title-txt" data-aos="zoom-in" data-aos-duration="1500">
 						
 						<img class= "gbl-title-img" src="texas.webp" data-aos="fade-up-right" data-aos-duration="1000">
 						
 						<span class="notranslate has-text-left" data-aos="fade-down-left" data-aos-duration="1250">
+							
 							<div class="ml-1 is-size-7 has-text-grey">
-								Tuesday, March 3, 2026
+								<p id="var1-countdown" data-aos="fade-down" data-aos-duration="3000"></p>
 							</div>
+							
 							<div class="ml-1 mb-1 has-text-white">
-								<strong>Texas Primary Elections</strong>
+								<strong>Texas Primaries 2026</strong>
 							</div>
+							
 							<div class="is-size-7 has-text-grey" data-aos="fade-left" data-aos-duration="3000">
 								<a id="var1-trans-english" href="#English" onclick="translateTo('en'); return false;">
 									<span class="icon-text">
@@ -828,36 +831,17 @@
 									</span>
 								</a>
 							</div>
+						
+							<div id="google_translate_element"></div>
+						
 						</span>
 						
 					</h2>
 					
-					<div id="google_translate_element"></div>
-					
-					<div class="mb-5" data-aos="fade-right" data-aos-duration="3000">
-						<a id="var1-lwv"
-						href="https://www.lwvtexas.org/"
-						target="_blank">
-							<span class="icon-text">
-								<span class="icon">🗽</span>
-								<span class="gbl-link-orange50">
-									<strong>New!</strong> Voters Guide
-								</span>
-							</span>
-						</a>
-						<br>
-						<!--
-							<a id="var1-lwv-english" href="https://www.lwvtexas.org/handlers/celinks.ashx?id=129402"target="_blank" class="gbl-link-orange50">
-							English</a>, 
-							<a id="var1-lwv-español" href="https://www.lwvtexas.org/handlers/celinks.ashx?id=129404"target="_blank" class="gbl-link-orange50">
-							Español</a>
-						-->
-					</div>
-					
 					<p class="mb-2 has-text-white">Find my voting <strong>place</strong> or see my <strong>ballot:</strong></p>
 					
-					<div class="mx-2 columns is-mobile">
-						<div class="column is-8 has-text-left">
+					<div class="mb-4 mx-2 columns is-mobile is-centered is-gapless">
+						<div class="column is-narrow has-text-left">
 							<div data-aos="fade-up-right" data-aos-duration="500">
 								<a id="var1-ev-dallas"
 								href="https://www.dallascountyvotes.org/in-person/"
@@ -936,7 +920,7 @@
 								</a>
 							</div>
 						</div>
-						<div class="column is-4 has-text-right">
+						<div class="column ml-6 is-narrow has-text-right">
 							<div class="mb-1" data-aos="fade-up-left" data-aos-duration="700">
 								<a id="var1-bal-dallas-dem" href="https://www.dallascountyvotes.org/wp-content/uploads/2026/01/Democratic-Party-Sample-Ballot-030326.pdf"target="_blank" class="is-size-6 is-size-7-mobile gbl-link-orange50"><i class="fa-solid fa-democrat"></i></a> 
 								<a id="var1-bal-dallas-rep" href="https://www.dallascountyvotes.org/wp-content/uploads/2026/01/Republican-Party-Sample-Ballot-030326.pdf"target="_blank" class="is-size-6 is-size-7-mobile gbl-link-orange50"><i class="ml-1 fa-solid fa-republican"></i></a>
@@ -966,12 +950,43 @@
 						</div>
 					</div>
 					
-					<p class="is-size-6 has-text-white">Early voting starts in:</p>
-		
-					<p id="var1-countdown" class="" data-aos="fade-up" data-aos-duration="3000"></p>
+					<div class="mb-4 has-text-white" data-aos="fade-right" data-aos-duration="3000">
+						<div class="mb-2">
+							<strong>New!</strong> See my 
+							<a id="var1-lwv" href="https://www.lwvtexas.org/" target="_blank" class="gbl-link-orange50">
+								candidate voters guide:
+							</a>
+						</div>
+						<div class="is-size-7" data-aos="fade-up" data-aos-duration="3000">
+							<a id="var1-lwv-english" href="https://www.lwvtexas.org/handlers/celinks.ashx?id=129402"target="_blank">
+								<span class="icon-text">
+									<span class="icon">🇺🇸</span>
+									<span class="gbl-link-orange50">USA</span>
+								</span>
+							</a>, 
+							<a id="var1-lwv-español" href="https://www.lwvtexas.org/handlers/celinks.ashx?id=129404"target="_blank">
+								<span class="icon-text">
+									<span class="icon">🇲🇽</span>
+									<span class="gbl-link-orange50">Español</span>
+								</span>
+							</a>
+							<a id="var1-lwv-tiếng-Việt" href="https://www.lwvtexas.org/handlers/celinks.ashx?id=131383"target="_blank">
+								<span class="icon-text">
+									<span class="icon">🇻🇳</span>
+									<span class="gbl-link-orange50">tiếng Việt</span>
+								</span>
+							</a>
+							<a id="var1-lwv-中文" href="https://www.lwvtexas.org/handlers/celinks.ashx?id=131382"target="_blank">
+								<span class="icon-text">
+									<span class="icon">🇨🇳</span>
+									<span class="gbl-link-orange50">中文</span>
+								</span>
+							</a>
+						</div>
+					</div>
 		
 					<!--go-info--><div><a id="var1-about" onclick="document.getElementById('psa-info').classList.add('is-active'); return false;">
-							<span class="mt-4 icon-text is-size-7">
+							<span class="icon-text is-size-7">
 								<span class="icon">🔔</span>
 								<span class="gbl-link-orange50 is-size-7">About the campaign site</span>
 							</span>
@@ -1233,7 +1248,6 @@
 		</script>
 	-->
 	
-	
 	<!--js-aos--><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
 		AOS.init();
@@ -1348,6 +1362,8 @@
 		const var1_lwv = document.getElementById('var1-lwv');
 		const var1_lwv_english = document.getElementById('var1-lwv-english');
 		const var1_lwv_español = document.getElementById('var1-lwv-español');
+		const var1_lwv_tiếng_Việt = document.getElementById('var1-lwv-tiếng-Việt');
+		const var1_lwv_中文 = document.getElementById('var1-lwv-中文');
 		
 		const var1_ev_dallas = document.getElementById('var1-ev-dallas');
 		const var1_ev_travis = document.getElementById('var1-ev-travis');
@@ -1467,6 +1483,22 @@
 			var1_ev_dallas.addEventListener('click', () => {
 				gtag('event', 'l1_var1_lwv_español_guide_clicked', {
 					'event_label': 'lwv guide español'
+				});
+			});
+		}
+		
+		if (var1_lwv_tiếng_Việt) {
+			var1_ev_dallas.addEventListener('click', () => {
+				gtag('event', 'l1_var1_lwv_tiếng_Việt_guide_clicked', {
+					'event_label': 'lwv guide tiếng Việt'
+				});
+			});
+		}
+		
+		if (var1_lwv_中文) {
+			var1_ev_dallas.addEventListener('click', () => {
+				gtag('event', 'l1_var1_lwv_中文_guide_clicked', {
+					'event_label': 'lwv guide 中文'
 				});
 			});
 		}
@@ -1695,13 +1727,17 @@
 				const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
 				const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
 				const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-				countdownEl.innerHTML = `<span class="is-size-4 has-text-warning-50">
+				countdownEl.innerHTML = `
+				<span class="has-text-white">
+				Early voting starts in:
+				</span>
+				<span class="has-text-weight-bold has-text-warning-50">
 				${days} days
 				</span>
-				<br>
 				<span class="has-text-warning-60">
 				${hours}h ${minutes}m ${seconds}s
-				</span>`;
+				</span>
+				`;
 			}
 			updateCountdown();
 			const var1TimerInterval = setInterval(updateCountdown, 1000);
