@@ -56,40 +56,54 @@ iframe.skiptranslate {
 	align-items: center !important;
 }
 .gbl-title-img {
-	width: 2.5em !important; 
-	height: 2.5em !important;
+	width: 1.75em !important; 
+	height: 1.75em !important;
 }
 .gbl-link-orange50 {
 	color: rgba(255,255,255,1) !important; /* white */
 	text-decoration: underline !important;
 	transition:
-		color 0.25s ease;
+		color 0.25s ease !important;
 }
-.gbl-link-orange50:hover {
+.gbl-link-orange50>.fa-democrat {
+	color: rgba(137,207,240,0.75) !important;
+	transition:
+		color 0.25s ease !important;
+}
+.gbl-link-orange50>.fa-republican {
+	color: rgba(255,119,121,0.65) !important;
+	transition:
+		color 0.25s ease !important;
+}
+.gbl-link-orange50:hover,
+.gbl-link-orange50>.fa-democrat:hover,
+.gbl-link-orange50>.fa-republican:hover {
 	color: rgba(245,171,0,1) !important; /* has-warning-50 orange */
 	cursor: pointer !important;
 }
-.gbl-link-ltblue {
-	color: rgba(255,255,255,0.5); /* semi-trans white */
-	text-decoration: underline !important;
-	transition:
-		color 0.25s ease;
-}
-.gbl-link-ltblue:hover {
-	color: rgba(25,25,255) !important; /* lighter blue */
-	cursor: pointer !important;
-}
-
 
 .trans-link-orange50 {
 	color: rgba(255,255,255,0.5) !important; /* semi-trans white */
 	text-decoration: underline !important;
 	transition:
-		color 0.25s ease;
+		color 0.25s ease !important;
 }
 .trans-link-orange50:hover {
 	color: rgba(245,171,0,1) !important; /* has-warning-50 orange */
 	cursor: pointer !important;
+}
+
+.abt-link-cactusgrn {
+	color: rgba(255,255,255,1) !important; /* white */
+	transition:
+		color 0.25s ease !important;
+}
+.abt-link-cactusgrn:hover {
+	color: rgba(130,197,97,1) !important; /* cactus green */
+	cursor: pointer !important;
+}
+.icon-text .abt-link-cactusgrn {
+	text-decoration: underline !important;
 }
 
 
@@ -151,31 +165,25 @@ iframe.skiptranslate {
 #var1-main {
 	z-index: 2 !important; /* #campaign=0 < #mvp-fireworks=1 < #var1-main=2 < psa-info=? */
 }
-#var1-image {
-	opacity: 50% !important;
-	border: 0.25em solid rgba(245,171,0,1) !important; /* has-warning-50 orange */
-	border-radius: 2em !important;
-	width: 20% !important;
+
+.var1-cta-btn {
+	background-color: rgba(0,0,50,0.9) !important;
+	border: 0.1em solid rgba(255,255,255,0.5) !important;
 	transition:
-		opacity 0.5s ease,
-		transform 0.2s ease !important;
-	;
+		background-color 0.2s ease !important,
+		border 0.2s ease !important,
+		color 0.2s ease !important;
 }
-#var1-image:hover {
-	opacity: 100% !important;
-	transform: scale(1.05) !important;
-}
-@media screen and (max-width: 768px) {
-	#var1-image {
-		width: 50% !important;
-	}
+.var1-cta-btn:hover {
+	background-color: rgba(0,0,50,1) !important;
+	border: 0.1em solid rgba(245,171,0,1) !important;
+	color: rgba(245,171,0,1) !important;
 }
 
 
 #psa-vr-bg {
 	background-color: rgba(0,0,50,0.9) !important;" /* semi-trans dark blue - rgba(0,0,50,0.9) */
 }
-
 #psa-vr-main{
 	z-index: 2 !important; /* > psa-vr-fireworks */
 }
@@ -189,7 +197,6 @@ iframe.skiptranslate {
     height: 100vh !important;
     pointer-events: none !important;
 }
-
 #psa-vr-fireworks canvas {
     display: block;
     width: 100%;
@@ -208,7 +215,6 @@ iframe.skiptranslate {
 		background-color 0.5s ease !important,
 		transform 0.25s ease !important;
 }
-
 #psa-vr-cta:hover {
 	background-color: rgba(0,0,255,1) !important; /* blue */
 	transform: scale(1.125) !important;
@@ -225,28 +231,23 @@ iframe.skiptranslate {
 		background-color 0.5s ease,
 		transform 0.25s ease !important;
 }
-
 #psa-vr-county-search:hover {
 	background-color: rgba(163,114,1,0.75) !important; /* semi-trans has-warning-25 orange */
 	transform:
 		scale(1.1) !important;
 }
-
 #psa-vr-county-search:focus {
 	outline: 0.1em solid rgba(245,171,0,1) !important; /* has-warning-50 orange */
 }
-
 #psa-vr-county-search::placeholder {
 	color: rgba(255,255,255,1) !important; /* white */
 	font-weight: normal !important;
 }
-
 #psa-vr-county-results li {
 	transition:
 		color 1s ease,
 		transform 0.25s ease !important;
 }
-
 #psa-vr-county-results li:hover {
 	color: rgba(245,171,0,1) !important; /* has-warning-50 orange */
 	transform: scale(1.325) !important;
