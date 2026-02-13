@@ -54,6 +54,7 @@ iframe.skiptranslate {
 }
 .gbl-title-txt {
 	align-items: center !important;
+	flex-wrap: nowrap !important;
 }
 .gbl-title-img {
 	width: 1.75em !important; 

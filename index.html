@@ -785,17 +785,17 @@
 				
 				<div><!--stacks content vertically instead of side-by-side-->
 					
-					<h2 class="icon-text is-size-3 is-size-5-mobile gbl-title-txt" data-aos="zoom-in" data-aos-duration="1500" style="flex-wrap: nowrap !important;">
+					<h2 class="icon-text is-size-3 is-size-5-mobile gbl-title-txt" data-aos="zoom-in" data-aos-duration="1500">
 						
 						<img class= "gbl-title-img" src="texas.webp" data-aos="fade-up-right" data-aos-duration="1000">
 						
 						<span class="notranslate has-text-left" data-aos="fade-down-left" data-aos-duration="1250">
 							
-							<p id="var1-countdown" data-aos="fade-down" data-aos-duration="3000" class="is-size-6 is-size-7-mobile"></p>
+							<!--countdown--><p id="var1-countdown" data-aos="fade-down" data-aos-duration="3000" class="is-size-6 is-size-7-mobile"></p>
 							
 							<div class="my-1"><strong>Texas Primaries 2026</strong></div>
 							
-							<div class="is-size-7 has-text-grey-light" data-aos="fade-left" data-aos-duration="3000">
+							<!--trans-links--><div class="is-size-7 has-text-grey-light" data-aos="fade-left" data-aos-duration="3000">
 								<a id="var1-trans-english" href="#English" onclick="translateTo('en'); return false;">
 									<span class="icon-text">
 										<span class="icon">🇺🇸</span>
@@ -826,9 +826,8 @@
 										<span class="trans-link-orange50">한국어</span>
 									</span>
 								</a>
+								<div id="google_translate_element"></div>
 							</div>
-						
-							<div id="google_translate_element"></div>
 						
 						</span>
 						
@@ -1697,71 +1696,64 @@
 			});
   		});
   	</script>
-
-	<!--js-mvp-countdown-<script>-->
-	<script>
-		(function() {
-			const targetDate = new Date("2026-02-02T17:00:00").getTime();
-			const countdownEl = document.getElementById("mvp-countdown");
-			function updateCountdown() {
-				const now = new Date().getTime();
-				const diff = targetDate - now;
-				if(diff <= 0) {
-					countdownEl.innerHTML = "Voter registration deadline: 2/2";
-					clearInterval(mvpTimerInterval);
-					return;
-				}
-				const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-				const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
-				const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
-				const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-				/*countdownEl.innerHTML = `<span class="is-size-3 has-text-warning-60">
-				${days} day
-				</span>
-				<br>
-				<span class="is-size-3 has-text-warning-60">
-				${hours}h ${minutes}m ${seconds}s
-				</span>`;*/
-				countdownEl.innerHTML = `<span class="is-size-3 has-text-warning-60">
-				${hours}h ${minutes}m ${seconds}s
-				</span>`;
-			}
-			updateCountdown();
-			const mvpTimerInterval = setInterval(updateCountdown, 1000);
-		})();
-	</script>
 		
 	<!--js-var1-countdown-<script>-->
 	<script>
 		(function() {
-			const targetDate = new Date("2026-02-17T07:00:00").getTime();
+			const events = [
+				{ date: new Date("2026-02-02T16:59:59"), text: "Voter signup ends in" },
+				{ date: new Date("2026-02-17T07:00:00"), text: "Early voting in" },
+				{ date: new Date("2026-02-27T19:00:00"), text: "Early voting ends in" },
+				{ date: new Date("2026-03-03T07:00:00"), text: "Election day in" },
+				{ date: new Date("2026-03-03T19:00:00"), text: "Election day ends in" }
+			];
+			
+			const finalText = '<span class="has-text-white">Voting polls closed for this election</span>';
 			const countdownEl = document.getElementById("var1-countdown");
-			function updateCountdown() {
-				const now = new Date().getTime();
-				const diff = targetDate - now;
-				if(diff <= 0) {
-					countdownEl.innerHTML = "2/17 through 2/27";
-					clearInterval(var1TimerInterval);
-					return;
-				}
-				const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-				const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
-				const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
-				const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-				countdownEl.innerHTML = `
-				<span class="has-text-white">
-				Early voting starts in:
-				</span>
-				<span class="has-text-weight-bold has-text-warning-50">
-				${days} days
-				</span>
-				<span class="has-text-warning-60">
-				${hours}h ${minutes}m ${seconds}s
-				</span>
-				`;
-			}
-			updateCountdown();
-			const var1TimerInterval = setInterval(updateCountdown, 1000);
+			
+	  	  	function updateCountdown() {
+	  	    	const now = new Date().getTime();
+	  	    	const nextEvent = events.find(e => now < e.date.getTime());
+    
+	  	    	if (!nextEvent) {
+	  	      		countdownEl.innerHTML = finalText;
+	  	      		clearInterval(timerInterval);
+	  	      		return;
+	  	    	}
+    
+	  	    	const diff = nextEvent.date.getTime() - now;
+	  	    	const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+	  	    	const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
+	  	    	const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
+	  	    	const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    
+	  	    	const month = nextEvent.date.getMonth() + 1;
+	  	    	const day = nextEvent.date.getDate();
+    
+	  	    	let timeDisplay = '';
+	  	    	let boldPart = '';
+    
+	  	    	if (days > 1) {
+	  	      		boldPart = `${days} days`;
+	  	      	  	timeDisplay = ` ${hours}h ${minutes}m ${seconds}s`;
+	  	    	} else if (days === 1) {
+	  	      	  	boldPart = `${days} day`;
+	  	      	  	timeDisplay = ` ${hours}h ${minutes}m ${seconds}s`;
+	  	    	} else if (hours > 0) {
+	  	      	  	timeDisplay = `${hours}h ${minutes}m ${seconds}s`;
+	  	    	} else {
+	  	      	  	timeDisplay = `${minutes}m ${seconds}s`;
+	  	    	}
+    
+	  	    	countdownEl.innerHTML = `
+	  	      	<span class="has-text-white">${nextEvent.text}:</span>
+	  	      	${boldPart ? `<span class="has-text-weight-bold has-text-warning-50">${boldPart}</span>` : ''}
+	  	      	<span class="has-text-warning-60">${timeDisplay}</span>
+	  	    `	;
+	  	  	}
+  
+	  	  	updateCountdown();
+	  	  	const timerInterval = setInterval(updateCountdown, 1000);
 		})();
 	</script>
 		
@@ -1910,6 +1902,43 @@
 	</script>
 		
 	<!--js-psa-vr-county-search--><script src="psa_vr_county_search.js" defer></script>
+	
+	<!---->
+	
+	<!--js-mvp-countdown-<script>-->
+	<script>
+		(function() {
+			const targetDate = new Date("2026-02-02T17:00:00").getTime();
+			const countdownEl = document.getElementById("mvp-countdown");
+			function updateCountdown() {
+				const now = new Date().getTime();
+				const diff = targetDate - now;
+				if(diff <= 0) {
+					countdownEl.innerHTML = "Voter registration deadline: 2/2";
+					clearInterval(mvpTimerInterval);
+					return;
+				}
+				const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+				const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000*60*60));
+				const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000*60));
+				const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+				/*countdownEl.innerHTML = `<span class="is-size-3 has-text-warning-60">
+				${days} day
+				</span>
+				<br>
+				<span class="is-size-3 has-text-warning-60">
+				${hours}h ${minutes}m ${seconds}s
+				</span>`;*/
+				countdownEl.innerHTML = `<span class="is-size-3 has-text-warning-60">
+				${hours}h ${minutes}m ${seconds}s
+				</span>`;
+			}
+			updateCountdown();
+			const mvpTimerInterval = setInterval(updateCountdown, 1000);
+		})();
+	</script>
+	
+	<!---->
 	
 	<!--js-google-trans-<script>-->
 	<script type="text/javascript">
