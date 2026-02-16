@@ -6,6 +6,7 @@
     <meta name="color-scheme" content="light dark">
 	<meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+	<link rel="icon" href="data:,">
     <title>Not a traditional consultant | Building infrastructure for 2026 campaigns</title>
 	<style>
 		#hero {
@@ -121,12 +122,13 @@
 				<form action="https://formsubmit.co/politexas@proton.me" method="POST">
 					<input type="hidden" name="_next" value="https://chrisbelltexas.com/portfolio/index.html?sent=true">
 					<input type="hidden" name="_subject" value="New email from portfolio-contact">
-					<input type="hidden" name="_captcha" value="false">
+					<input type="hidden" name="_captcha" value="true">
 					<input type="hidden" name="_autoresponse" value="Thank you for reaching out. I'll reply asap. — Abhi">
 					<input type="hidden" name="_replyto" value="email">
+					<input type="text" name="_formsubmit_id" style="display:none;">
 					<fieldset>
 						<input name="name" placeholder="My name" autocomplete="given-name" required>
-						<input name="email" placeholder="My email" autocomplete="email" required>
+						<input name="email" placeholder="My email" type= "email" autocomplete="email" required>
 						<textarea name="message" placeholder="My message" required></textarea>
 					</fieldset>
 					<button class="outline" type="submit">Send</button>
