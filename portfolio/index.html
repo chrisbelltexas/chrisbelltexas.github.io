@@ -11,7 +11,16 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Romanesco&display=swap">
 	<link rel="icon" href="data:,">
     <title>Not a traditional consultant | Building infrastructure for 2026 campaigns</title>
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://chrisbelltexas.com/portfolio/photo_main.webp">
+	<meta property="og:title" content="Not a traditional consultant">
+	<meta property="og:url" content="https://chrisbelltexas.com/portfolio/index.html">
+	<meta property="og:description" content="Building infrastructure for 2026 campaigns">
+	<meta property="og:locale" content="en_US">
 	<style>
+		html {
+			scroll-behavior: smooth;
+		}
 		#hero {
 			background-image: url('photo_main.webp');
 			background-size: cover;
@@ -22,7 +31,20 @@
 			align-items: center;
 			justify-content: flex-end;
 			padding-bottom: 3.5em;
-			text-shadow: 2px 2px 3px rgba(0,0,0,1);
+		}
+		#hero h1 {
+			text-shadow: 3px 3px 10px rgba(0,0,0,1);
+		}
+		#hero a[role="button"] {
+		    border: 1px solid white;
+			border-radius: 5px;
+			box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+			background-color: rgba(0, 0, 0, 1);
+			transition: transform 0.2s ease, background-color 0.2s ease;
+		}
+		#hero a[role="button"]:hover {
+		    transform: scale(1.05);
+			background-color: rgba(32, 96, 223, 1);
 		}
 		hr {
 			border-top: 1px solid rgba(164, 172, 186, 1);
@@ -34,7 +56,7 @@
 		
 		<section id="hero">
 			<h1><small>Not a traditional consultant.</small></h1>
-			<a href="#casestudy" role="button">Read case study</a>
+			<a href="#casestudy" role="button"><strong>See case study</strong></a>
 		</section>
 		
 		<section id="casestudy">
