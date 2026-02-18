@@ -18,6 +18,7 @@
     <meta name="color-scheme" content="light dark">
 	<meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Romanesco&display=swap">
@@ -68,8 +69,14 @@
     <main class="container">
 		
 		<section id="hero">
-			<h1><small>Not a traditional consultant.</small></h1>
-			<a id="case-study-button" href="#casestudy" role="button"><strong>See case study</strong></a>
+			<h1 data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease">
+				<small>Not a traditional consultant.</small>
+			</h1>
+			<h2 data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease">
+				<a id="case-study-button" href="#casestudy" role="button">
+					<strong>See case study</strong>
+				</a>
+			</h2>
 		</section>
 		
 		<section id="casestudy">
@@ -141,7 +148,7 @@
 			
 		</section>
 		
-		<section id="about">
+		<section id="about" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
 			
 			<article>
 				
@@ -153,7 +160,7 @@
 			
 		</section>
 		
-		<section id="contact">
+		<section id="contact" data-aos="fade-left" data-aos-duration="1	000" data-aos-easing="ease">
 			
 			<article>
 				
@@ -184,16 +191,20 @@
 	<!--js-ga4-analytics-<script>-->
     <script>
 		// ga4 analytics
-		const case_study_button = document.getElementById('case-study-button');
-		
+		const case_study_button = document.getElementById('case-study-button');		
 		if (case_study_button) {
-			case_study_button.addEventListener('focus', () => {
+			case_study_button.addEventListener('click', () => {
 				gtag('event', 'portfolio_case_study_clicked', {
 					'event_label': 'case study cta'
 				});
 			});
 		}
     </script>
+		
+	<!--js-aos--><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 
 </body>
 </html>
