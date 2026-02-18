@@ -1,6 +1,18 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
 <head>
+	<!--js-ga4-analytics--><script async src="https://www.googletagmanager.com/gtag/js?id=G-WFECMM0VJQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		// initialize GA4 analytics
+		gtag('js', new Date());
+		// anonymize ip & disable ads features / location reporting
+		gtag('config', 'G-WFECMM0VJQ', {
+			'anonymize_ip': true,
+			'allow_ad_personalization_signals': false
+		});
+	</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
@@ -57,7 +69,7 @@
 		
 		<section id="hero">
 			<h1><small>Not a traditional consultant.</small></h1>
-			<a href="#casestudy" role="button"><strong>See case study</strong></a>
+			<a id="case-study-button" href="#casestudy" role="button"><strong>See case study</strong></a>
 		</section>
 		
 		<section id="casestudy">
@@ -168,6 +180,20 @@
 		</section>
 		
     </main>
+	
+	<!--js-ga4-analytics-<script>-->
+    <script>
+		// ga4 analytics
+		const case_study_button = document.getElementById('case-study-button');
+		
+		if (case_study_button) {
+			case_study_button.addEventListener('focus', () => {
+				gtag('event', 'portfolio_case_study_clicked', {
+					'event_label': 'case study cta'
+				});
+			});
+		}
+    </script>
 
 </body>
 </html>
