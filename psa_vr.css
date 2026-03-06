@@ -202,6 +202,7 @@ iframe.skiptranslate {
 #var1-county-search::placeholder {
 	color: rgba(255,255,255,1) !important; /* white */
 	font-weight: normal !important;
+	opacity: 1 !important;
 }
 #var1-county-results li {
 	text-decoration: underline !important;
