@@ -182,6 +182,39 @@ iframe.skiptranslate {
 	z-index: 2 !important; /* #campaign=0 < #mvp-fireworks=1 < #var1-main=2 < psa-info=? */
 }
 
+#var1-county-search {
+	background-color: rgba(0,0,0,0.75) !important; /* trans black */
+	color: rgba(255,255,255,1) !important; /* white */
+	border: 0.05em solid rgba(245,171,0,1) !important; /* has-warning-50 orange */
+	border-radius: 2em !important;
+	width: 100% !important;
+	transition:
+		background-color 0.5s ease,
+		transform 0.2s ease !important;
+}
+#var1-county-search:hover {
+	background-color: rgba(0,0,0,1) !important; /* black */
+	transform: scale(1.1) !important;
+}
+#var1-county-search:focus {
+	outline: 0.1em solid rgba(245,171,0,1) !important; /* has-warning-50 orange */
+}
+#var1-county-search::placeholder {
+	color: rgba(255,255,255,1) !important; /* white */
+	font-weight: normal !important;
+}
+#var1-county-results li {
+	text-decoration: underline !important;
+	transition:
+		color 0.25s ease,
+		transform 0.125s ease !important;
+}
+#var1-county-results li:hover {
+	color: rgba(245,171,0,1) !important; /* has-warning-50 orange */
+	transform: scale(1.325) !important;
+	cursor: pointer !important;
+}
+
 .var1-cta-btn {
 	background-color: rgba(0,0,0,0) !important;
 	border: 0.25em solid rgba(245,171,0,1) !important;
