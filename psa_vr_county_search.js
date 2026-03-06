@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", async () => {
 	const GLOBAL_FALLBACK = "https://vrrequest.sos.texas.gov/VoterApplication/ConfirmStatusEN";
-	const input = document.getElementById("mvp-county-search");
-	const results = document.getElementById("mvp-county-results");
+	const input = document.getElementById("var1-county-search");
+	const results = document.getElementById("var1-county-results");
 	let counties = [];
+	if (!input || !results) return;
 	try {
 		const res = await fetch('counties.json');
 		if (!res.ok) throw new Error('Failed to load counties.json');
@@ -21,8 +22,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 			li.textContent = c.county;
 			li.style.cursor = "pointer";
 			li.onclick = () => {
-				const targetUrl = c.url && c.url.trim() ? c.url : GLOBAL_FALLBACK;
-				window.open(targetUrl, "_blank","noopener,noreferrer"); 
+			    const targetUrl = c.url && c.url.trim() ? c.url : GLOBAL_FALLBACK;
+			    gtag('event', 'l1_county_link_clicked', {
+			        'event_label': c.county
+			    });
+			    window.open(targetUrl, "_blank", "noopener,noreferrer");
 			};
 			results.appendChild(li);
 		});

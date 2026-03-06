@@ -50,7 +50,7 @@ iframe.skiptranslate {
 
 
 .gbl-bg {
-	background-color: rgba(0,0,50,0.9) !important;" /* semi-trans dark blue - rgba(0,0,50,0.9) */
+	background-color: rgba(0,0,50,0.9) !important; /* semi-trans dark blue - rgba(0,0,50,0.9) */
 }
 .gbl-title-txt {
 	align-items: center !important;
@@ -194,7 +194,7 @@ iframe.skiptranslate {
 
 
 #psa-vr-bg {
-	background-color: rgba(0,0,50,0.9) !important;" /* semi-trans dark blue - rgba(0,0,50,0.9) */
+	background-color: rgba(0,0,50,0.9) !important; /* semi-trans dark blue - rgba(0,0,50,0.9) */
 }
 #psa-vr-main{
 	z-index: 2 !important; /* > psa-vr-fireworks */
